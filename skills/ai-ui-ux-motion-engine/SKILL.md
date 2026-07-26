@@ -80,7 +80,17 @@ Choose the lightest mechanism that expresses the intended relationship:
 - canvas frame sequences only when seeking quality or device support requires them;
 - WebGL/3D only when real-time depth materially improves the product story.
 
-Read [motion-patterns.md](references/motion-patterns.md) and [framework-recipes.md](references/framework-recipes.md) before implementation.
+For a watch-style or product-inspection effect made from prompts and reference
+images, do not default to CAD, GLB or WebGL. Route first to the
+[generated product scrubber](references/generated-product-scrubber.md):
+approve a clean still, generate a controlled image-to-video camera move, chain
+clips from exact end frames when needed, then deliver it as scroll-linked video
+or a frame sequence. Use real-time 3D only when the visitor must freely
+manipulate the object or inspect arbitrary viewpoints.
+
+Read [motion-patterns.md](references/motion-patterns.md),
+[generated-product-scrubber.md](references/generated-product-scrubber.md) and
+[framework-recipes.md](references/framework-recipes.md) before implementation.
 
 ### 5. Implement in passes
 
@@ -116,6 +126,7 @@ Read [accessibility-performance.md](references/accessibility-performance.md) and
 
 - Use [workflow.md](references/workflow.md) for phase outputs and decision gates.
 - Use [motion-patterns.md](references/motion-patterns.md) for interaction architecture and safe implementation patterns.
+- Use [generated-product-scrubber.md](references/generated-product-scrubber.md) for prompt/reference-image product films, end-frame chaining, scroll scrubbing and acceptance tests.
 - Use [media-pipeline.md](references/media-pipeline.md) for recording capture, frame extraction, video/image generation and asset delivery.
 - Use [framework-recipes.md](references/framework-recipes.md) for Astro/static, React/Next, Vue and Svelte decisions.
 - Use [research-and-extraction.md](references/research-and-extraction.md) for competitor and design-system research.

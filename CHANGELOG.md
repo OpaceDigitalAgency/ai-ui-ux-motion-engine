@@ -2,6 +2,27 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 1.5.0 - 2026-07-26
+
+### Added
+
+- First-class generated product scrubber workflow for watch-style,
+  image-to-video and prompt-to-video product experiences without mandatory CAD,
+  GLB or WebGL assets.
+- Provider-independent subject-lock prompt, exact end-frame chaining, Astro and
+  React integration routes, SVG alternative, reduced-motion and Save-Data
+  fallbacks.
+- Acceptance checks that reject static-image crossfades, decorative parallax
+  and unsynchronised playback as substitutes for continuous cinematic product
+  motion.
+
+### Changed
+
+- Motion routing, media pipeline, framework recipes, provider guidance, prompt
+  library and source-coverage record now make the prompt/reference-image route
+  explicit.
+- Codex and Claude package versions advanced to 1.5.0.
+
 ## 1.4.0 - 2026-07-26
 
 ### Added

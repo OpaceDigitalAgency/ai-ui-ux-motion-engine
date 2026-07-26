@@ -36,6 +36,7 @@ const required = [
   join(skillRoot, "references/workflow.md"),
   join(skillRoot, "references/motion-patterns.md"),
   join(skillRoot, "references/media-pipeline.md"),
+  join(skillRoot, "references/generated-product-scrubber.md"),
   join(skillRoot, "references/tool-connections.md"),
   join(skillRoot, "references/accessibility-performance.md"),
   join(skillRoot, "references/source-coverage.md"),

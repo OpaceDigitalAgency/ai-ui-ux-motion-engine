@@ -10,8 +10,16 @@ Verified 26 July 2026 from <https://higgsfield.ai/mcp>.
 - Authentication: provider-hosted sign-in/OAuth; do not put a Higgsfield API key in the repository.
 - Treat model names as selectable capabilities, not permanent requirements.
 - Ask for user authority before spending credits.
+- Use the generated-product-scrubber workflow for an approved still,
+  image-to-video camera move, exact final-frame continuation and silent
+  high-resolution product output.
+- A CAD, GLB or 3D mesh is not a prerequisite for this route.
 
 Do not use the unverified npm package `@higgsfield/mcp-server`.
+
+If no video-generation connector is available, implement and validate the
+poster/layout/player boundary but report the generated motion asset as blocked.
+Do not substitute three still-image fades and claim equivalent output.
 
 ## Firecrawl research
 

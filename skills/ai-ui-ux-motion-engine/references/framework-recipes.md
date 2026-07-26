@@ -8,6 +8,9 @@
 - Scope scripts to a component data attribute and clean up observers/listeners.
 - Use `astro:assets` or the project’s image component.
 - Do not add React solely to implement motion.
+- For a generated product scrubber, server-render the poster, copy and actions,
+  then attach one data-attribute-scoped video or canvas controller. Read
+  `generated-product-scrubber.md`.
 
 ## React and Next.js
 
@@ -17,6 +20,8 @@
 - Use stable keys and typed interaction data.
 - Keep semantic content in the server-rendered tree.
 - Test hydration with reduced motion enabled.
+- For generated video/frame scrubbing, isolate seeking in the smallest client
+  component while keeping the poster and commercial content server rendered.
 
 ## Vue and Nuxt
 

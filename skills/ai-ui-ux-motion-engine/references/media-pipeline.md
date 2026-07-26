@@ -24,6 +24,10 @@ Inspect frames as a sequence. A still image cannot prove easing, pinning or inte
 
 ## Build generated visual continuity
 
+For a prompt/reference-image “product rotates as I scroll” journey, follow
+`generated-product-scrubber.md`. This route uses generated camera movement and
+pre-rendered frames; it does not require CAD, GLB or WebGL.
+
 For a multi-clip journey:
 
 1. approve a still keyframe and visual brief;

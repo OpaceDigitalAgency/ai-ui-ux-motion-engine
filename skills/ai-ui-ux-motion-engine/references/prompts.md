@@ -48,6 +48,24 @@ Report motion purpose, input parity, reduced-motion behaviour, mobile fallback, 
 Do not edit files.
 ```
 
+## Prompt/reference-image product film
+
+```text
+Use $ai-ui-ux-motion-engine and the generated product scrubber workflow.
+
+Create a watch-style, scroll-linked inspection of this product using approved
+reference images and prompts, not CAD or a GLB model. First approve one clean
+still and lock subject geometry, lens, camera path, lighting, background,
+duration and end frame. Generate short silent clips, chain from exact final
+frames where needed, reject geometry/text drift, then deliver the lightest
+tested video or canvas scrubber.
+
+Keep the offer, H1, actions, labels and evidence copy in semantic HTML. Provide
+poster, reduced-motion, Save-Data, no-JavaScript and media-error fallbacks.
+Validate protected crops, native scrolling, keyboard/touch use, mobile Safari,
+desktop, console, performance and the full project baseline.
+```
+
 ## Micro refinement
 
 ```text

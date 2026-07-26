@@ -19,8 +19,8 @@ The package treats the videos as inspiration and strengthens their techniques wi
 | Same | goal/layout/voice/audience brief | `SKILL.md`, `prompts.md` |
 | Same | key offer high in page; hero alternatives | `SKILL.md`, `prompts.md` |
 | Same | targeted component comments and preview workaround | bounded component workflow; platform-neutral browser verification |
-| Zubair Trabzada, cinematic site workflow | scroll-linked video and canvas frame sequence | `motion-patterns.md`, `media-pipeline.md` |
-| Same | sequential end-frame chaining | `media-pipeline.md` with honest continuity limit |
+| Zubair Trabzada, cinematic site workflow | prompt/reference-image product films, scroll-linked video and canvas frame sequence without mandatory CAD | `generated-product-scrubber.md`, `motion-patterns.md`, `media-pipeline.md` |
+| Same | sequential end-frame chaining | `generated-product-scrubber.md`, `media-pipeline.md` with honest continuity limit |
 | Same | external media connector and local frame processing | `tool-connections.md`, extraction script |
 | Same | local preview and delivery validation | `verification.md` |
 | Jack Roberts, seven-level website workflow | references, design skills, media, components, research and design extraction | core workflow plus all reference modules |

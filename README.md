@@ -101,6 +101,10 @@ of fashionable effects.
 
 ### Motion graphics and interactive web design
 
+- prompt-to-video and reference-image-to-video product films without mandatory
+  CAD, GLB or WebGL assets
+- watch-style, scroll-linked product inspection with exact end-frame clip
+  chaining and high-resolution video or canvas delivery
 - CSS transitions, keyframes and progressive entrance effects
 - Intersection Observer reveals and native scroll-driven animations
 - GSAP timelines, ScrollTrigger pinning and horizontal scroll storytelling
@@ -283,6 +287,17 @@ sequences and Three.js. Choose the lightest architecture that can achieve the
 required spatial continuity, then provide a reduced-motion/static equivalent.
 ```
 
+### Prompt: watch-style generated product inspection
+
+```text
+Use $ai-ui-ux-motion-engine to create a watch-style product experience from
+approved reference images and prompts, without requiring CAD or a GLB model.
+Generate a controlled high-resolution camera move, chain clips from exact final
+frames when needed, and implement a scroll-linked video or canvas sequence with
+poster, reduced-motion, Save-Data and no-JavaScript fallbacks. Reject a
+three-image crossfade as insufficient.
+```
+
 ### Prompt: UI/UX and motion audit only
 
 ```text
@@ -328,6 +343,10 @@ Choose CSS first for local states, then Intersection Observer or native scroll
 animation, an existing framework library, GSAP for coordinated timelines,
 video/canvas for photographic sequences, or WebGL only when depth materially
 improves the story.
+
+For an authored product-camera journey, the skill now routes to generated
+image-to-video or prompt-to-video first. CAD and GLB assets are optional, not a
+precondition. Real-time WebGL remains the route for freely manipulable objects.
 
 ### 5. Multi-pass implementation
 

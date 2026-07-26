@@ -59,6 +59,11 @@ For Astro/static sites, prefer a CSS-highlight treatment driven by one small mod
 
 ## Video scrubber
 
+- Treat prompt/reference-image generation as a first-class source for authored
+  product camera moves. CAD or a GLB model is not required when the visitor
+  follows one pre-rendered path.
+- Read `generated-product-scrubber.md` before producing or integrating the
+  media.
 - Use `preload="metadata"` by default and provide a poster.
 - Wait for metadata before seeking.
 - Coalesce updates with `requestAnimationFrame`.
