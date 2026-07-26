@@ -2,6 +2,13 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 1.5.1 - 2026-07-26
+
+### Changed
+
+- Reissued the 1.5 generated-product-scrubber capability as a packaging patch
+  so GitHub's immutable release can include the versioned installation ZIP.
+
 ## 1.5.0 - 2026-07-26
 
 ### Added

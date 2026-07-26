@@ -53,9 +53,9 @@ curated vocabulary in useful prose, examples and headings.
 
 ## Release metadata
 
-- Tag: `v1.5.0`
+- Tag: `v1.5.1`
 - Release title:
-  `AI UI/UX Motion Engine v1.5.0 — generated product films and scroll scrubbing`
+  `AI UI/UX Motion Engine v1.5.1 — generated product films and scroll scrubbing`
 - Attach the versioned ZIP generated from the committed tree.
 - Summarise the supported agents, installer targets and validation evidence.
 
@@ -79,7 +79,7 @@ private project information.
 2. Set the description and all 20 topics.
 3. Keep the root `README.md`, `LICENSE`, `SECURITY.md` and
    `CONTRIBUTING.md`.
-4. Create the `v1.5.0` release and attach the matching ZIP.
+4. Create the `v1.5.1` release and attach the matching ZIP.
 5. Keep the contextual Opace web-design link in the README and repository
    website field.
 6. Submit or share useful examples rather than manufacturing keyword-heavy
