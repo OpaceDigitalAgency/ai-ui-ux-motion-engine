@@ -1,0 +1,33 @@
+name: Validate skill package
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate package structure and references
+        run: node skills/ai-ui-ux-motion-engine/scripts/validate-package.mjs
+      - name: Run motion-safety self-audit
+        run: node skills/ai-ui-ux-motion-engine/scripts/audit-motion-safety.mjs .
+      - name: Exercise every portable installer target
+        run: |
+          test_root="$(mktemp -d)"
+          targets="codex claude cursor antigravity antigravity-cli gemini copilot vscode cline roo opencode windsurf amp zed goose agents"
+          for target in $targets; do
+            destination="$test_root/$target"
+            ./scripts/install-skill.sh \
+              --target "$target" \
+              --scope project \
+              --destination "$destination"
+            test -f "$destination/ai-ui-ux-motion-engine/SKILL.md"
+          done

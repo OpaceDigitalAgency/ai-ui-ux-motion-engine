@@ -1,0 +1,39 @@
+name: Feature request
+description: Suggest a reusable improvement to AI UI/UX Motion Engine.
+title: "[Feature request]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Proposed capability
+      placeholder: Add a reusable motion-performance budget workflow
+    validations:
+      required: true
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Example requests
+      description: What would users ask an AI agent to do?
+      placeholder: |
+        Audit this scroll-linked video for mobile performance.
+        Produce reduced-motion alternatives for these interactions.
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Reusable workflows or resources
+      description: Describe scripts, references, templates or integrations the skill would need.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Contribution checks
+      options:
+        - label: The proposed workflow can be useful across more than one project.
+          required: true
+        - label: The request does not require private credentials or proprietary source material.
+          required: true

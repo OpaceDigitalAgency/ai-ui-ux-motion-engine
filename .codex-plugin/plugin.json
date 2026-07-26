@@ -1,0 +1,29 @@
+{
+  "name": "ai-ui-ux-motion-engine",
+  "version": "1.4.0",
+  "description": "Cross-platform AI website UI/UX, frontend and motion-design skill for Codex, Claude Code, Cursor, Copilot, Antigravity, Gemini, Windsurf and more.",
+  "author": {
+    "name": "David Bryan / Opace",
+    "url": "https://opace.agency/services/web-design/"
+  },
+  "homepage": "https://opace.agency/services/web-design/",
+  "repository": "https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine",
+  "license": "MIT",
+  "keywords": ["agent-skills", "ai-website-design", "frontend-design", "ui-design", "ux-design", "motion-design", "motion-graphics", "3d-web", "scroll-animation", "accessibility", "astro", "react", "nextjs", "codex-skill", "claude-code-skill", "cursor-skill", "copilot-skill", "antigravity-skill", "gemini-cli", "windsurf-skill"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI UI/UX Motion Engine",
+    "shortDescription": "Build distinctive, accessible motion-led websites.",
+    "longDescription": "Extracts design and interaction intent from references, develops a project-specific visual direction, implements purposeful motion without sacrificing accessibility or performance, and validates the finished experience.",
+    "developerName": "David Bryan / Opace",
+    "websiteURL": "https://opace.agency/services/web-design/",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": [
+      "Improve this site with purposeful motion and full validation.",
+      "Extract a design system from these references without cloning.",
+      "Audit this interface for visual, motion and UX quality."
+    ],
+    "brandColor": "#12B8A6"
+  }
+}

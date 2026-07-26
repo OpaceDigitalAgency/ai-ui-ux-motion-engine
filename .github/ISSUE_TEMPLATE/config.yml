@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Opace web design and development
+    url: https://opace.agency/services/web-design/
+    about: Discuss commercial website design and development projects with Opace.
+  - name: Private security report
+    url: https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine/security/advisories/new
+    about: Report a vulnerability privately instead of opening a public issue.

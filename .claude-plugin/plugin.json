@@ -1,0 +1,15 @@
+{
+  "name": "ai-ui-ux-motion-engine",
+  "displayName": "AI UI/UX Motion Engine",
+  "version": "1.4.0",
+  "description": "Cross-platform AI website UI/UX, frontend and motion-design skill for distinctive, accessible production interfaces.",
+  "author": {
+    "name": "David Bryan / Opace",
+    "url": "https://opace.agency/services/web-design/"
+  },
+  "homepage": "https://opace.agency/services/web-design/",
+  "repository": "https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine",
+  "license": "MIT",
+  "keywords": ["agent-skills", "ai-website-design", "frontend-design", "ui-design", "ux-design", "motion-design", "motion-graphics", "3d-web", "codex-skill", "claude-code-skill", "cursor-skill", "copilot-skill", "antigravity-skill", "gemini-cli", "windsurf-skill"],
+  "skills": "./skills/"
+}

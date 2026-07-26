@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a reproducible problem with a skill, installer or validator.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve Opace Agent Skills. Do not include credentials or private project data.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill and version
+      placeholder: ai-ui-ux-motion-engine 1.3.0
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: AI client or editor
+      options:
+        - OpenAI Codex
+        - Claude Code
+        - Cursor
+        - GitHub Copilot / VS Code
+        - Google Antigravity
+        - Gemini CLI
+        - Windsurf
+        - Cline
+        - Roo Code
+        - OpenCode
+        - Amp
+        - Zed
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the exact command or prompt and a minimal reproducible example.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation output
+      description: Remove secrets and customer data before pasting logs.

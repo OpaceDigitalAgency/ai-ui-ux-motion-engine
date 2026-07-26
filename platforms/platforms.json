@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "skill": "ai-ui-ux-motion-engine",
+  "canonicalSource": "skills/ai-ui-ux-motion-engine",
+  "targets": [
+    {
+      "id": "codex",
+      "names": ["OpenAI Codex", "Codex CLI", "Codex app"],
+      "aliases": ["codex"],
+      "projectPath": ".agents/skills",
+      "globalPath": "~/.agents/skills",
+      "package": ".codex-plugin/plugin.json",
+      "support": "native",
+      "docs": "https://learn.chatgpt.com/docs/build-skills.md"
+    },
+    {
+      "id": "claude",
+      "names": ["Claude Code", "Anthropic Claude Code"],
+      "aliases": ["claude"],
+      "projectPath": ".claude/skills",
+      "globalPath": "~/.claude/skills",
+      "package": ".claude-plugin/plugin.json",
+      "support": "native",
+      "docs": "https://code.claude.com/docs/en/skills"
+    },
+    {
+      "id": "cursor",
+      "names": ["Cursor", "Cursor AI"],
+      "aliases": ["cursor"],
+      "projectPath": ".cursor/skills",
+      "globalPath": "~/.cursor/skills",
+      "support": "native",
+      "docs": "https://cursor.com/docs/skills"
+    },
+    {
+      "id": "antigravity",
+      "names": ["Google Antigravity IDE"],
+      "aliases": ["antigravity"],
+      "projectPath": ".agents/skills",
+      "globalPath": "~/.gemini/config/skills",
+      "support": "native",
+      "docs": "https://codelabs.developers.google.com/getting-started-with-antigravity-skills"
+    },
+    {
+      "id": "antigravity-cli",
+      "names": ["Google Antigravity CLI"],
+      "aliases": ["antigravity-cli"],
+      "projectPath": ".agents/skills",
+      "globalPath": "~/.gemini/antigravity-cli/skills",
+      "support": "native",
+      "docs": "https://codelabs.developers.google.com/antigravity/how-to-create-agent-skills-for-antigravity-cli"
+    },
+    {
+      "id": "gemini",
+      "names": ["Gemini CLI", "Google Gemini CLI"],
+      "aliases": ["gemini"],
+      "projectPath": ".agents/skills",
+      "globalPath": null,
+      "support": "native-project",
+      "docs": "https://codelabs.developers.google.com/gemini-cli/how-to-create-agent-skills-for-gemini-cli"
+    },
+    {
+      "id": "copilot",
+      "names": ["GitHub Copilot", "GitHub Copilot CLI", "GitHub Copilot coding agent"],
+      "aliases": ["copilot", "vscode"],
+      "projectPath": ".github/skills",
+      "globalPath": "~/.copilot/skills",
+      "support": "native",
+      "docs": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills"
+    },
+    {
+      "id": "cline",
+      "names": ["Cline", "Cline for VS Code"],
+      "aliases": ["cline"],
+      "projectPath": ".cline/skills",
+      "globalPath": "~/.cline/skills",
+      "support": "native",
+      "docs": "https://docs.cline.bot/customization/skills"
+    },
+    {
+      "id": "roo",
+      "names": ["Roo Code", "Roo Code for VS Code"],
+      "aliases": ["roo"],
+      "projectPath": ".roo/skills",
+      "globalPath": "~/.roo/skills",
+      "support": "native",
+      "docs": "https://docs.roocode.com/features/skills"
+    },
+    {
+      "id": "opencode",
+      "names": ["OpenCode", "OpenCode AI"],
+      "aliases": ["opencode"],
+      "projectPath": ".opencode/skills",
+      "globalPath": "~/.config/opencode/skills",
+      "support": "native",
+      "docs": "https://opencode.ai/docs/skills"
+    },
+    {
+      "id": "windsurf",
+      "names": ["Windsurf", "Windsurf Cascade", "Devin Desktop Cascade"],
+      "aliases": ["windsurf"],
+      "projectPath": ".windsurf/skills",
+      "globalPath": "~/.codeium/windsurf/skills",
+      "support": "native",
+      "docs": "https://docs.windsurf.com/windsurf/cascade/skills"
+    },
+    {
+      "id": "amp",
+      "names": ["Amp", "Amp Code"],
+      "aliases": ["amp"],
+      "projectPath": ".agents/skills",
+      "globalPath": "~/.config/agents/skills",
+      "support": "native",
+      "docs": "https://ampcode.com/manual"
+    },
+    {
+      "id": "zed",
+      "names": ["Zed", "Zed Agent"],
+      "aliases": ["zed"],
+      "projectPath": ".agents/skills",
+      "globalPath": "~/.agents/skills",
+      "support": "native",
+      "docs": "https://zed.dev/docs/ai/skills"
+    },
+    {
+      "id": "goose",
+      "names": ["goose AI agent", "Block goose"],
+      "aliases": ["goose"],
+      "projectPath": ".agents/skills",
+      "globalPath": "~/.agents/skills",
+      "support": "agent-skills",
+      "docs": "https://block.github.io/goose/"
+    },
+    {
+      "id": "agents",
+      "names": ["Agent Skills compatible clients"],
+      "aliases": ["agents"],
+      "projectPath": ".agents/skills",
+      "globalPath": "~/.agents/skills",
+      "support": "open-standard",
+      "docs": "https://agentskills.io/specification"
+    }
+  ]
+}

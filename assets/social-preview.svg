@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">AI UI/UX Motion Engine</title>
+  <desc id="desc">AI website design and motion graphics skill for Codex, Claude Code, Cursor, Copilot, Antigravity and Gemini</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081719"/>
+      <stop offset="1" stop-color="#12383a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="75%" cy="20%" r="70%">
+      <stop offset="0" stop-color="#21d4c2" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#21d4c2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <rect width="1280" height="640" fill="url(#glow)"/>
+  <circle cx="1100" cy="100" r="250" fill="none" stroke="#21d4c2" stroke-opacity=".25" stroke-width="2"/>
+  <circle cx="1100" cy="100" r="170" fill="none" stroke="#21d4c2" stroke-opacity=".18" stroke-width="2"/>
+  <rect x="72" y="64" width="148" height="42" rx="21" fill="#21d4c2"/>
+  <text x="146" y="92" fill="#052322" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">OPEN SOURCE</text>
+  <text x="72" y="205" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="61" font-weight="800">AI UI/UX MOTION ENGINE</text>
+  <text x="72" y="276" fill="#bce9e5" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="500">AI website design • motion graphics • 3D web</text>
+  <text x="72" y="390" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="27">Codex  ·  Claude Code  ·  Cursor  ·  Copilot</text>
+  <text x="72" y="435" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="27">Antigravity  ·  Gemini  ·  Windsurf  ·  Cline  ·  More</text>
+  <rect x="72" y="510" width="560" height="3" fill="#21d4c2"/>
+  <text x="72" y="565" fill="#bce9e5" font-family="Arial, Helvetica, sans-serif" font-size="25">github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine</text>
+</svg>
