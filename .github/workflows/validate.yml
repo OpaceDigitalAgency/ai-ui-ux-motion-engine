@@ -26,6 +26,10 @@ jobs:
             --mode flagship > /tmp/cinematic-prompt.txt
           grep -q "IDENTITY LOCK" /tmp/cinematic-prompt.txt
           grep -q "SHOT 4" /tmp/cinematic-prompt.txt
+      - name: Install cinematic media dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
       - name: Exercise cinematic media preparation
         run: |
           ffmpeg -hide_banner -loglevel error -y \

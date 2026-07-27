@@ -77,7 +77,7 @@ for (const match of skill.matchAll(/\]\((references\/[^)]+)\)/g)) {
 const plugin = JSON.parse(await readFile(join(pluginRoot, ".codex-plugin/plugin.json"), "utf8"));
 if (plugin.name !== "ai-ui-ux-motion-engine") failures.push("Plugin name does not match skill.");
 if (!/^\d+\.\d+\.\d+(?:[-+].+)?$/.test(plugin.version ?? "")) failures.push("Plugin version is not semver.");
-if (plugin.version.split("+")[0] !== "1.6.1") failures.push("Plugin base version is not 1.6.1.");
+if (plugin.version.split("+")[0] !== "1.6.2") failures.push("Plugin base version is not 1.6.2.");
 if (plugin.homepage !== "https://opace.agency/services/web-design/") {
   failures.push("Codex plugin homepage does not point to Opace web design.");
 }
@@ -142,6 +142,15 @@ for (const phrase of [
   if (!generatedScrubber.includes(phrase)) {
     failures.push(`Generated scrubber is missing required section: ${phrase}`);
   }
+}
+
+const workflow = await readFile(join(pluginRoot, ".github/workflows/validate.yml"), "utf8");
+for (const phrase of [
+  "apt-get install -y ffmpeg",
+  "prepare-scroll-media.sh",
+  "validate-cinematic-brief.mjs",
+]) {
+  if (!workflow.includes(phrase)) failures.push(`Hosted validation is missing: ${phrase}`);
 }
 if (!readme.includes("https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine")) {
   failures.push("README is missing the standalone AI UI/UX Motion Engine repository.");
