@@ -65,6 +65,14 @@ Work on one bounded component at a time:
 
 Commit or checkpoint only after the component passes. Then continue to the next component.
 
+Use the lean path: one flagship per major journey, reuse valid chapters/crops/
+reversals, use 3–5 second supporting media only for a new fact and keep other
+motion code-native. Prove media before page work. Perform source/provider
+research once per run. Do not create multiple redesigns or documentation passes
+before proof. Run focused component validation first and the full regression
+once after final integration. Capture metadata, contact sheets and reports
+automatically.
+
 ### E. Regression and handoff
 
 Run the full project baseline after the final component. Compare against the intake record and report:
@@ -86,3 +94,13 @@ Use capability-based routing instead of hard-coding product names:
 - browser-capable agent: live interaction, responsive and console verification.
 
 The project’s current model policy overrides this heuristic.
+
+When the client/model supports subagents, default to parallel execution when
+two or more independent streams exist and delegation saves time. Use a
+high-capability multimodal lead for reference interpretation, truth mode,
+creative direction, spend and acceptance. Use faster capable models for
+bounded source inventory, provider/cost checks, brief validation, media
+preparation, technical QC, browser checks and documentation. Do not assign
+visual QC to a model without image/video inspection. Assign file ownership;
+never allow concurrent edits to the same files. Do not parallelise paid
+generations, approvals or dependent steps. Rejoin before decisions.

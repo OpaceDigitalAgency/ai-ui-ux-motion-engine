@@ -49,6 +49,7 @@ const required = [
   join(skillRoot, "scripts/validate-cinematic-brief.mjs"),
   join(skillRoot, "scripts/render-cinematic-prompt.mjs"),
   join(skillRoot, "scripts/prepare-scroll-media.sh"),
+  join(skillRoot, "scripts/validate-scroll-media.mjs"),
 ];
 
 for (const path of required) {
@@ -65,6 +66,10 @@ for (const phrase of [
   "The user does not need to use a trigger word",
   "Produce one isolated private proof",
   "Never put a weak proof into a live hero",
+  "fastest route that can meet the accuracy target",
+  "Target 15–30 minutes",
+  "inspect every frame only",
+  "default to parallel execution",
 ]) {
   if (!skill.includes(phrase)) failures.push(`SKILL.md is missing cinematic guardrail: ${phrase}`);
 }
@@ -77,7 +82,7 @@ for (const match of skill.matchAll(/\]\((references\/[^)]+)\)/g)) {
 const plugin = JSON.parse(await readFile(join(pluginRoot, ".codex-plugin/plugin.json"), "utf8"));
 if (plugin.name !== "ai-ui-ux-motion-engine") failures.push("Plugin name does not match skill.");
 if (!/^\d+\.\d+\.\d+(?:[-+].+)?$/.test(plugin.version ?? "")) failures.push("Plugin version is not semver.");
-if (plugin.version.split("+")[0] !== "1.6.2") failures.push("Plugin base version is not 1.6.2.");
+if (plugin.version.split("+")[0] !== "1.6.4") failures.push("Plugin base version is not 1.6.4.");
 if (plugin.homepage !== "https://opace.agency/services/web-design/") {
   failures.push("Codex plugin homepage does not point to Opace web design.");
 }
@@ -137,6 +142,8 @@ for (const phrase of [
   "Provider preflight",
   "Attempt discipline",
   "ordinary long-GOP",
+  "short-GOP",
+  "Six correct screenshots",
   "Scaling across a site",
 ]) {
   if (!generatedScrubber.includes(phrase)) {
@@ -147,6 +154,7 @@ for (const phrase of [
 const workflow = await readFile(join(pluginRoot, ".github/workflows/validate.yml"), "utf8");
 for (const phrase of [
   "bash -n skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh",
+  "validate-scroll-media.mjs",
   "silent all-intra H.264",
   "prepare-scroll-media.sh",
   "validate-cinematic-brief.mjs",
@@ -155,6 +163,52 @@ for (const phrase of [
 }
 if (!readme.includes("https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine")) {
   failures.push("README is missing the standalone AI UI/UX Motion Engine repository.");
+}
+
+const scrollController = await readFile(
+  join(skillRoot, "assets/cinematic-scroll-controller.js"),
+  "utf8",
+);
+for (const phrase of [
+  "seekInFlight",
+  "pendingTime",
+  "loadeddata",
+  "cinematicReady",
+  "seekLatest",
+]) {
+  if (!scrollController.includes(phrase)) {
+    failures.push(`Scroll controller is missing seek-safety contract: ${phrase}`);
+  }
+}
+
+const scrollValidator = await readFile(
+  join(skillRoot, "scripts/validate-scroll-media.mjs"),
+  "utf8",
+);
+for (const phrase of [
+  "nonIntraFrames",
+  "audioStreams",
+  "Fast-start requirement failed",
+  "--poster",
+  "posterFirstFrameSsim",
+  "Poster/first-frame mismatch",
+  "moov",
+  "mdat",
+]) {
+  if (!scrollValidator.includes(phrase)) {
+    failures.push(`Scroll-media validator is missing delivery check: ${phrase}`);
+  }
+}
+
+for (const phrase of [
+  "accuracy-first",
+  "lean-scalable",
+  "safe-when-supported",
+  "automated-overview-dense-on-risk",
+]) {
+  if (!JSON.stringify(cinematicBrief).includes(phrase)) {
+    failures.push(`Cinematic brief is missing workflow guardrail: ${phrase}`);
+  }
 }
 
 for (const entry of await readdir(join(pluginRoot, "skills"), {

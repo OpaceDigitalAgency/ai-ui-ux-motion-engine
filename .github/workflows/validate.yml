@@ -15,6 +15,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install pinned FFmpeg toolchain
+        uses: FedericoCarboni/setup-ffmpeg@36c6454b5a2348e7794ba2d82a21506605921e3d
+        with:
+          ffmpeg-version: release
       - name: Validate package structure and references
         run: node skills/ai-ui-ux-motion-engine/scripts/validate-package.mjs
       - name: Validate cinematic brief and prompt generation
@@ -31,6 +35,28 @@ jobs:
           bash -n skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh
           bash skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh --help \
             | grep -q "silent all-intra H.264"
+          command -v ffmpeg
+          command -v ffprobe
+          ffmpeg -hide_banner -loglevel error -y \
+            -f lavfi -i "testsrc2=size=320x180:rate=12:duration=1" \
+            -c:v libx264 -pix_fmt yuv420p /tmp/scroll-source.mp4
+          bash skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh \
+            /tmp/scroll-source.mp4 /tmp/scroll-media --frames 12 --width 320
+          node skills/ai-ui-ux-motion-engine/scripts/validate-scroll-media.mjs \
+            /tmp/scroll-media/scroll-master.mp4 \
+            --poster /tmp/scroll-media/poster.jpg \
+            --json /tmp/scroll-media/revalidated.json
+          ffmpeg -hide_banner -loglevel error -y \
+            -f lavfi -i "color=c=red:size=320x180" -frames:v 1 \
+            /tmp/scroll-media/wrong-poster.jpg
+          if node skills/ai-ui-ux-motion-engine/scripts/validate-scroll-media.mjs \
+            /tmp/scroll-media/scroll-master.mp4 \
+            --poster /tmp/scroll-media/wrong-poster.jpg; then
+            echo "Mismatched poster unexpectedly passed" >&2
+            exit 1
+          fi
+          test -s /tmp/scroll-media/delivery-validation.json
+          test -s /tmp/scroll-media/revalidated.json
       - name: Run motion-safety self-audit
         run: node skills/ai-ui-ux-motion-engine/scripts/audit-motion-safety.mjs .
       - name: Exercise every portable installer target

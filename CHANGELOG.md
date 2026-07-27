@@ -2,6 +2,52 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 1.6.4 - 2026-07-27
+
+### Added
+
+- Mandatory poster-to-first-frame validation. The shipping poster must match
+  the shipping MP4's aspect ratio and achieve at least 0.99 SSIM against its
+  exact decoded opening frame.
+- Accuracy-first workflow fields for lean delivery, target/escalation time,
+  safe parallelism and risk-led frame inspection.
+- CI rejection proof using a deliberately mismatched poster.
+
+### Changed
+
+- Media preparation now generates the poster from the finished all-intra
+  shipping master before validating the pair.
+- Browser acceptance rejects crop, scale, position, filter or mask changes at
+  the poster-to-film handoff.
+- The scalable default reuses one flagship across chapters and limits
+  supporting films to genuinely new facts.
+- Automated technical checks plus overview contact sheets are routine; dense
+  sampling is limited to risky transitions, with exhaustive review reserved
+  for defects or explicitly evidence-critical mechanics.
+- Explicit timeboxes and safe model-aware parallelism reduce process bloat
+  while retaining truth, spend and acceptance decisions with the lead model.
+
+## 1.6.3 - 2026-07-27
+
+### Added
+
+- Deterministic `validate-scroll-media.mjs` gate proving that the exact shipping
+  MP4 is silent H.264/yuv420p, fast-start, inside budget and 100% independent
+  I-frames.
+- Executable CI coverage that creates, prepares and revalidates a synthetic
+  scroll master rather than syntax-checking the media pipeline alone.
+
+### Changed
+
+- The reference controller now permits one seek at a time, retains only the
+  newest pending target and permanently latches the video visible after its
+  first decoded frame.
+- Scroll acceptance now requires full-speed forward, reverse and rapid
+  direction-change evidence with zero poster exposure. Settled checkpoints and
+  normal playback are explicitly insufficient.
+- Short-GOP files and crossfade montages are rejected alongside ordinary
+  long-GOP video.
+
 ## 1.6.2 - 2026-07-27
 
 ### Changed

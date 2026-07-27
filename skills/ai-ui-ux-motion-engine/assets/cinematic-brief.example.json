@@ -1,6 +1,14 @@
 {
   "project": "Private product-film proof",
   "truthMode": "identity-locked",
+  "workflow": {
+    "profile": "lean-scalable",
+    "accuracyPriority": "accuracy-first",
+    "targetMinutes": 60,
+    "escalationMinutes": 75,
+    "parallelism": "safe-when-supported",
+    "frameInspection": "automated-overview-dense-on-risk"
+  },
   "experience": {
     "placement": "homepage flagship",
     "tier": "flagship",

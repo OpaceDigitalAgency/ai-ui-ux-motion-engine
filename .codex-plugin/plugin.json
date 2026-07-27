@@ -1,7 +1,7 @@
 {
   "name": "ai-ui-ux-motion-engine",
-  "version": "1.6.2",
-  "description": "Cinematic-first website UI/UX and motion-design skill with provider intake, product-film prompts, scroll-media tooling and production validation.",
+  "version": "1.6.4",
+  "description": "Accuracy-first cinematic website skill with timeboxed product-film production, reusable scroll media and fail-closed validation.",
   "author": {
     "name": "David Bryan / Opace",
     "url": "https://opace.agency/services/web-design/"
@@ -9,18 +9,42 @@
   "homepage": "https://opace.agency/services/web-design/",
   "repository": "https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine",
   "license": "MIT",
-  "keywords": ["agent-skills", "ai-website-design", "frontend-design", "ui-design", "ux-design", "motion-design", "motion-graphics", "3d-web", "scroll-animation", "accessibility", "astro", "react", "nextjs", "codex-skill", "claude-code-skill", "cursor-skill", "copilot-skill", "antigravity-skill", "gemini-cli", "windsurf-skill"],
+  "keywords": [
+    "agent-skills",
+    "ai-website-design",
+    "frontend-design",
+    "ui-design",
+    "ux-design",
+    "motion-design",
+    "motion-graphics",
+    "3d-web",
+    "scroll-animation",
+    "accessibility",
+    "astro",
+    "react",
+    "nextjs",
+    "codex-skill",
+    "claude-code-skill",
+    "cursor-skill",
+    "copilot-skill",
+    "antigravity-skill",
+    "gemini-cli",
+    "windsurf-skill"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "AI UI/UX Motion Engine",
-    "shortDescription": "Build cinematic, scroll-led production websites.",
-    "longDescription": "Infers cinematic intent, confirms media-provider and accuracy requirements before coding, proves one private signature sequence, generates repeatable product-film prompts and scroll assets, then builds and validates the finished production experience.",
+    "shortDescription": "Build accurate cinematic sites without wasted work.",
+    "longDescription": "Chooses the fastest route that preserves accuracy, proves one private signature sequence, reuses one master film across page chapters, parallelises safe independent work and fails closed on unreliable scroll media.",
     "developerName": "David Bryan / Opace",
     "websiteURL": "https://opace.agency/services/web-design/",
     "category": "Developer Tools",
-    "capabilities": ["Interactive", "Write"],
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
     "defaultPrompt": [
-      "Create a cinematic scroll reveal and identify media needs first.",
+      "Create an accuracy-first, timeboxed cinematic scroll reveal.",
       "Extract a design system from these references without cloning.",
       "Audit this interface for visual, motion and UX quality."
     ],

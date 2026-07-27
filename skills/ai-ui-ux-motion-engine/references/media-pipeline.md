@@ -55,11 +55,30 @@ bash scripts/prepare-scroll-media.sh accepted-film.mp4 ./scroll-media
 ```
 
 The script creates a silent all-intra scrub master, 150 JPEG frames at 1600px
-by default, poster, contact sheet and ffprobe metadata.
+by default, poster, contact sheet, ffprobe metadata and a machine-readable
+delivery-validation report. The script fails if its own master is not genuinely
+all-intra, silent and fast-start.
+
+Validate any renamed, recompressed or CDN-produced shipping derivative again:
+
+```bash
+node scripts/validate-scroll-media.mjs shipping.mp4 \
+  --poster shipping-poster.jpg \
+  --json delivery-validation.json
+```
+
+Generate the poster from the exact shipping MP4, not a raw source, storyboard
+still or separately cropped frame. The validator requires matching aspect ratio
+and at least 0.99 SSIM against the decoded first frame. Render poster and video
+with identical fit, position, transform, filter and mask rules.
 
 Use all-intra video only after target-browser seeking passes. Use the frame
 sequence when exact frame mapping or device reliability requires it. Never
 silently fall back to ordinary long-GOP scrubbing after visible jitter.
+
+Normal playback is not a scrub test. A held opening image, crossfade montage or
+short-GOP encode can look clean when played from start to finish and still fail
+random forward/reverse seeking.
 
 ## Quality-control evidence
 
@@ -73,6 +92,11 @@ For every attempt retain:
 
 Do not trim around identity or geometry drift and reuse the remainder as if the
 whole action passed.
+
+Automate technical validation and create an overview contact sheet by default.
+Sample difficult transitions densely. Inspect every frame only after a detected
+defect or when the brief explicitly marks the mechanics evidence-critical; do
+not make exhaustive manual frame review the routine path.
 
 ## Delivery requirements
 

@@ -7,6 +7,7 @@ Usage: prepare-scroll-media.sh INPUT.mp4 OUTPUT_DIR [--frames COUNT] [--width PX
 
 Creates:
   scroll-master.mp4  silent all-intra H.264 for responsive direct seeking
+  delivery-validation.json  machine-readable proof of the scrub master
   poster.jpg         first-frame fallback
   frames/*.jpg       exact scroll sequence
   contact-sheet.jpg  evenly sampled QC overview
@@ -52,9 +53,14 @@ ffmpeg -hide_banner -loglevel error -y -i "$input" \
   -g 1 -keyint_min 1 -sc_threshold 0 -pix_fmt yuv420p \
   -movflags +faststart "$output_dir/scroll-master.mp4"
 
-ffmpeg -hide_banner -loglevel error -y -i "$input" \
+ffmpeg -hide_banner -loglevel error -y -i "$output_dir/scroll-master.mp4" \
   -frames:v 1 -vf "scale=${width}:-2:flags=lanczos" -q:v 2 \
   "$output_dir/poster.jpg"
+
+node "$(dirname "$0")/validate-scroll-media.mjs" \
+  "$output_dir/scroll-master.mp4" \
+  --poster "$output_dir/poster.jpg" \
+  --json "$output_dir/delivery-validation.json"
 
 ffmpeg -hide_banner -loglevel error -y -i "$input" \
   -vf "fps=${rate},scale=${width}:-2:flags=lanczos" -frames:v "$frame_count" \

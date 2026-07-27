@@ -17,11 +17,15 @@ content. It is not real-time 3D.
 6. Render the prompt from the brief; do not improvise a different production
    method.
 7. Generate one private proof.
-8. Inspect contact sheets and dense frames; reject identity or mechanical drift.
+8. Inspect the overview contact sheet and sample risky transitions densely only
+   where identity or mechanical drift could occur.
 9. Convert accepted media to an all-intra scrub master and frame sequence.
-10. Prove forward/backward scroll on an isolated private route.
-11. Obtain approval before page integration or further generation.
-12. Reuse the approved film and component across chapters where appropriate.
+10. Generate the poster from the exact shipping master and validate both
+    together with `validate-scroll-media.mjs`.
+11. Prove forward/backward scroll and rapid direction changes on an isolated
+    private route.
+12. Obtain approval before page integration or further generation.
+13. Reuse the approved film and component across chapters where appropriate.
 
 ## Route by truth mode
 
@@ -176,6 +180,22 @@ This produces:
 - a contact sheet;
 - source metadata.
 
+Before integration run:
+
+```bash
+node scripts/validate-scroll-media.mjs \
+  ./scroll-media/scroll-master.mp4 \
+  --poster ./scroll-media/poster.jpg \
+  --json ./scroll-media/delivery-validation.json
+```
+
+The command must report every decoded frame as an independent keyframe, zero
+audio streams, H.264/yuv420p delivery, a fast-start atom order and a file size
+inside the explicit page budget. It must also prove matching poster/video aspect
+ratio and at least 0.99 structural similarity between the poster and exact
+first decoded frame. A filename containing `all-intra`, `scroll` or `master`
+is not evidence.
+
 ### Use all-intra video when
 
 - the encoded size fits the page budget;
@@ -185,6 +205,10 @@ This produces:
 
 Do not scrub an ordinary long-GOP delivery file merely because it plays
 normally. Long distances between keyframes can cause jumps.
+
+Do not accept a short-GOP file either. Any P- or B-frame means the shipping
+video failed the direct-seek contract, even if manual forward scrolling appears
+acceptable once.
 
 ### Use a canvas sequence when
 
@@ -204,11 +228,19 @@ Adapt it to project conventions rather than rewriting the seek loop casually.
 - Use a sticky stage inside a normal document-height wrapper.
 - Map bounded wrapper progress to `0..duration`.
 - Coalesce seeks with `requestAnimationFrame`.
+- Permit only one seek in flight and retain only the newest pending target.
+- Latch the video visible after its first `loadeddata`/decoded frame; never
+  reveal the poster again merely because `readyState` drops during a seek.
+- Use the validated first-frame poster in the same CSS box with identical
+  `object-fit`, `object-position`, transform, filter and mask rules.
 - Ignore tiny deltas.
 - Pause work off screen.
 - Never hijack native scrolling.
 - Trigger DOM chapters from the same progress value.
 - Test reverse as well as forward scroll.
+- Stress at least one full-speed forward pass, one full-speed reverse pass and
+  three rapid direction changes while recording current time, seeking state,
+  video visibility and poster exposure.
 - Keep the full product inside a protected responsive crop.
 
 For Astro/static, render semantic content and poster server-side and add one
@@ -232,6 +264,12 @@ Do not generate a new flagship film for every section.
 Reject if the result is only still-image crossfades, CSS zoom/parallax, an
 unrelated background video, an unsynchronised film, a slight single action
 mislabelled as a flagship, or a visibly jittery scrub.
+
+Six correct screenshots at settled positions do not prove the scrubber. Reject
+if the video layer ever becomes hidden after first decode, the poster is
+exposed during travel, seeks overlap, time settles against an obsolete target,
+rapid reverse/forward input leaves a blank or stale stage, or the first decoded
+frame changes crop, scale, position, filter or mask from the poster.
 
 Require:
 

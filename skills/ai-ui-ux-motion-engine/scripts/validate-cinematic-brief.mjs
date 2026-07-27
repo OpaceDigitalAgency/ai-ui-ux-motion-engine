@@ -17,6 +17,10 @@ const brief = JSON.parse(await readFile(briefPath, "utf8"));
 const failures = [];
 const truthModes = new Set(["illustrative", "identity-locked", "evidence-accurate"]);
 const tiers = new Set(["flagship", "supporting", "code-native"]);
+const workflowProfiles = new Set(["lean-scalable"]);
+const accuracyPriorities = new Set(["accuracy-first"]);
+const parallelismModes = new Set(["safe-when-supported", "off"]);
+const frameInspectionModes = new Set(["automated-overview-dense-on-risk"]);
 
 const requireValue = (value, label) => {
   if (value === undefined || value === null || value === "") failures.push(`${label} is required.`);
@@ -24,6 +28,25 @@ const requireValue = (value, label) => {
 
 requireValue(brief.project, "project");
 if (!truthModes.has(brief.truthMode)) failures.push("truthMode is invalid.");
+if (!workflowProfiles.has(brief.workflow?.profile)) failures.push("workflow.profile is invalid.");
+if (!accuracyPriorities.has(brief.workflow?.accuracyPriority)) {
+  failures.push("workflow.accuracyPriority must be accuracy-first.");
+}
+if (!Number.isInteger(brief.workflow?.targetMinutes) || brief.workflow.targetMinutes < 5) {
+  failures.push("workflow.targetMinutes must be an integer of at least 5.");
+}
+if (
+  !Number.isInteger(brief.workflow?.escalationMinutes) ||
+  brief.workflow.escalationMinutes < brief.workflow?.targetMinutes
+) {
+  failures.push("workflow.escalationMinutes must be an integer no lower than targetMinutes.");
+}
+if (!parallelismModes.has(brief.workflow?.parallelism)) {
+  failures.push("workflow.parallelism is invalid.");
+}
+if (!frameInspectionModes.has(brief.workflow?.frameInspection)) {
+  failures.push("workflow.frameInspection is invalid.");
+}
 if (!tiers.has(brief.experience?.tier)) failures.push("experience.tier is invalid.");
 requireValue(brief.experience?.placement, "experience.placement");
 requireValue(brief.experience?.durationSeconds, "experience.durationSeconds");

@@ -15,6 +15,10 @@ branding, copy, code or protected assets.
   current working-tree changes before editing.
 - Define the bounded target, acceptance criteria, dependencies, spend and
   validation plan.
+- Use the fastest route that can meet the accuracy target. For real products,
+  default to `evidence-accurate` when authoritative sources exist; never trade
+  accuracy silently for spectacle. State early when CAD, compositing or real
+  footage is required.
 - Preserve the existing stack unless the user explicitly authorises a change.
 - Label observations, facts, proposals, generated visualisations and unknowns.
 - Keep content and actions usable without motion, JavaScript or unrestricted
@@ -61,11 +65,16 @@ Before editing the page:
    before generation.
 6. Produce one isolated private proof of the signature moment before redesigning
    the page or generating the full library.
-7. Reject drift with contact-sheet and dense-frame evidence. Use at most the
-   approved attempts; then simplify the action, change technique or report the
-   blocker.
+7. Reject drift with automated technical checks and an overview contact sheet.
+   Sample only risky transitions densely; inspect every frame only for a
+   detected defect or evidence-critical mechanics. Use at most the approved
+   attempts; then simplify the action, change technique or report the blocker.
 8. Integrate only an approved asset. Never put a weak proof into a live hero to
    see whether surrounding UI rescues it.
+
+Keep the first response concise: confirm the accuracy target, source readiness,
+provider/spend authority, desired placements and delivery/time budget. Do not
+ask the user to choose implementation details the skill can determine.
 
 “First time” means selecting the correct professional route and bounded proof
 immediately. It cannot guarantee that a stochastic provider’s first render
@@ -125,11 +134,40 @@ Choose the lightest mechanism that preserves the intended experience:
 For cinematic product motion, the media is the experience. Prove it first; do
 not expect CSS transforms to create the missing film.
 
+Use the lean scalable default:
+
+- one master flagship per major journey;
+- reuse approved chapters, crops and clean reversals where they stay truthful;
+- add a 3–5 second supporting shot only for a genuinely new fact;
+- use code-native motion everywhere else.
+
+Target 15–30 minutes for a private proof when sources/provider are ready,
+30–60 minutes for an approved flagship plus scroll delivery, and 5–10 minutes
+for a derivative or supporting integration. Allow 75–120 minutes only for new
+or inconsistent source packs, evidence-critical mechanics, CAD or compositing.
+These are targets, not guarantees. If a timebox is exceeded, report the
+evidence and obtain approval before continuing.
+
 ### 5. Implement in bounded passes
 
 Build semantic content, macro layout, the approved signature motion,
 micro-states, responsive composition and editorial polish. Keep text, labels
 and actions in the DOM rather than baking them into generated media.
+
+Prevent process bloat: prove media before page work; perform provider and
+source research once per run; do not create multiple redesigns or documentation
+passes before proof; run a focused component test first and the full regression
+once after final integration; capture technical evidence automatically.
+
+When the client/model supports subagents, default to parallel execution whenever
+two or more independent streams exist and delegation saves time. Parallelise
+source audit, provider capability/current cost, brief validation, media
+preparation/QC, browser checks and documentation. Give visual interpretation,
+truth mode, creative direction, spend and acceptance to the lead
+high-capability multimodal model; use faster capable models for bounded
+mechanical work. Never assign visual QC to a model that cannot inspect the
+media, let agents edit the same files concurrently, or parallelise paid
+generation, approvals or dependent steps. Rejoin before decisions.
 
 ### 6. Validate
 
@@ -140,8 +178,17 @@ crop and fallback. Then run:
 
 ```bash
 node scripts/audit-motion-safety.mjs <project-directory>
+node scripts/validate-scroll-media.mjs <shipping-scroll-master.mp4> \
+  --poster <shipping-poster.jpg>
 node scripts/validate-package.mjs
 ```
+
+Fail closed: if the media validator fails, the poster reappears after the first
+decoded frame, seeks overlap, rapid direction changes expose stale or blank
+frames, the poster changes crop or scale against the first decoded frame, or
+the film is only still-image crossfades, do not ship the scrubber. Use the
+numbered canvas sequence or a static fallback until the complete gate passes.
+Six settled checkpoints alone are insufficient.
 
 Run the project’s full regression baseline before handoff. Read
 [verification.md](references/verification.md).
@@ -174,6 +221,7 @@ Reusable assets and scripts:
 - `scripts/validate-cinematic-brief.mjs`
 - `scripts/render-cinematic-prompt.mjs`
 - `scripts/prepare-scroll-media.sh`
+- `scripts/validate-scroll-media.mjs`
 
 ## Completion report
 

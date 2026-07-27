@@ -43,7 +43,8 @@ corrections:
   tolerance for generated detail;
 - inconsistent reference packs and multi-action prompts cause avoidable drift;
 - ordinary long-GOP video can visibly jump during direct scroll seeking;
-- accepted footage needs all-intra/frame-sequence preparation and dense QC;
+- accepted footage needs all-intra/frame-sequence preparation, automated
+  technical checks and risk-led visual QC;
 - a missing requested shot is a disclosed exception, not parity;
 - weak proofs must never be wired into a hero as an experiment.
 

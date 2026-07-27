@@ -35,8 +35,29 @@ If provider access, source assets or authority are missing, say:
 
 Continue independently when these answers already exist.
 
+Keep the request to five decisions: accuracy target, source readiness,
+provider/spend authority, desired placements and delivery/time budget. Do not
+ask the user to choose implementation mechanics.
+
 “First time” means the correct media route, questions, proof and stop rules are
 used from the beginning. Generated video remains probabilistic.
+
+## Accuracy-first routing
+
+Use the fastest route that can meet the stated accuracy. For real products with
+authoritative sources, default to evidence-accurate. Never substitute an
+illustrative spectacular result silently. State before generation when exact
+mechanics require CAD, compositing or real footage.
+
+Use these target timeboxes:
+
+- 15–30 minutes: private proof with ready sources and provider;
+- 30–60 minutes: approved flagship plus scroll delivery;
+- 5–10 minutes: derivative or supporting integration;
+- 75–120 minutes: only for new/inconsistent sources, evidence-critical
+  mechanics, CAD or compositing.
+
+If a target is exceeded, report why and obtain approval before continuing.
 
 ## Three production tiers
 
@@ -89,7 +110,7 @@ The first deliverable is:
 1. the validated cinematic brief;
 2. the prepared reference pack;
 3. one generated proof;
-4. contact-sheet and dense-frame QC;
+4. automated technical checks, an overview contact sheet and risk-led dense QC;
 5. an isolated scroll prototype with poster and reduced-motion fallback.
 
 Do not redesign, publish or populate multiple routes until the user approves

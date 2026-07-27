@@ -1,4 +1,4 @@
 interface:
   display_name: "AI UI UX Motion Engine"
-  short_description: "Build cinematic, scroll-led production websites"
-  default_prompt: "Use $ai-ui-ux-motion-engine to create a cinematic scroll-led experience, identify required media tools first, prove one private signature sequence, and then build and validate it."
+  short_description: "Build accurate cinematic sites without wasted work"
+  default_prompt: "Use $ai-ui-ux-motion-engine to create an accuracy-first, timeboxed cinematic experience, reuse one master sequence, and parallelise safe independent work."
