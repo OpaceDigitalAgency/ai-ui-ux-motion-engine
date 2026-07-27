@@ -2,6 +2,13 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 1.6.1 - 2026-07-27
+
+### Changed
+
+- Reissued the v1.6 cinematic-first workflow as a packaging patch so GitHub's
+  immutable release can include the archive built from the tagged commit.
+
 ## 1.6.0 - 2026-07-27
 
 ### Added
