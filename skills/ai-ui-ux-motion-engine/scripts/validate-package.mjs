@@ -146,7 +146,8 @@ for (const phrase of [
 
 const workflow = await readFile(join(pluginRoot, ".github/workflows/validate.yml"), "utf8");
 for (const phrase of [
-  "apt-get install -y ffmpeg",
+  "bash -n skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh",
+  "silent all-intra H.264",
   "prepare-scroll-media.sh",
   "validate-cinematic-brief.mjs",
 ]) {

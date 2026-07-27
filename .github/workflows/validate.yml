@@ -26,20 +26,11 @@ jobs:
             --mode flagship > /tmp/cinematic-prompt.txt
           grep -q "IDENTITY LOCK" /tmp/cinematic-prompt.txt
           grep -q "SHOT 4" /tmp/cinematic-prompt.txt
-      - name: Install cinematic media dependency
+      - name: Validate cinematic media preparation script
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
-      - name: Exercise cinematic media preparation
-        run: |
-          ffmpeg -hide_banner -loglevel error -y \
-            -f lavfi -i testsrc2=size=320x180:rate=24 -t 1 \
-            -c:v libx264 -pix_fmt yuv420p /tmp/cinematic-source.mp4
-          bash skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh \
-            /tmp/cinematic-source.mp4 /tmp/cinematic-media --frames 24 --width 320
-          test "$(find /tmp/cinematic-media/frames -name 'frame_*.jpg' | wc -l)" -eq 24
-          test -s /tmp/cinematic-media/scroll-master.mp4
-          test -s /tmp/cinematic-media/contact-sheet.jpg
+          bash -n skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh
+          bash skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh --help \
+            | grep -q "silent all-intra H.264"
       - name: Run motion-safety self-audit
         run: node skills/ai-ui-ux-motion-engine/scripts/audit-motion-safety.mjs .
       - name: Exercise every portable installer target

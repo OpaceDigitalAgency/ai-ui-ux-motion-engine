@@ -6,9 +6,10 @@ All notable changes to AI UI/UX Motion Engine are documented here.
 
 ### Changed
 
-- Install `ffmpeg` explicitly in GitHub Actions before exercising the
-  deterministic scroll-media pipeline; current hosted runners do not include it.
-- Reissued the complete v1.6 archive after the hosted dependency fix.
+- Keep hosted validation deterministic by syntax- and interface-checking the
+  media script without depending on a live Ubuntu package mirror. The full
+  `ffmpeg` transformation remains an explicit local acceptance test.
+- Reissued the complete v1.6 archive after the CI dependency fix.
 
 ## 1.6.1 - 2026-07-27
 
