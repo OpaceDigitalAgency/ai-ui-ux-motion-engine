@@ -1,3 +1,5 @@
+> **Opace open-source portfolio:** [Browse featured Opace Agent Skills, WordPress plugins, web platforms and interactive projects](https://github.com/OpaceDigitalAgency/OpaceDigitalAgency)
+
 # AI UI/UX Motion Engine: Website Design Skill for Codex, Claude Code, Cursor, Copilot, Antigravity and Gemini
 
 **Latest release: [v1.6.4](https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine/releases/tag/v1.6.4)**
