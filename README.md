@@ -1,5 +1,7 @@
 # AI UI/UX Motion Engine: Website Design Skill for Codex, Claude Code, Cursor, Copilot, Antigravity and Gemini
 
+**Latest release: [v1.6.2](https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine/releases/tag/v1.6.2)**
+
 **AI UI/UX Motion Engine** is an open Agent Skill and plugin from
 [Opace Digital Agency](https://opace.agency/services/web-design/) for AI
 website design, UI design, UX design, frontend development, motion graphics,
