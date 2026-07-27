@@ -1,4 +1,4 @@
 interface:
   display_name: "AI UI UX Motion Engine"
-  short_description: "Design and validate distinctive motion-led websites"
-  default_prompt: "Use $ai-ui-ux-motion-engine to improve this website with evidence-led design, purposeful motion, accessibility, and full validation."
+  short_description: "Build cinematic, scroll-led production websites"
+  default_prompt: "Use $ai-ui-ux-motion-engine to create a cinematic scroll-led experience, identify required media tools first, prove one private signature sequence, and then build and validate it."

@@ -1,211 +1,249 @@
-# Generated product scrubber
+# Cinematic generated-product scrubber
 
-Use this workflow for the high-detail “watch rotates or opens as I scroll”
-experience when the source material is photography, approved stills, prompts or
-generated keyframes rather than a CAD, GLB or USDZ model.
+Use this route when the experience depends on an authored photographic camera
+path, product reveal, assembly/disassembly, burst/exploded view, macro inspection
+or object state controlled by scrolling.
 
-This is a pre-rendered photographic 3D illusion. It is not freely manipulable
-3D. Do not describe it as a real-time 3D model.
+The deliverable is a pre-rendered film or frame sequence plus semantic DOM
+content. It is not real-time 3D.
 
-## Routing rule
+## Golden path
 
-Choose this route when:
+1. Run the cinematic-intent gate before editing the page.
+2. Classify truth mode and production tier.
+3. Verify provider capability, access, terms, cost and attempt authority.
+4. Create and validate a cinematic brief.
+5. Prepare one identity authority and only the shot-specific references needed.
+6. Render the prompt from the brief; do not improvise a different production
+   method.
+7. Generate one private proof.
+8. Inspect contact sheets and dense frames; reject identity or mechanical drift.
+9. Convert accepted media to an all-intra scrub master and frame sequence.
+10. Prove forward/backward scroll on an isolated private route.
+11. Obtain approval before page integration or further generation.
+12. Reuse the approved film and component across chapters where appropriate.
 
-- the visitor should follow one authored camera path;
-- surface detail and cinematic lighting matter more than arbitrary viewpoints;
-- a product photograph or approved keyframe exists;
-- the experience must be lighter than a real-time WebGL scene.
+## Route by truth mode
 
-Use WebGL or a product viewer only when the visitor must rotate freely, change
-parts, inspect any angle or interact with spatial state that cannot be
-pre-rendered.
+### Illustrative
 
-No CAD, GLB or 3D mesh is required for this workflow.
+The object may transform creatively, but its silhouette and designed visual
+identity should remain coherent. Use this for fictional products, abstract
+materials, paint/liquid bursts and explicitly conceptual visuals.
 
-## Production contract
+### Identity-locked
 
-Record before generation:
+Use one authority image for the product identity. Other references constrain
+individual shots and must not be averaged into a new product. Reject changes to
+recognisable proportions, materials, panels, ports or count.
 
-1. one approved hero/keyframe with no unlicensed logo, accidental text or
-   misleading product detail;
-2. a fixed subject description, lens, camera path, lighting, background and
-   aspect ratio;
-3. exact start and end states for each clip;
-4. target viewport, rendered dimensions and duration;
-5. disclosure and evidence status for generated or altered product media;
-6. user authority for any provider credits or paid generation.
+### Evidence-accurate
 
-Do not generate from an evidence photograph if the result could be mistaken for
-the exact ordered build. Either keep the motion illustrative or validate every
-visible product detail.
+Use authoritative photography, CAD or approved keyframes. Record exact counts,
+geometry, labels, ports, fasteners and permitted axes. If generation cannot
+preserve them within the attempt cap, simplify the action or use CAD,
+compositing or real footage. Never imply that generated media proves the
+delivered product.
 
-## Provider-independent prompt
+## Route by production tier
 
-```text
-REFERENCE IMAGE:
-Use the attached approved product keyframe as the exact subject reference.
+### Flagship film
 
-SUBJECT LOCK:
-Preserve the product's proportions, panel layout, ports, fasteners, materials
-and colour. Do not add or remove components. Do not invent logos, labels,
-numbers, watermarks, cables, hands or scenery.
+- 10–15 seconds is normally sufficient.
+- Use an authored progression: authority, access/change, inspection and payoff.
+- Choose a model that supports the required multi-reference and multi-shot
+  controls.
+- One paid attempt by default; one additional attempt only with explicit
+  approval.
+- A missing shot is a disclosed exception, not a silent success.
 
-CAMERA:
-One continuous controlled product-camera move. Begin at [START VIEW]. Move
-slowly [CAMERA PATH] and finish exactly at [END VIEW]. No cuts, whip pans,
-handheld motion, lens breathing or sudden speed change.
+### Supporting shot
 
-LIGHT:
-Premium studio product lighting with [LIGHT DESCRIPTION]. Preserve fine metal,
-glass, fabric or surface detail. Keep the background [BACKGROUND].
+- 3–5 seconds.
+- One action and one camera instruction.
+- One or two consistent references.
+- Use for cooling, connectors, materials, controlled pushes and simple physical
+  movement.
+- Do not stretch a small action into a flagship hero.
 
-DELIVERY:
-[DURATION] seconds, [ASPECT RATIO], highest available resolution, silent,
-clean first and final frames, stable subject geometry, no text.
-```
+### Code-native motion
 
-For a technical reveal, add only physically credible changes:
+Use CSS, SVG, canvas or an existing motion library when the effect explains
+data, airflow, state or typography and does not need photographic state change.
 
-```text
-During the move, transition from the complete exterior to an authorised
-cutaway or open configuration. Keep the chassis position, camera axis,
-fasteners and internal component locations consistent. The final frame must be
-clean and suitable as the reference image for the next clip.
-```
+## One-anchor burst preset
 
-Negative instructions are requirements, not decoration. Reject output with
-warped geometry, drifting ports, invented text, duplicated fans, changing
-materials or inconsistent final frames.
+For a fictional product, abstract material or illustrative reference-style
+experience:
 
-## Clip chaining
+1. approve one strong anchor image;
+2. reuse that same anchor for each independent clip;
+3. generate three simple movements rather than one overloaded film—typically a
+   controlled orbit/dolly, one exploded or burst action, and one macro/detail
+   move;
+4. keep each clip to one action and one camera instruction;
+5. reverse an accepted separation clip for reassembly when that reads cleanly;
+6. extract a consistent numbered frame sequence from every accepted segment;
+7. preload the opening frames and map the sequence to a pinned canvas;
+8. keep chapter text and controls in the DOM.
 
-For a journey longer than one reliable generation:
+Do not use this illustrative preset for evidence-accurate mechanics.
 
-1. generate a short first clip;
-2. extract its final clean frame with `ffmpeg`;
-3. inspect geometry, text and product fidelity;
-4. use that exact frame as the next clip’s reference;
-5. keep the subject lock, lens, light, colour and camera speed unchanged;
-6. compare both sides of the join at full resolution;
-7. regenerate or hide a failed join rather than calling it seamless.
+## Provider preflight
 
-Example:
+Before upload or generation, record:
+
+- current provider and model capability;
+- authenticated connection and upload availability;
+- accepted reference count and ordering;
+- duration, ratio, resolution, bitrate and audio controls;
+- current displayed cost;
+- user authority for uploads, terms and credits;
+- raw-download method;
+- attempt cap.
+
+Provider interfaces, models and prices change. Verify them live. Do not hard-code
+an obsolete model name merely because it worked previously.
+
+## Reference pack
+
+1. Select the identity-authority image.
+2. Remove or obtain permission for visible brands and accidental text.
+3. Match aspect ratio, orientation, crop, colour and lighting.
+4. Ensure different views can plausibly depict one object.
+5. Keep exact counts visible and unoccluded where they matter.
+6. Order references to follow the shot plan.
+7. Give each non-authority reference one named purpose.
+8. Reject inconsistent references before generation.
+
+More references do not automatically create more control. Inconsistent
+references create averaged or invented geometry.
+
+## Brief and prompt
+
+Copy `assets/cinematic-brief.example.json`, replace the example values, then run:
 
 ```bash
-ffmpeg -sseof -0.08 -i product-01.mp4 -frames:v 1 product-01-end.png
-ffmpeg -i product-01.mp4 -i product-02.mp4 \
-  -filter_complex "[0:v][1:v]concat=n=2:v=1:a=0[out]" \
-  -map "[out]" -movflags +faststart product-journey.mp4
+node scripts/validate-cinematic-brief.mjs cinematic-brief.json --check-files
+node scripts/render-cinematic-prompt.mjs cinematic-brief.json --mode flagship \
+  > cinematic-prompt.txt
 ```
 
-Continuity can be improved, never guaranteed.
+Use `--mode single` for a supporting shot and `--mode illustrative` for a burst
+or fictional transformation. Read [cinematic-prompts.md](cinematic-prompts.md)
+before changing the rendered structure.
 
-## Delivery choice
+## Prompt discipline
 
-Use an encoded video scrubber when:
+- State identity and positive immutable constraints first.
+- State exactly one action per supporting clip.
+- Use timed shot blocks and hard cuts for a multi-shot film.
+- Separate object motion from camera motion.
+- Require a clean still hold at useful cue points.
+- Keep readable text and labels outside generated pixels.
+- Reject a generic orbit when the brief requires a product story.
+- Do not add endless exclusions after bad output; diagnose references, action
+  complexity or model capability.
 
-- seeking is smooth on the target browsers;
-- the compressed file meets the project budget;
-- exact frame selection is not critical.
+## Attempt discipline
 
-Use a canvas frame sequence when:
+For each attempt:
 
-- exact frame-to-scroll mapping is required;
-- iOS or target-device video seeking is unreliable;
-- the request count and decoded-memory budget are controlled.
+1. save provider ID, model/settings, prompt and cost;
+2. download the raw result;
+3. produce a 30-frame overview sheet;
+4. sample difficult mechanical moments densely;
+5. decide pass, supporting-only, disclosed exception or reject;
+6. do not integrate rejected media.
 
-Use an ordinary short video when scroll linking adds no explanatory value.
+After the approved cap, change one material condition—references, model,
+complexity or technique. Do not keep rewriting synonyms.
 
-## Scroll mapping
+## Scrub delivery
 
-For video:
+Run:
 
-- render a semantic poster before JavaScript;
-- wait for metadata before seeking;
-- map bounded section progress to `0..duration`;
-- coalesce seeks with `requestAnimationFrame`;
-- ignore tiny seek deltas;
-- stop work while the section is off screen;
-- never block native scrolling.
+```bash
+bash scripts/prepare-scroll-media.sh accepted-film.mp4 ./scroll-media \
+  --frames 150 --width 1600
+```
 
-For canvas:
+This produces:
 
-- keep the poster as an adjacent accessible image or canvas fallback;
-- preload the opening frame;
-- fetch ahead in small windows;
-- evict decoded frames outside the active window;
-- size source frames close to their maximum rendered dimensions;
-- keep readable labels and calls to action in the DOM.
+- a silent all-intra H.264 master for responsive seeking;
+- a numbered JPEG sequence for exact canvas mapping;
+- a poster;
+- a contact sheet;
+- source metadata.
 
-## Astro/static recipe
+### Use all-intra video when
 
-1. Render the H1, offer, actions, poster and caption in Astro.
-2. Put the scrubber in a bounded sticky section with a normal document-height
-   wrapper.
-3. Add one small module script scoped by a data attribute.
-4. Use CSS custom properties or data states for progress-dependent annotation.
-5. Remove listeners and observers when the component is disconnected.
-6. Do not add React solely for the scrubber.
+- the encoded size fits the page budget;
+- seeking is smooth in the required browsers;
+- the film is the easiest responsive source;
+- direct testing proves forward and backward scroll.
 
-## React/Next recipe
+Do not scrub an ordinary long-GOP delivery file merely because it plays
+normally. Long distances between keyframes can cause jumps.
 
-1. Keep the hero copy and poster server rendered.
-2. Isolate seeking in one smallest client component.
-3. Call hooks at the component top level.
-4. Store the pending progress in a ref and seek in one animation frame.
-5. Avoid hydration-dependent layout values in the initial render.
-6. Test static export and direct route loading when the site is statically
-   deployed.
+### Use a canvas sequence when
 
-## SVG route
+- exact frame selection matters;
+- video seeking remains unreliable;
+- a flagship experience justifies controlled frame requests and memory;
+- frames can be sized near their rendered dimensions.
 
-Use SVG when the desired effect is explanatory rather than photographic:
+For canvas, show the poster first, fetch ahead in bounded windows, evict decoded
+frames outside the active window and retain all labels/actions in the DOM.
 
-- animate viewBox, masks, clip paths and grouped transforms;
-- keep labels as real text when they carry meaning;
-- use one scroll progress value to reveal layers or a data path;
-- avoid converting an entire interface to inaccessible paths;
-- provide the complete diagram without animation under reduced motion.
+## Scroll integration
 
-SVG cannot create authentic unseen product angles from one photograph. Use it
-for cutaways, airflow, exploded relationships and technical overlays.
+Use `assets/cinematic-scroll-controller.js` as the framework-neutral baseline.
+Adapt it to project conventions rather than rewriting the seek loop casually.
 
-## Reduced motion, data saving and failure states
+- Use a sticky stage inside a normal document-height wrapper.
+- Map bounded wrapper progress to `0..duration`.
+- Coalesce seeks with `requestAnimationFrame`.
+- Ignore tiny deltas.
+- Pause work off screen.
+- Never hijack native scrolling.
+- Trigger DOM chapters from the same progress value.
+- Test reverse as well as forward scroll.
+- Keep the full product inside a protected responsive crop.
 
-- `prefers-reduced-motion: reduce`: show the approved poster or a small static
-  sequence with manual labelled steps.
-- `Save-Data`: do not fetch the full sequence automatically.
-- JavaScript unavailable: keep the product, proposition and actions visible.
-- media failure: replace the stage with the poster and do not leave a blank
-  sticky viewport.
-- any clip containing speech needs captions; product films should normally be
-  silent.
+For Astro/static, render semantic content and poster server-side and add one
+small scoped module. For React/Next, isolate seeking in the smallest client
+component and keep the rest server-rendered.
 
-## Acceptance tests
+## Scaling across a site
 
-The result is not a cinematic product scrubber if it is only:
+Do not generate a new flagship film for every section.
 
-- three unrelated stills crossfading;
-- a static image scaling behind fixed text;
-- decorative parallax with no product relationship;
-- a CSS rotate transform pretending to reveal a new angle;
-- a video playing independently of the visitor’s progress.
+1. Use one flagship per major journey.
+2. Divide it into reusable DOM-labelled chapters.
+3. Add short supporting shots only where they explain a different product fact.
+4. Use code-native motion for diagrams, typography and interface state.
+5. Load one active cinematic asset per viewport.
+6. Lazy-load below-fold media and keep posters for mobile, reduced motion and
+   Save-Data.
+
+## Acceptance gate
+
+Reject if the result is only still-image crossfades, CSS zoom/parallax, an
+unrelated background video, an unsynchronised film, a slight single action
+mislabelled as a flagship, or a visibly jittery scrub.
 
 Require:
 
-- at least 24 visually distinct frames per authored motion segment, or smooth
-  encoded video seeking that visibly changes the camera/product relationship;
-- continuous subject geometry through the move;
-- the complete product inside a protected crop at every required viewport;
-- meaningful progress from exterior to detail, cutaway or operating evidence;
-- pointer, keyboard/touch reading and native-scroll compatibility;
-- reduced-motion, Save-Data, no-JavaScript and media-error fallbacks;
-- no console error, layout overflow or long-task regression;
-- browser evidence on mobile Safari/WebKit and representative desktop browsers.
+- the requested beginning, progression and payoff;
+- continuous identity and required counts/geometry;
+- clean cue frames and truthful disclosed exceptions;
+- smooth forward/backward progress;
+- protected crops at target viewports;
+- semantic DOM content and native scrolling;
+- poster, reduced-motion, Save-Data, no-JavaScript and media-error fallbacks;
+- browser, console, performance and full-project evidence;
+- private approval before production integration.
 
-## Handoff evidence
-
-Report the provider and model selected, source-image rights, prompt version,
-clip/frame count, output resolution and size, codecs or image formats,
-responsive crop, reduced-motion result, browsers tested and any product-detail
-inference that remains illustrative.
+Read [cinematic-case-study.md](cinematic-case-study.md) for failure patterns
+and the production choices that proved reliable.

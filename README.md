@@ -45,6 +45,13 @@ interactive hero sections, 3D scroll effects, scroll-linked video, GSAP
 ScrollTrigger, Framer Motion, Motion for React, Three.js, WebGL and accessible
 micro-interactions—without forcing every project into the same template.
 
+For cinematic scroll reveals, product-opening or assembly films, burst and
+exploded-view effects, the skill now recognises the intended experience before
+coding. It confirms accuracy, source media, provider access and spend; proves
+one private signature sequence; rejects hallucinated geometry; then prepares
+the approved media for smooth scroll delivery. Users do not need to know the
+tool name or ask for “wow”.
+
 > The skill extracts principles, structure and interaction intent. It does not
 > clone protected branding, copy, source code or assets.
 
@@ -63,12 +70,14 @@ reduced-motion users were considered.
 
 AI UI/UX Motion Engine replaces one-shot prompting with a production workflow:
 
-1. establish the brief, source of truth and test baseline;
-2. extract layout, design-system and motion principles from evidence;
-3. commit to one concrete visual direction;
-4. choose the lightest suitable motion architecture;
-5. implement macro design before micro-polish;
-6. validate accessibility, responsive behaviour, performance and regressions.
+1. detect whether the reference depends on cinematic source motion;
+2. confirm accuracy, sources, provider capability and spend before coding;
+3. prove one private signature sequence when cinematic media is required;
+4. establish the wider brief, source of truth and test baseline;
+5. extract layout, design-system and motion principles from evidence;
+6. commit to one concrete visual direction;
+7. implement approved media and macro design before micro-polish;
+8. validate identity, scrolling, accessibility, responsiveness and regressions.
 
 The result is a repeatable AI frontend-design method rather than a collection
 of fashionable effects.
@@ -281,10 +290,11 @@ baseline before reporting completion.
 ### Prompt: cinematic 3D scroll and video storytelling
 
 ```text
-Use $ai-ui-ux-motion-engine to plan a scroll-linked product story. Compare
-native scroll animation, GSAP ScrollTrigger, video scrubbing, canvas frame
-sequences and Three.js. Choose the lightest architecture that can achieve the
-required spatial continuity, then provide a reduced-motion/static equivalent.
+Use $ai-ui-ux-motion-engine to create an impressive cinematic,
+scroll-controlled product story from these references. Infer the required
+media route, confirm accuracy, provider access and credits before coding, and
+prove one private signature sequence before changing the page. Do not
+substitute photo fades, CSS zooms or generic background video.
 ```
 
 ### Prompt: watch-style generated product inspection
@@ -292,10 +302,10 @@ required spatial continuity, then provide a reduced-motion/static equivalent.
 ```text
 Use $ai-ui-ux-motion-engine to create a watch-style product experience from
 approved reference images and prompts, without requiring CAD or a GLB model.
-Generate a controlled high-resolution camera move, chain clips from exact final
-frames when needed, and implement a scroll-linked video or canvas sequence with
-poster, reduced-motion, Save-Data and no-JavaScript fallbacks. Reject a
-three-image crossfade as insufficient.
+Classify it as illustrative, identity-locked or evidence-accurate; confirm the
+provider and attempt budget; validate a cinematic brief; and prove one private
+film before integration. Reject geometry/count drift and prepare accepted media
+as an all-intra video plus exact frame sequence with static fallbacks.
 ```
 
 ### Prompt: UI/UX and motion audit only
@@ -344,9 +354,11 @@ animation, an existing framework library, GSAP for coordinated timelines,
 video/canvas for photographic sequences, or WebGL only when depth materially
 improves the story.
 
-For an authored product-camera journey, the skill now routes to generated
-image-to-video or prompt-to-video first. CAD and GLB assets are optional, not a
-precondition. Real-time WebGL remains the route for freely manipulable objects.
+For an authored product-camera journey, the skill now runs a mandatory
+cinematic intake before page implementation. It routes to generated
+image-to-video, prompt-to-video, controlled 3D/CAD, compositing or footage
+according to the required truth level. Real-time WebGL remains the route for
+freely manipulable objects.
 
 ### 5. Multi-pass implementation
 
@@ -385,6 +397,10 @@ task justifies them and the user authorises configuration or spend:
 - Awwwards, Godly, Land-book and other galleries as inspiration sources, never
   as permission to clone.
 
+When a requested experience depends on photographic camera or object-state
+change, a suitable media provider/source is a real production dependency. The
+skill says so immediately and will not present a CSS substitute as equivalent.
+
 Read
 [tool-connections.md](skills/ai-ui-ux-motion-engine/references/tool-connections.md)
 before configuring external services. Never commit credentials or assume paid
@@ -407,8 +423,9 @@ API access.
 ├── skills/ai-ui-ux-motion-engine/
 │   ├── SKILL.md                       # canonical Agent Skill
 │   ├── agents/openai.yaml             # Codex interface metadata
+│   ├── assets/                         # cinematic brief and scroll controller
 │   ├── references/                    # workflow and implementation guides
-│   └── scripts/                       # frame, safety and package validators
+│   └── scripts/                       # prompts, media, safety and validators
 ├── GITHUB-PUBLISHING.md               # repo description, topics and release SEO
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
@@ -426,6 +443,23 @@ Run package validation:
 
 ```bash
 node skills/ai-ui-ux-motion-engine/scripts/validate-package.mjs
+```
+
+Validate a cinematic brief and render a repeatable provider prompt:
+
+```bash
+node skills/ai-ui-ux-motion-engine/scripts/validate-cinematic-brief.mjs \
+  skills/ai-ui-ux-motion-engine/assets/cinematic-brief.example.json
+node skills/ai-ui-ux-motion-engine/scripts/render-cinematic-prompt.mjs \
+  skills/ai-ui-ux-motion-engine/assets/cinematic-brief.example.json \
+  --mode flagship
+```
+
+Prepare an accepted film for exact scroll delivery:
+
+```bash
+bash skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh \
+  accepted-film.mp4 ./scroll-media
 ```
 
 Audit a website repository for common unsafe motion patterns:
@@ -511,7 +545,9 @@ identity, copy, source code or distinctive assets.
 
 It designs and implements web-based motion using CSS, Motion/Framer Motion,
 GSAP, ScrollTrigger, video, canvas, Three.js and WebGL when appropriate. It can
-also coordinate an authorised external image/video-generation workflow.
+also coordinate an authorised external image/video-generation workflow. For a
+cinematic reveal, it first confirms provider access, truth mode, references,
+cost and proof acceptance rather than attempting basic photo animation.
 
 ### Will it automatically install GSAP, Three.js or an MCP server?
 

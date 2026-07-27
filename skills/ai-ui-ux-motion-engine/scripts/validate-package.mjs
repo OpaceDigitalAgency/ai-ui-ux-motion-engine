@@ -33,14 +33,22 @@ const required = [
   join(pluginRoot, "assets/social-preview.png"),
   join(skillRoot, "SKILL.md"),
   join(skillRoot, "agents/openai.yaml"),
+  join(skillRoot, "assets/cinematic-brief.example.json"),
+  join(skillRoot, "assets/cinematic-scroll-controller.js"),
   join(skillRoot, "references/workflow.md"),
   join(skillRoot, "references/motion-patterns.md"),
   join(skillRoot, "references/media-pipeline.md"),
   join(skillRoot, "references/generated-product-scrubber.md"),
+  join(skillRoot, "references/cinematic-intake.md"),
+  join(skillRoot, "references/cinematic-prompts.md"),
+  join(skillRoot, "references/cinematic-case-study.md"),
   join(skillRoot, "references/tool-connections.md"),
   join(skillRoot, "references/accessibility-performance.md"),
   join(skillRoot, "references/source-coverage.md"),
   join(skillRoot, "references/verification.md"),
+  join(skillRoot, "scripts/validate-cinematic-brief.mjs"),
+  join(skillRoot, "scripts/render-cinematic-prompt.mjs"),
+  join(skillRoot, "scripts/prepare-scroll-media.sh"),
 ];
 
 for (const path of required) {
@@ -52,6 +60,15 @@ if (!/^---\nname: ai-ui-ux-motion-engine\ndescription: .+\n---/s.test(skill)) {
   failures.push("SKILL.md frontmatter is missing or invalid.");
 }
 
+for (const phrase of [
+  "Mandatory cinematic-intent gate",
+  "The user does not need to use a trigger word",
+  "Produce one isolated private proof",
+  "Never put a weak proof into a live hero",
+]) {
+  if (!skill.includes(phrase)) failures.push(`SKILL.md is missing cinematic guardrail: ${phrase}`);
+}
+
 for (const match of skill.matchAll(/\]\((references\/[^)]+)\)/g)) {
   const path = join(skillRoot, match[1]);
   await access(path).catch(() => failures.push(`Broken SKILL.md reference: ${match[1]}`));
@@ -60,6 +77,7 @@ for (const match of skill.matchAll(/\]\((references\/[^)]+)\)/g)) {
 const plugin = JSON.parse(await readFile(join(pluginRoot, ".codex-plugin/plugin.json"), "utf8"));
 if (plugin.name !== "ai-ui-ux-motion-engine") failures.push("Plugin name does not match skill.");
 if (!/^\d+\.\d+\.\d+(?:[-+].+)?$/.test(plugin.version ?? "")) failures.push("Plugin version is not semver.");
+if (plugin.version.split("+")[0] !== "1.6.0") failures.push("Plugin base version is not 1.6.0.");
 if (plugin.homepage !== "https://opace.agency/services/web-design/") {
   failures.push("Codex plugin homepage does not point to Opace web design.");
 }
@@ -89,6 +107,41 @@ if (
 const readme = await readFile(join(pluginRoot, "README.md"), "utf8");
 if (!readme.includes("[Opace Digital Agency](https://opace.agency/services/web-design/)")) {
   failures.push("README is missing the contextual Opace web-design link.");
+}
+for (const phrase of [
+  "cinematic scroll reveals",
+  "provider access and spend",
+  "one private signature sequence",
+  "all-intra video",
+]) {
+  if (!readme.includes(phrase)) failures.push(`README is missing v1.6 guidance: ${phrase}`);
+}
+
+const cinematicBrief = JSON.parse(
+  await readFile(join(skillRoot, "assets/cinematic-brief.example.json"), "utf8"),
+);
+if (cinematicBrief.experience?.tier !== "flagship") {
+  failures.push("Cinematic example does not exercise the flagship route.");
+}
+if (cinematicBrief.provider?.attemptLimit !== 1) {
+  failures.push("Cinematic example does not enforce a one-attempt first proof.");
+}
+
+const generatedScrubber = await readFile(
+  join(skillRoot, "references/generated-product-scrubber.md"),
+  "utf8",
+);
+for (const phrase of [
+  "Golden path",
+  "One-anchor burst preset",
+  "Provider preflight",
+  "Attempt discipline",
+  "ordinary long-GOP",
+  "Scaling across a site",
+]) {
+  if (!generatedScrubber.includes(phrase)) {
+    failures.push(`Generated scrubber is missing required section: ${phrase}`);
+  }
 }
 if (!readme.includes("https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine")) {
   failures.push("README is missing the standalone AI UI/UX Motion Engine repository.");

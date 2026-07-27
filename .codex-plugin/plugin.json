@@ -1,7 +1,7 @@
 {
   "name": "ai-ui-ux-motion-engine",
-  "version": "1.5.1",
-  "description": "Cross-platform AI website UI/UX, frontend and motion-design skill for Codex, Claude Code, Cursor, Copilot, Antigravity, Gemini, Windsurf and more.",
+  "version": "1.6.0",
+  "description": "Cinematic-first website UI/UX and motion-design skill with provider intake, product-film prompts, scroll-media tooling and production validation.",
   "author": {
     "name": "David Bryan / Opace",
     "url": "https://opace.agency/services/web-design/"
@@ -13,14 +13,14 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "AI UI/UX Motion Engine",
-    "shortDescription": "Build distinctive, accessible motion-led websites.",
-    "longDescription": "Extracts design and interaction intent from references, develops a project-specific visual direction, implements purposeful motion without sacrificing accessibility or performance, and validates the finished experience.",
+    "shortDescription": "Build cinematic, scroll-led production websites.",
+    "longDescription": "Infers cinematic intent, confirms media-provider and accuracy requirements before coding, proves one private signature sequence, generates repeatable product-film prompts and scroll assets, then builds and validates the finished production experience.",
     "developerName": "David Bryan / Opace",
     "websiteURL": "https://opace.agency/services/web-design/",
     "category": "Developer Tools",
     "capabilities": ["Interactive", "Write"],
     "defaultPrompt": [
-      "Improve this site with purposeful motion and full validation.",
+      "Create a cinematic scroll reveal and identify media needs first.",
       "Extract a design system from these references without cloning.",
       "Audit this interface for visual, motion and UX quality."
     ],

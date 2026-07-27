@@ -28,6 +28,29 @@ The package treats the videos as inspiration and strengthens their techniques wi
 | Same | component registry adaptation | `tool-connections.md` |
 | Same | seamless product loops | `media-pipeline.md` |
 
+## Production-learning coverage
+
+A later identity-locked technical-product implementation exposed gaps that
+video summaries alone could not reveal. Version 1.6 adds these evidence-led
+corrections:
+
+- cinematic intent must be inferred before page implementation;
+- media-provider access, source quality, terms, credits and attempt limits are
+  first-class dependencies;
+- one private signature proof precedes page redesign or library generation;
+- flagship and supporting films require different models and shot complexity;
+- exact-product, identity-locked and illustrative routes require different
+  tolerance for generated detail;
+- inconsistent reference packs and multi-action prompts cause avoidable drift;
+- ordinary long-GOP video can visibly jump during direct scroll seeking;
+- accepted footage needs all-intra/frame-sequence preparation and dense QC;
+- a missing requested shot is a disclosed exception, not parity;
+- weak proofs must never be wired into a hero as an experiment.
+
+These are documented in `cinematic-intake.md`,
+`cinematic-case-study.md`, `cinematic-prompts.md`,
+`generated-product-scrubber.md` and executable scripts.
+
 ## Deliberate corrections
 
 - No “100% continuity” guarantee.

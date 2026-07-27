@@ -2,6 +2,38 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 1.6.0 - 2026-07-27
+
+### Added
+
+- Mandatory cinematic-intent detection for scroll-controlled product reveals,
+  burst/exploded effects, authored camera moves and photographic transformations
+  even when the user does not name a tool or say “wow”.
+- Concise first-response contract that requests truth mode, source references,
+  scenes/placements, provider access and spend authority before page work.
+- Flagship, supporting-shot and code-native production tiers with explicit
+  proof-before-page, attempt-budget and stop rules.
+- Parameterised cinematic brief, validator and prompt renderer for exact
+  single-action, multi-shot flagship and illustrative burst workflows.
+- Deterministic `ffmpeg` pipeline for silent all-intra scrub masters, 150-frame
+  JPEG sequences, posters, contact sheets and metadata.
+- Reusable framework-neutral scroll controller and production case study based
+  on accepted and rejected technical-product footage.
+- Dense product-identity, mechanical-geometry, scroll-direction and private
+  approval verification gates.
+
+### Changed
+
+- Cinematic media is now proved before layout implementation; weak photo fades,
+  CSS zooms, generic orbits and ordinary long-GOP video are explicitly rejected
+  as substitutes.
+- Provider capability, authentication, terms, references, displayed cost and
+  attempt limits are first-class preflight requirements.
+- Generated-product guidance now separates illustrative, identity-locked and
+  evidence-accurate media and scales one flagship film into reusable chapters
+  before commissioning more.
+- Codex and Claude package versions advanced to 1.6.0.
+
 ## 1.5.1 - 2026-07-26
 
 ### Changed

@@ -1,0 +1,107 @@
+{
+  "project": "Private product-film proof",
+  "truthMode": "identity-locked",
+  "experience": {
+    "placement": "homepage flagship",
+    "tier": "flagship",
+    "scrollControlled": true,
+    "durationSeconds": 12,
+    "aspectRatio": "16:9",
+    "resolution": "1280x720",
+    "frameRate": 24
+  },
+  "provider": {
+    "name": "approved image-to-video provider",
+    "requiredCapability": "multi-reference multi-shot video",
+    "connected": true,
+    "termsApproved": true,
+    "creditsApproved": 90,
+    "attemptLimit": 1
+  },
+  "identity": {
+    "authorityReference": "01-product-exterior.png",
+    "description": "one exact unbranded dark-metal technical product",
+    "immutableDetails": [
+      "overall proportions",
+      "panel and vent geometry",
+      "fasteners and ports",
+      "material and colour"
+    ],
+    "exactCounts": [
+      {
+        "name": "removable modules",
+        "count": 8
+      }
+    ]
+  },
+  "references": [
+    {
+      "file": "01-product-exterior.png",
+      "purpose": "identity authority"
+    },
+    {
+      "file": "02-product-open.png",
+      "purpose": "open-state constraint"
+    },
+    {
+      "file": "03-modules-aligned.png",
+      "purpose": "count and spacing constraint"
+    }
+  ],
+  "look": {
+    "background": "controlled black engineering studio",
+    "lighting": "cold-white inspection key with restrained coloured rim",
+    "camera": "physically stabilised product cinematography"
+  },
+  "shots": [
+    {
+      "name": "authority",
+      "startSeconds": 0,
+      "endSeconds": 2.5,
+      "reference": "01-product-exterior.png",
+      "action": "hold the complete product still",
+      "camera": "slow straight dolly-in",
+      "endState": "complete exterior with a half-second still hold"
+    },
+    {
+      "name": "access",
+      "startSeconds": 2.5,
+      "endSeconds": 5,
+      "reference": "02-product-open.png",
+      "action": "one rigid panel moves on its real straight axis",
+      "camera": "locked camera with a restrained push",
+      "endState": "stable authorised open state"
+    },
+    {
+      "name": "assembly",
+      "startSeconds": 5,
+      "endSeconds": 9,
+      "reference": "03-modules-aligned.png",
+      "action": "all eight rigid modules descend vertically at equal speed",
+      "camera": "slow straight overhead dolly",
+      "endState": "exactly eight evenly seated modules with a still hold"
+    },
+    {
+      "name": "resolve",
+      "startSeconds": 9,
+      "endSeconds": 12,
+      "reference": "01-product-exterior.png",
+      "action": "existing status lights activate",
+      "camera": "slow straight pull-back",
+      "endState": "opening exterior identity with a half-second still hold"
+    }
+  ],
+  "forbidden": [
+    "morphing",
+    "duplicated or missing parts",
+    "changed object count or spacing",
+    "invented text or branding",
+    "camera shake",
+    "generated audio"
+  ],
+  "delivery": {
+    "silent": true,
+    "scrollMaster": "all-intra-video",
+    "fallback": "approved poster"
+  }
+}

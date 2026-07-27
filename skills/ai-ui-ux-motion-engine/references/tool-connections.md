@@ -1,66 +1,80 @@
-# Optional tool connections
+# External tools and cinematic-provider preflight
 
-Verify all provider instructions against the provider’s current official documentation before configuring them. Provider models, endpoints, pricing and authentication change.
+Provider interfaces, models, pricing and authentication change. Verify current
+capabilities and displayed cost before configuration or spend.
 
-## Higgsfield media generation
+## Cinematic provider requirement
 
-Verified 26 July 2026 from <https://higgsfield.ai/mcp>.
+When the desired experience requires photographic camera movement, unseen
+angles, assembly/disassembly or a physical burst:
 
-- Preferred connector URL: `https://mcp.higgsfield.ai/mcp`
-- Authentication: provider-hosted sign-in/OAuth; do not put a Higgsfield API key in the repository.
-- Treat model names as selectable capabilities, not permanent requirements.
-- Ask for user authority before spending credits.
-- Use the generated-product-scrubber workflow for an approved still,
-  image-to-video camera move, exact final-frame continuation and silent
-  high-resolution product output.
-- A CAD, GLB or 3D mesh is not a prerequisite for this route.
+- use a capable image/video provider, controlled 3D/CAD, compositing or footage;
+- state this dependency before page implementation;
+- if unavailable, stop the cinematic asset work and offer only an honest static
+  fallback;
+- do not substitute photo fades, CSS zooms, generic stock video or a background
+  loop and claim equivalent output.
 
-Do not use the unverified npm package `@higgsfield/mcp-server`.
+## Provider preflight
 
-If no video-generation connector is available, implement and validate the
-poster/layout/player boundary but report the generated motion asset as blocked.
-Do not substitute three still-image fades and claim equivalent output.
+Complete before upload:
 
-## Firecrawl research
+1. provider is connected and authenticated;
+2. upload controls work in the available tool/browser;
+3. user owns or may upload the references;
+4. any provider terms requiring acceptance are shown to the user;
+5. selected model supports the required references, duration, ratio,
+   resolution, shot control and silent output;
+6. displayed cost and attempt cap are recorded and approved;
+7. prompt entry and reference ordering can be verified;
+8. raw output can be downloaded;
+9. no generation begins while any item above is unknown.
 
-Verified 26 July 2026 from <https://docs.firecrawl.dev/mcp>.
+Prefer a supported direct connector/API for repeatable structured operations.
+Use browser control when the provider exposes required controls only through
+its signed-in UI. Do not spend credits merely to test browser automation.
 
-Local stdio configuration:
+## Higgsfield
 
-```json
-{
-  "mcpServers": {
-    "firecrawl": {
-      "command": "npx",
-      "args": ["-y", "firecrawl-mcp"],
-      "env": {
-        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
-      }
-    }
-  }
-}
+The provider has supported a hosted connector at:
+
+```text
+https://mcp.higgsfield.ai/mcp
 ```
 
-Never commit the resolved key. Use the current remote endpoint from official documentation when the client supports remote MCP.
+Verify this against current official provider documentation before use.
+Authentication is provider-hosted; do not commit credentials. Treat individual
+model names as current capabilities rather than permanent requirements.
+
+Use a multi-reference/multi-shot capable model for a flagship when the brief
+requires it. Use a simpler image-to-video model only for one bounded action.
+Unlimited or low-cost access does not make a model appropriate for exact
+mechanical continuity.
+
+## Local processing
+
+Require `ffmpeg` and `ffprobe` for cinematic delivery. Use:
+
+- `scripts/prepare-scroll-media.sh` for all-intra video, frames, poster and QC;
+- `scripts/validate-cinematic-brief.mjs` before generation;
+- `scripts/render-cinematic-prompt.mjs` for repeatable prompt structure.
 
 ## Browser and visual inspection
 
-Prefer the agent platform’s supported browser integration. Use browser inspection for visible state, responsive behaviour, interaction and console evidence. Use a purpose-built connector for structured private data.
+Use browser inspection for provider form verification, private-route scroll,
+responsive crops, reduced motion, console evidence and screenshots. Sample
+forward and backward progress, not only playback.
 
 ## Image generation
 
-Generate only when original imagery materially improves the experience and suitable licensed imagery is unavailable. Freeze the art direction first. Inspect text, hands, hardware geometry, logos and evidence implications before shipping.
+Use image generation to create missing original references only after art
+direction and truth mode are fixed. Check text, hands, hardware geometry, logos,
+counts and evidence implications. Generated stills that disagree are not a
+valid continuity pack.
 
-## Component registries
+## Research and component sources
 
-Treat registries as inspiration or dependency sources, not a licence to paste code blindly. Check:
-
-- licence;
-- dependency and framework compatibility;
-- accessibility;
-- server rendering;
-- reduced motion;
-- maintenance status;
-- visual fit.
-
-Record the exact source and modifications.
+Use research connectors only when they materially improve evidence. Treat
+component registries and inspiration galleries as sources to evaluate for
+licence, accessibility, compatibility, maintenance and visual fit—not as
+permission to paste code or identity.

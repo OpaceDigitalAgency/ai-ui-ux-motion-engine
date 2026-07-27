@@ -1,148 +1,183 @@
 ---
 name: ai-ui-ux-motion-engine
-description: Design, redesign, audit and validate distinctive production websites using reference extraction, design systems, purposeful motion, scroll interactions, media pipelines and multi-pass refinement. Use for landing pages, product sites, portfolios, interactive storytelling, UI/UX improvement, video- or screenshot-led recreation, cinematic scroll effects, motion graphics, hero refinement, design-system extraction, and anti-generic visual polish in Astro, React, Next.js, Vue, Svelte or static HTML/CSS. Preserve the existing stack and require accessibility, responsive, performance and regression evidence.
+description: Design, redesign, build, audit and validate distinctive production websites with cinematic scroll reveals, product films, burst or exploded-view effects, reference-led design systems, purposeful motion and multi-pass refinement. Use for landing pages, product sites, portfolios, interactive storytelling, premium or immersive web experiences, scroll-controlled product inspection, assembly or disassembly sequences, camera moves, image/video-led recreation, hero refinement, motion graphics, and anti-generic visual polish in Astro, React, Next.js, Vue, Svelte or static HTML/CSS. Infer cinematic intent from the requested experience or reference; the user does not need to say "wow" or name a tool.
 ---
 
 # AI UI/UX Motion Engine
 
-Create a project-specific interface from evidence, not a generic component recipe. Treat references as structural and interaction inputs, never as permission to clone branding, copy or protected assets.
+Create a project-specific experience from evidence. Treat references as
+structural, visual and interaction inputs, never as permission to clone
+branding, copy, code or protected assets.
 
 ## Non-negotiable rules
 
-- Read every applicable `AGENTS.md`, project source-of-truth/status document, design system and current working-tree change before editing.
-- Define the bounded component, acceptance criteria, dependencies and validation plan.
-- Preserve the existing framework, package manager, content model and design conventions unless the user explicitly authorises a migration.
-- Label facts, source observations, inferences, proposals and unknowns separately.
-- Use motion to explain hierarchy, state, continuity or spatial relationships. Reject decorative motion that delays content or weakens comprehension.
-- Keep primary content and actions usable without JavaScript and when `prefers-reduced-motion: reduce` is active.
-- Never claim reference parity, WCAG conformance, performance, cross-browser support or production readiness without direct evidence.
-- Never copy brand identity, proprietary copy, source code or distinctive assets from a reference.
-- Never install or configure a paid third-party service without user authority. Keep credentials out of repositories and output.
+- Read applicable `AGENTS.md`, source-of-truth documents, design systems and
+  current working-tree changes before editing.
+- Define the bounded target, acceptance criteria, dependencies, spend and
+  validation plan.
+- Preserve the existing stack unless the user explicitly authorises a change.
+- Label observations, facts, proposals, generated visualisations and unknowns.
+- Keep content and actions usable without motion, JavaScript or unrestricted
+  data use.
+- Never claim cinematic parity, product accuracy, accessibility, performance
+  or release readiness without direct evidence.
+- Never configure a paid service, accept provider terms or spend credits
+  without user authority.
 
-## Workflow
+## Mandatory cinematic-intent gate
+
+Activate this gate whenever the request or reference implies any of:
+
+- a cinematic, premium or immersive scroll experience;
+- a product opening, assembling, exploding, bursting or transforming;
+- a camera orbit, dolly, macro inspection or authored product journey;
+- photographic motion controlled by scrolling;
+- a reference whose impact comes from changing viewpoint or object state.
+
+The user does not need to use a trigger word or know which tool is required.
+
+Before editing the page:
+
+1. Classify truth mode:
+   - `illustrative`: invented details are acceptable;
+   - `identity-locked`: the same fictional or concept product must stay stable;
+   - `evidence-accurate`: visible counts, geometry, labels and mechanics must
+     match authoritative product evidence.
+2. Confirm the reference or desired scenes, available source images or CAD,
+   number and placement of flagship/supporting moments, target devices, media
+   provider access and permitted credit/attempt cap.
+   If the reference is a video, inspect keyframes plus any available transcript,
+   prompt pack and description links; do not reconstruct its workflow from a
+   summary or isolated screenshot.
+3. State the dependency plainly. Photographic camera movement or physical
+   transformation requires suitable source media plus an image/video
+   generation, 3D or compositing route. CSS cannot invent unseen product views.
+4. If the required provider or source material is unavailable, stop the
+   cinematic asset work. Offer the static layout/fallback honestly; never
+   substitute fades, zooms or stock background video and call it equivalent.
+5. Create a cinematic brief from
+   `assets/cinematic-brief.example.json`, validate it with
+   `scripts/validate-cinematic-brief.mjs`, and obtain spend/terms authority
+   before generation.
+6. Produce one isolated private proof of the signature moment before redesigning
+   the page or generating the full library.
+7. Reject drift with contact-sheet and dense-frame evidence. Use at most the
+   approved attempts; then simplify the action, change technique or report the
+   blocker.
+8. Integrate only an approved asset. Never put a weak proof into a live hero to
+   see whether surrounding UI rescues it.
+
+“First time” means selecting the correct professional route and bounded proof
+immediately. It cannot guarantee that a stochastic provider’s first render
+will pass.
+
+When required information is missing, make the first response short:
+
+> This experience depends on cinematic source motion, not ordinary CSS. I can
+> produce it with an approved media provider and suitable references, but I
+> first need the required accuracy, key scenes/placements, source assets,
+> provider access and credit cap. I will prove one private signature sequence
+> before changing the page and will not substitute basic photo reveals.
+
+Read [cinematic-intake.md](references/cinematic-intake.md),
+[generated-product-scrubber.md](references/generated-product-scrubber.md) and
+[cinematic-prompts.md](references/cinematic-prompts.md) completely when this
+gate activates.
+
+## Standard workflow
 
 ### 1. Establish the brief and baseline
 
-Record:
-
-1. goal and primary conversion;
-2. audience and decision context;
-3. required routes, states and interactions;
-4. content voice and evidence constraints;
-5. target devices, input modes and browsers;
-6. framework, build and release boundaries;
-7. baseline build, test and representative screenshots.
-
-Read [workflow.md](references/workflow.md) for the complete phase gates.
+Record goal, audience, routes, content/evidence rules, target devices,
+framework, release boundary and current build/test state. Read
+[workflow.md](references/workflow.md).
 
 ### 2. Extract references
 
-For each screenshot, recording or site:
-
-- map section order, viewport geometry and content density;
-- identify typography roles, colour roles, spacing, shape and image treatment;
-- record entrance, scroll, hover, drag and state-transition behaviour;
-- distinguish reusable principles from identity-specific material;
-- combine at least two independent inputs when the user requests a mashup.
-
-For a local recording, run:
+Map composition, typography, colour, imagery, entrances, scroll, hover, drag,
+camera movement, object state and timing. Distinguish reusable principles from
+identity-specific material. For a local recording run:
 
 ```bash
 bash scripts/extract-reference-frames.sh <video> <output-directory>
 ```
 
-Read [media-pipeline.md](references/media-pipeline.md) before processing video, image sequences or generated assets.
+Read [media-pipeline.md](references/media-pipeline.md).
 
-### 3. Commit to one design direction
+### 3. Lock one direction
 
-Write a seven-line direction:
+Write seven implementable lines covering goal/audience, tone, composition,
+typography, colour/media, motion/reduced-motion and one signature
+differentiator. Do not proceed on “clean and modern” alone.
 
-1. product goal and audience;
-2. tone in two or three concrete adjectives;
-3. page composition and hierarchy;
-4. typography strategy;
-5. colour, surface and image strategy;
-6. motion strategy and reduced-motion equivalent;
-7. one signature differentiator.
+### 4. Select the architecture
 
-Reject “clean and modern” unless every line above makes it implementable. Generate alternatives only for a material decision such as the hero, navigation model or interaction language; keep the rest fixed while comparing.
+Choose the lightest mechanism that preserves the intended experience:
 
-### 4. Select the motion architecture
+- CSS for local state and entrance changes;
+- Intersection Observer or native scroll animation for simple reveals;
+- an existing motion library for coordinated component motion;
+- GSAP for deliberate pinning/timelines;
+- generated or filmed media for photographic camera/object change;
+- all-intra video or canvas frames for exact scroll scrubbing;
+- WebGL/3D for freely manipulable viewpoints or reliable exact mechanics.
 
-Choose the lightest mechanism that expresses the intended relationship:
+For cinematic product motion, the media is the experience. Prove it first; do
+not expect CSS transforms to create the missing film.
 
-- CSS transitions/keyframes for local state and entrance changes;
-- Intersection Observer for one-shot reveals;
-- native scroll-driven animation when support and fallback are acceptable;
-- a small framework motion library when the project already uses it;
-- GSAP only for coordinated pinning/timelines that simpler primitives cannot express;
-- video scrubbing for photographic or generated camera movement;
-- canvas frame sequences only when seeking quality or device support requires them;
-- WebGL/3D only when real-time depth materially improves the product story.
+### 5. Implement in bounded passes
 
-For a watch-style or product-inspection effect made from prompts and reference
-images, do not default to CAD, GLB or WebGL. Route first to the
-[generated product scrubber](references/generated-product-scrubber.md):
-approve a clean still, generate a controlled image-to-video camera move, chain
-clips from exact end frames when needed, then deliver it as scroll-linked video
-or a frame sequence. Use real-time 3D only when the visitor must freely
-manipulate the object or inspect arbitrary viewpoints.
+Build semantic content, macro layout, the approved signature motion,
+micro-states, responsive composition and editorial polish. Keep text, labels
+and actions in the DOM rather than baking them into generated media.
 
-Read [motion-patterns.md](references/motion-patterns.md),
-[generated-product-scrubber.md](references/generated-product-scrubber.md) and
-[framework-recipes.md](references/framework-recipes.md) before implementation.
+### 6. Validate
 
-### 5. Implement in passes
-
-1. Architecture: semantic HTML, section order, content and primary action.
-2. Macro design: grid, scale, rhythm, typography, colour and media.
-3. Motion: one interaction at a time with a static/reduced-motion equivalent.
-4. Micro states: hover, focus-visible, active, loading, empty, error and success.
-5. Responsive composition: mobile, tablet, desktop and zoom.
-6. Editorial pass: remove filler, unsupported claims and repeated copy.
-
-Keep the primary offer within the first two useful viewports when that supports the page goal; do not apply this as a universal rule to editorial or narrative experiences.
-
-### 6. Validate every bounded component
-
-After each component:
-
-- test pointer, keyboard and touch behaviour;
-- inspect reduced motion;
-- check layout at the project’s required viewports;
-- check console and runtime errors;
-- run the narrowest relevant automated checks.
-
-Then run the project’s complete regression baseline. Run:
+After each component, test pointer, keyboard, touch, reduced motion, target
+viewports, console/runtime behaviour and focused checks. For cinematic media,
+also verify identity/count/geometry, first/end states, forward/backward scrub,
+crop and fallback. Then run:
 
 ```bash
 node scripts/audit-motion-safety.mjs <project-directory>
 node scripts/validate-package.mjs
 ```
 
-Read [accessibility-performance.md](references/accessibility-performance.md) and [verification.md](references/verification.md) for acceptance gates.
+Run the project’s full regression baseline before handoff. Read
+[verification.md](references/verification.md).
 
-## Reference routing
+## Resource routing
 
-- Use [workflow.md](references/workflow.md) for phase outputs and decision gates.
-- Use [motion-patterns.md](references/motion-patterns.md) for interaction architecture and safe implementation patterns.
-- Use [generated-product-scrubber.md](references/generated-product-scrubber.md) for prompt/reference-image product films, end-frame chaining, scroll scrubbing and acceptance tests.
-- Use [media-pipeline.md](references/media-pipeline.md) for recording capture, frame extraction, video/image generation and asset delivery.
-- Use [framework-recipes.md](references/framework-recipes.md) for Astro/static, React/Next, Vue and Svelte decisions.
-- Use [research-and-extraction.md](references/research-and-extraction.md) for competitor and design-system research.
-- Use [tool-connections.md](references/tool-connections.md) only when external media or research tools are needed.
-- Use [accessibility-performance.md](references/accessibility-performance.md) for motion safety, Core Web Vitals and responsive requirements.
-- Use [prompts.md](references/prompts.md) for reusable task payloads.
-- Use [source-coverage.md](references/source-coverage.md) to understand what was derived from the four source videos and what was independently strengthened.
-- Use [verification.md](references/verification.md) before claiming completion.
+- [cinematic-intake.md](references/cinematic-intake.md): mandatory questions,
+  pushback, tiers, spend and stop rules.
+- [cinematic-prompts.md](references/cinematic-prompts.md): exact reusable
+  single-action, flagship and illustrative prompt contracts.
+- [generated-product-scrubber.md](references/generated-product-scrubber.md):
+  cinematic production and scroll-delivery golden path.
+- [media-pipeline.md](references/media-pipeline.md): references, ffmpeg,
+  all-intra video, frames, posters and delivery.
+- [tool-connections.md](references/tool-connections.md): provider preflight and
+  external-tool boundaries.
+- [motion-patterns.md](references/motion-patterns.md): code-native motion.
+- [framework-recipes.md](references/framework-recipes.md): stack-specific
+  implementation.
+- [accessibility-performance.md](references/accessibility-performance.md):
+  motion safety and performance.
+- [prompts.md](references/prompts.md): user-facing request templates.
+- [source-coverage.md](references/source-coverage.md): provenance and known
+  limitations.
+
+Reusable assets and scripts:
+
+- `assets/cinematic-brief.example.json`
+- `assets/cinematic-scroll-controller.js`
+- `scripts/validate-cinematic-brief.mjs`
+- `scripts/render-cinematic-prompt.mjs`
+- `scripts/prepare-scroll-media.sh`
 
 ## Completion report
 
-Report:
-
-1. selected direction and signature differentiator;
-2. references used and what was extracted rather than copied;
-3. files and components changed;
-4. motion added and its reduced-motion/static equivalent;
-5. tests, builds, viewports and interaction states checked;
-6. remaining unknowns, external gates and release status.
+Report the selected direction, media tier and truth mode; references/provider,
+model/settings, attempts and credits; files changed; QC and browser evidence;
+fallbacks; unresolved visual inference; and private, staged or production
+release status.

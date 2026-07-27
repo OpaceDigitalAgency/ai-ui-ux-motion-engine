@@ -17,6 +17,11 @@ Produce a short implementation contract:
 
 Stop when the requested change would overwrite unexplained user work, require a framework migration, introduce a paid service, or materially expand scope.
 
+If the request or reference implies cinematic product motion, a burst/exploded
+view, changing photographic viewpoint or scroll-controlled film, run
+`cinematic-intake.md` before the normal design phases. Do not code a substitute
+effect while the required media route is unresolved.
+
 ### B. Reference decomposition
 
 Create a table with one row per scene or section:
@@ -42,16 +47,21 @@ Write the seven-line direction required by `SKILL.md`. Check that:
 - the signature differentiator appears in the first viewport or key journey;
 - the direction is compatible with the project’s evidence and performance rules.
 
+For cinematic work, also lock the truth mode, production tier, identity
+authority, shot progression, provider capability, attempt/credit cap and
+private-proof gate.
+
 ### D. Implementation passes
 
 Work on one bounded component at a time:
 
-1. semantic static baseline;
-2. layout and visual hierarchy;
-3. pointer/keyboard/touch states;
-4. motion enhancement;
-5. reduced-motion and no-JavaScript behaviour;
-6. narrow test.
+1. cinematic media proof when the experience depends on it;
+2. semantic static baseline;
+3. layout and visual hierarchy;
+4. pointer/keyboard/touch states;
+5. approved motion integration;
+6. reduced-motion and no-JavaScript behaviour;
+7. narrow test.
 
 Commit or checkpoint only after the component passes. Then continue to the next component.
 
