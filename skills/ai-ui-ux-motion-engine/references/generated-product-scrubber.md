@@ -12,11 +12,13 @@ content. It is not real-time 3D.
 1. Run the cinematic-intent gate before editing the page.
 2. Classify truth mode and production tier.
 3. Verify provider capability, access, terms, cost and attempt authority.
-4. Create and validate a cinematic brief.
+4. Record the user's requested signature moment, progression, payoff, required
+   effects and prohibited substitutes; create and validate the cinematic brief.
 5. Prepare one identity authority and only the shot-specific references needed.
 6. Render the prompt from the brief; do not improvise a different production
    method.
-7. Generate one private proof.
+7. Generate one private proof through CLI, MCP or API where available; use
+   browser control only as a recorded capability-specific fallback.
 8. Inspect the overview contact sheet and sample risky transitions densely only
    where identity or mechanical drift could occur.
 9. Convert accepted media to an all-intra scrub master and frame sequence.
@@ -24,7 +26,8 @@ content. It is not real-time 3D.
     together with `validate-scroll-media.mjs`.
 11. Prove forward/backward scroll and rapid direction changes on an isolated
     private route.
-12. Obtain approval before page integration or further generation.
+12. Run the creative-acceptance validator, obtain approval, then rerun it for
+   integration before changing the page.
 13. Reuse the approved film and component across chapters where appropriate.
 
 ## Route by truth mode
@@ -60,6 +63,8 @@ delivered product.
 - One paid attempt by default; one additional attempt only with explicit
   approval.
 - A missing shot is a disclosed exception, not a silent success.
+- A rotation, dolly, zoom, parallax or static product with moving camera is
+  supporting footage, never a substitute for a requested flagship.
 
 ### Supporting shot
 
@@ -264,6 +269,16 @@ Do not generate a new flagship film for every section.
 Reject if the result is only still-image crossfades, CSS zoom/parallax, an
 unrelated background video, an unsynchronised film, a slight single action
 mislabelled as a flagship, or a visibly jittery scrub.
+
+Require both:
+
+```bash
+node scripts/validate-creative-acceptance.mjs creative-review.json --stage review
+node scripts/validate-scroll-media.mjs scroll-master.mp4 --poster poster.jpg
+```
+
+Run the creative validator again with `--stage integration` only after the
+owner approves the exact proof. Neither command substitutes for the other.
 
 Six correct screenshots at settled positions do not prove the scrubber. Reject
 if the video layer ever becomes hidden after first decode, the poster is

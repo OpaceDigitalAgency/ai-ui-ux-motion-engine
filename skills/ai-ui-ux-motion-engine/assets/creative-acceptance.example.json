@@ -1,0 +1,23 @@
+{
+  "brief": "cinematic-brief.example.json",
+  "asset": "creative-acceptance-placeholder.txt",
+  "decision": "approved",
+  "ownerApproved": true,
+  "creative": {
+    "openingMatches": true,
+    "progressionMatches": true,
+    "payoffMatches": true,
+    "meaningfulStateChange": true,
+    "cameraOnlySubstitute": false,
+    "tierSubstantial": true,
+    "identityContinuity": true,
+    "truthfulnessDisclosed": true,
+    "observedEffects": [
+      "opening",
+      "exploded-view",
+      "assembly"
+    ],
+    "missingMoments": [],
+    "evidenceNotes": "Saved fixture representing an owner-approved flagship with a visible opening, engineered separation, inspection progression and resolved payoff."
+  }
+}

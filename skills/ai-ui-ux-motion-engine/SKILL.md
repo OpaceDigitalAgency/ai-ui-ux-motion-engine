@@ -27,6 +27,9 @@ branding, copy, code or protected assets.
   or release readiness without direct evidence.
 - Never configure a paid service, accept provider terms or spend credits
   without user authority.
+- Never downgrade a requested full-screen, homepage or signature cinematic
+  journey to a supporting shot. A camera rotation, dolly, zoom, parallax or
+  static-image reveal is not a flagship.
 
 ## Mandatory cinematic-intent gate
 
@@ -42,35 +45,84 @@ The user does not need to use a trigger word or know which tool is required.
 
 Before editing the page:
 
-1. Classify truth mode:
+1. Copy the user's requested outcome into `intent.requestSummary`; record the
+   signature moment, progression, payoff, required effects and unacceptable
+   substitutes. Do not rewrite the request around the easiest available asset.
+2. Classify truth mode:
    - `illustrative`: invented details are acceptable;
    - `identity-locked`: the same fictional or concept product must stay stable;
    - `evidence-accurate`: visible counts, geometry, labels and mechanics must
      match authoritative product evidence.
-2. Confirm the reference or desired scenes, available source images or CAD,
+3. Confirm the reference or desired scenes, available source images or CAD,
    number and placement of flagship/supporting moments, target devices, media
    provider access and permitted credit/attempt cap.
    If the reference is a video, inspect keyframes plus any available transcript,
    prompt pack and description links; do not reconstruct its workflow from a
    summary or isolated screenshot.
-3. State the dependency plainly. Photographic camera movement or physical
+4. State the dependency plainly. Photographic camera movement or physical
    transformation requires suitable source media plus an image/video
    generation, 3D or compositing route. CSS cannot invent unseen product views.
-4. If the required provider or source material is unavailable, stop the
+5. If the required provider or source material is unavailable, stop the
    cinematic asset work. Offer the static layout/fallback honestly; never
    substitute fades, zooms or stock background video and call it equivalent.
-5. Create a cinematic brief from
+6. Create a cinematic brief from
    `assets/cinematic-brief.example.json`, validate it with
    `scripts/validate-cinematic-brief.mjs`, and obtain spend/terms authority
-   before generation.
-6. Produce one isolated private proof of the signature moment before redesigning
+   before generation. Do not upload or spend after a failed validation.
+7. Produce one isolated private proof of the signature moment before redesigning
    the page or generating the full library.
-7. Reject drift with automated technical checks and an overview contact sheet.
+8. Reject drift with automated technical checks and an overview contact sheet.
    Sample only risky transitions densely; inspect every frame only for a
    detected defect or evidence-critical mechanics. Use at most the approved
    attempts; then simplify the action, change technique or report the blocker.
-8. Integrate only an approved asset. Never put a weak proof into a live hero to
+9. Create a creative-review JSON from
+   `assets/creative-acceptance.example.json` and run
+   `scripts/validate-creative-acceptance.mjs`. Technical media validation does
+   not prove narrative, impact or creative acceptance.
+10. Integrate only an owner-approved asset after the creative validator passes
+   with `--stage integration`. Never put a weak proof into a live hero to
    see whether surrounding UI rescues it.
+
+### Executable flagship gate
+
+Treat a requested full-screen, homepage, hero, signature, immersive, intricate,
+burst, exploded or authored scroll journey as `flagship` unless the user
+explicitly requests a smaller supporting shot. Before any paid generation run:
+
+```bash
+node scripts/validate-cinematic-brief.mjs cinematic-brief.json --check-files
+node scripts/render-cinematic-prompt.mjs cinematic-brief.json --mode flagship
+```
+
+The validator must reject a tier downgrade, a camera-only story, a missing
+beginning/progression/payoff, insufficient source coverage, a missing requested
+transformation and an unverified provider route. Do not bypass it by writing a
+manual prompt.
+
+After generation, record visual evidence and run:
+
+```bash
+node scripts/validate-creative-acceptance.mjs creative-review.json --stage review
+```
+
+Use `--stage integration` only after the owner approves the exact private
+proof. Never use a passing codec, keyframe, contact-sheet or scroll-delivery
+check as evidence that the creative brief passed.
+
+### Programmatic provider rule
+
+Use structured provider access before browser control. For Higgsfield in Codex:
+
+1. prefer the authenticated Higgsfield CLI;
+2. use Higgsfield MCP in clients that expose the connector natively;
+3. use a supported API when the account exposes one;
+4. use browser control only for a required control unavailable through all
+   programmatic routes, and record that exact limitation in the brief.
+
+Run `scripts/higgsfield-preflight.mjs` before Higgsfield generation. It checks
+the CLI account connection without spending credits. Read
+[tool-connections.md](references/tool-connections.md) completely before
+provider work.
 
 Keep the first response concise: confirm the accuracy target, source readiness,
 provider/spend authority, desired placements and delivery/time budget. Do not
@@ -217,8 +269,12 @@ Run the project’s full regression baseline before handoff. Read
 Reusable assets and scripts:
 
 - `assets/cinematic-brief.example.json`
+- `assets/creative-acceptance.example.json`
 - `assets/cinematic-scroll-controller.js`
 - `scripts/validate-cinematic-brief.mjs`
+- `scripts/validate-creative-acceptance.mjs`
+- `scripts/higgsfield-preflight.mjs`
+- `scripts/test-cinematic-regressions.mjs`
 - `scripts/render-cinematic-prompt.mjs`
 - `scripts/prepare-scroll-media.sh`
 - `scripts/validate-scroll-media.mjs`

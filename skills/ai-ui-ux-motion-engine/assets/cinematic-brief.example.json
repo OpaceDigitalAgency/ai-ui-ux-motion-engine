@@ -1,6 +1,35 @@
 {
   "project": "Private product-film proof",
   "truthMode": "identity-locked",
+  "intent": {
+    "requestSummary": "Create a full-screen scroll-controlled homepage flagship with an intricate product journey rather than a simple camera move",
+    "impact": "flagship",
+    "fullScreen": true,
+    "scrollControlled": true,
+    "signatureMoment": "the product opens and its eight rigid modules separate into a readable engineered arrangement",
+    "progression": [
+      "establish the real product",
+      "open and reveal the system",
+      "separate and inspect the modules",
+      "resolve to the complete commissioned product"
+    ],
+    "payoff": "the complete product returns with its existing status lights active",
+    "requiredEffects": [
+      "opening",
+      "exploded-view",
+      "assembly"
+    ],
+    "prohibitedSubstitutes": [
+      "camera-only",
+      "css-like-parallax",
+      "generic-orbit",
+      "rotation-only",
+      "zoom-only"
+    ],
+    "requiresMeaningfulStateChange": true,
+    "requiresUnseenGeometry": true,
+    "requiresExactMechanics": false
+  },
   "workflow": {
     "profile": "lean-scalable",
     "accuracyPriority": "accuracy-first",
@@ -18,11 +47,24 @@
     "resolution": "1280x720",
     "frameRate": 24
   },
+  "production": {
+    "technique": "multi-shot-generation"
+  },
+  "sourceCoverage": {
+    "authorityType": "multi-view",
+    "supportsUnseenGeometry": true,
+    "supportsExactMechanics": false,
+    "limitations": [
+      "the exploded arrangement is an identity-locked visualisation, not assembly evidence"
+    ]
+  },
   "provider": {
     "name": "approved image-to-video provider",
     "requiredCapability": "multi-reference multi-shot video",
     "connected": true,
     "termsApproved": true,
+    "accessMethod": "cli",
+    "programmaticPreflightComplete": true,
     "creditsApproved": 90,
     "attemptLimit": 1
   },
@@ -64,6 +106,8 @@
   "shots": [
     {
       "name": "authority",
+      "purpose": "authority",
+      "subjectChange": "none",
       "startSeconds": 0,
       "endSeconds": 2.5,
       "reference": "01-product-exterior.png",
@@ -73,28 +117,34 @@
     },
     {
       "name": "access",
+      "purpose": "transformation",
+      "subjectChange": "physical",
       "startSeconds": 2.5,
       "endSeconds": 5,
       "reference": "02-product-open.png",
-      "action": "one rigid panel moves on its real straight axis",
+      "action": "open one rigid panel on its authorised straight axis",
       "camera": "locked camera with a restrained push",
       "endState": "stable authorised open state"
     },
     {
       "name": "assembly",
+      "purpose": "inspection",
+      "subjectChange": "physical",
       "startSeconds": 5,
       "endSeconds": 9,
       "reference": "03-modules-aligned.png",
-      "action": "all eight rigid modules descend vertically at equal speed",
+      "action": "separate all eight rigid modules vertically into an exploded-view arrangement, then assemble them at equal speed",
       "camera": "slow straight overhead dolly",
       "endState": "exactly eight evenly seated modules with a still hold"
     },
     {
       "name": "resolve",
+      "purpose": "payoff",
+      "subjectChange": "visualized-system",
       "startSeconds": 9,
       "endSeconds": 12,
       "reference": "01-product-exterior.png",
-      "action": "existing status lights activate",
+      "action": "activate only the existing status lights",
       "camera": "slow straight pull-back",
       "endState": "opening exterior identity with a half-second still hold"
     }

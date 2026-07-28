@@ -34,6 +34,9 @@ const required = [
   join(skillRoot, "SKILL.md"),
   join(skillRoot, "agents/openai.yaml"),
   join(skillRoot, "assets/cinematic-brief.example.json"),
+  join(skillRoot, "assets/creative-acceptance.example.json"),
+  join(skillRoot, "assets/creative-acceptance-placeholder.txt"),
+  join(skillRoot, "assets/regressions/camera-only-homepage-failure.json"),
   join(skillRoot, "assets/cinematic-scroll-controller.js"),
   join(skillRoot, "references/workflow.md"),
   join(skillRoot, "references/motion-patterns.md"),
@@ -47,6 +50,9 @@ const required = [
   join(skillRoot, "references/source-coverage.md"),
   join(skillRoot, "references/verification.md"),
   join(skillRoot, "scripts/validate-cinematic-brief.mjs"),
+  join(skillRoot, "scripts/validate-creative-acceptance.mjs"),
+  join(skillRoot, "scripts/higgsfield-preflight.mjs"),
+  join(skillRoot, "scripts/test-cinematic-regressions.mjs"),
   join(skillRoot, "scripts/render-cinematic-prompt.mjs"),
   join(skillRoot, "scripts/prepare-scroll-media.sh"),
   join(skillRoot, "scripts/validate-scroll-media.mjs"),
@@ -66,6 +72,10 @@ for (const phrase of [
   "The user does not need to use a trigger word",
   "Produce one isolated private proof",
   "Never put a weak proof into a live hero",
+  "Never downgrade a requested full-screen",
+  "Executable flagship gate",
+  "Programmatic provider rule",
+  "validate-creative-acceptance.mjs",
   "fastest route that can meet the accuracy target",
   "Target 15–30 minutes",
   "inspect every frame only",
@@ -82,7 +92,7 @@ for (const match of skill.matchAll(/\]\((references\/[^)]+)\)/g)) {
 const plugin = JSON.parse(await readFile(join(pluginRoot, ".codex-plugin/plugin.json"), "utf8"));
 if (plugin.name !== "ai-ui-ux-motion-engine") failures.push("Plugin name does not match skill.");
 if (!/^\d+\.\d+\.\d+(?:[-+].+)?$/.test(plugin.version ?? "")) failures.push("Plugin version is not semver.");
-if (plugin.version.split("+")[0] !== "1.6.4") failures.push("Plugin base version is not 1.6.4.");
+if (plugin.version.split("+")[0] !== "1.7.0") failures.push("Plugin base version is not 1.7.0.");
 if (plugin.homepage !== "https://opace.agency/services/web-design/") {
   failures.push("Codex plugin homepage does not point to Opace web design.");
 }
@@ -118,8 +128,10 @@ for (const phrase of [
   "provider access and spend",
   "one private signature sequence",
   "all-intra video",
+  "cannot silently become a five-second supporting rotation",
+  "Higgsfield",
 ]) {
-  if (!readme.includes(phrase)) failures.push(`README is missing v1.6 guidance: ${phrase}`);
+  if (!readme.includes(phrase)) failures.push(`README is missing current guidance: ${phrase}`);
 }
 
 const cinematicBrief = JSON.parse(
@@ -130,6 +142,15 @@ if (cinematicBrief.experience?.tier !== "flagship") {
 }
 if (cinematicBrief.provider?.attemptLimit !== 1) {
   failures.push("Cinematic example does not enforce a one-attempt first proof.");
+}
+if (cinematicBrief.intent?.impact !== "flagship") {
+  failures.push("Cinematic example does not lock flagship intent.");
+}
+if (cinematicBrief.provider?.accessMethod !== "cli") {
+  failures.push("Cinematic example does not exercise programmatic provider access.");
+}
+if ((cinematicBrief.intent?.progression?.length ?? 0) < 3) {
+  failures.push("Cinematic example does not contain an authored progression.");
 }
 
 const generatedScrubber = await readFile(
@@ -158,6 +179,8 @@ for (const phrase of [
   "silent all-intra H.264",
   "prepare-scroll-media.sh",
   "validate-cinematic-brief.mjs",
+  "test-cinematic-regressions.mjs",
+  "validate-creative-acceptance.mjs",
 ]) {
   if (!workflow.includes(phrase)) failures.push(`Hosted validation is missing: ${phrase}`);
 }
@@ -197,6 +220,51 @@ for (const phrase of [
 ]) {
   if (!scrollValidator.includes(phrase)) {
     failures.push(`Scroll-media validator is missing delivery check: ${phrase}`);
+  }
+}
+
+const briefValidator = await readFile(
+  join(skillRoot, "scripts/validate-cinematic-brief.mjs"),
+  "utf8",
+);
+for (const phrase of [
+  "FLAGSHIP_INTENT_CANNOT_BE_DOWNGRADED",
+  "FULLSCREEN_SCROLL_REQUIRES_FLAGSHIP",
+  "CAMERA_ONLY_MOTION_CANNOT_SATISFY_PRODUCT_JOURNEY",
+  "REQUESTED_BURST_OR_TRANSFORMATION_IS_MISSING",
+  "UNSEEN_GEOMETRY_SOURCE_GAP",
+  "PROGRAMMATIC_PREFLIGHT_REQUIRED",
+]) {
+  if (!briefValidator.includes(phrase)) {
+    failures.push(`Cinematic brief validator is missing semantic gate: ${phrase}`);
+  }
+}
+
+const creativeValidator = await readFile(
+  join(skillRoot, "scripts/validate-creative-acceptance.mjs"),
+  "utf8",
+);
+for (const phrase of [
+  "CAMERA_ONLY_SUBSTITUTE_REJECTED",
+  "REQUESTED_EFFECTS_NOT_OBSERVED",
+  "OWNER_APPROVAL_REQUIRED",
+]) {
+  if (!creativeValidator.includes(phrase)) {
+    failures.push(`Creative acceptance validator is missing gate: ${phrase}`);
+  }
+}
+
+const toolConnections = await readFile(
+  join(skillRoot, "references/tool-connections.md"),
+  "utf8",
+);
+for (const phrase of [
+  "native CLI for coding agents such as Codex",
+  "higgsfield-preflight.mjs",
+  "browserFallbackReason",
+]) {
+  if (!toolConnections.includes(phrase)) {
+    failures.push(`Tool connection guidance is missing programmatic route: ${phrase}`);
   }
 }
 

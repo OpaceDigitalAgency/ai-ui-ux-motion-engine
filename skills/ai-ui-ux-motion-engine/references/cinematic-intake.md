@@ -65,6 +65,9 @@ If a target is exceeded, report why and obtain approval before continuing.
 
 - Use for the homepage or a key product-family journey.
 - Usually 10–15 seconds with an authored beginning, progression and payoff.
+- Treat full-screen, homepage, signature, intricate, burst, exploded and
+  immersive scroll requests as flagship. Do not downgrade them to supporting
+  merely because only one source image or a cheaper model is available.
 - Use a provider/model that supports the necessary reference count, duration
   and multi-shot control.
 - Allow one paid attempt and at most one explicitly approved retry.
@@ -107,11 +110,22 @@ CAD/compositing/real footage. Never prompt harder indefinitely.
 
 The first deliverable is:
 
-1. the validated cinematic brief;
+1. the validated cinematic brief with the user's intent, progression, payoff,
+   source coverage and prohibited substitutes recorded;
 2. the prepared reference pack;
 3. one generated proof;
 4. automated technical checks, an overview contact sheet and risk-led dense QC;
 5. an isolated scroll prototype with poster and reduced-motion fallback.
+
+Run the semantic brief regression gate before upload or spend:
+
+```bash
+node scripts/validate-cinematic-brief.mjs cinematic-brief.json --check-files
+```
+
+After generation, run `validate-creative-acceptance.mjs --stage review`.
+Technical media validation is a separate gate and cannot prove creative
+success.
 
 Do not redesign, publish or populate multiple routes until the user approves
 that proof.

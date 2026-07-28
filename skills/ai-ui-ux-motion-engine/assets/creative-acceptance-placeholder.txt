@@ -1,0 +1,1 @@
+Regression fixture placeholder. Creative validation checks workflow evidence and file presence; technical media validation is handled separately by validate-scroll-media.mjs.

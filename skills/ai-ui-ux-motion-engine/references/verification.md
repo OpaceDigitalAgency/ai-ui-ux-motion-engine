@@ -11,6 +11,10 @@ node skills/ai-ui-ux-motion-engine/scripts/validate-cinematic-brief.mjs \
 node skills/ai-ui-ux-motion-engine/scripts/render-cinematic-prompt.mjs \
   skills/ai-ui-ux-motion-engine/assets/cinematic-brief.example.json \
   --mode flagship
+node skills/ai-ui-ux-motion-engine/scripts/test-cinematic-regressions.mjs
+node skills/ai-ui-ux-motion-engine/scripts/validate-creative-acceptance.mjs \
+  skills/ai-ui-ux-motion-engine/assets/creative-acceptance.example.json \
+  --stage integration
 node skills/ai-ui-ux-motion-engine/scripts/validate-scroll-media.mjs \
   <exact-shipping-scroll-master.mp4> \
   --poster <exact-shipping-poster.jpg> \
@@ -34,14 +38,25 @@ mask; any handoff change fails.
 
 Before integration:
 
-1. inspect the opening, end and evenly sampled contact sheet;
-2. inspect difficult mechanical actions densely;
-3. verify identity, counts, spacing, geometry, ports, labels and permitted axes;
-4. verify every requested shot or disclose any omission;
-5. reject morphing, duplication, clipping and unexplained transitions;
-6. verify the asset is substantial enough for its flagship/supporting tier;
-7. record provider/model/settings, attempts, cost and generation status;
-8. obtain owner approval for the private proof.
+1. rerun the brief validator and confirm the generated prompt came from that
+   exact passing brief;
+2. inspect the opening, end and evenly sampled contact sheet;
+3. inspect difficult mechanical actions densely;
+4. verify identity, counts, spacing, geometry, ports, labels and permitted axes;
+5. verify every requested shot, progression stage, effect and payoff;
+6. reject morphing, duplication, clipping and unexplained transitions;
+7. reject camera-only rotation, zoom, dolly or parallax when a flagship journey
+   was requested;
+8. verify the asset is substantial enough for its flagship/supporting tier;
+9. record provider/model/settings, programmatic access route, attempts, cost
+   and generation status;
+10. run `validate-creative-acceptance.mjs --stage review`;
+11. obtain owner approval for the exact private proof;
+12. run `validate-creative-acceptance.mjs --stage integration`.
+
+Technical delivery validation and creative acceptance are separate mandatory
+gates. Passing H.264, keyframe, poster, size or scroll tests cannot satisfy the
+creative gate.
 
 ## Scroll-experience gate
 

@@ -2,6 +2,35 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 1.7.0 - 2026-07-28
+
+### Added
+
+- Executable intent contract recording the user's requested signature moment,
+  progression, payoff, effects and prohibited substitutes.
+- Semantic flagship validation rejecting tier downgrades, five-second
+  camera-only stories, missing narrative chapters, missing requested
+  burst/transformation actions and unsupported unseen geometry.
+- Regression fixture reproducing the failed full-screen homepage request that
+  had previously passed as a one-shot supporting dolly.
+- Separate creative-acceptance validator proving beginning, progression,
+  payoff, meaningful state change, required effects and owner approval.
+- Higgsfield CLI preflight that verifies authentication and available credits
+  without submitting or charging for a generation.
+- Regression runner proving that the valid flagship passes while the
+  camera-only downgrade and wrong prompt mode fail.
+
+### Changed
+
+- Full-screen, homepage, signature, burst and intricate scroll journeys now
+  default to flagship and cannot silently become supporting shots.
+- Prompt rendering embeds the immutable intent contract and refuses to render a
+  flagship brief through single-shot or illustrative modes.
+- Provider routing is CLI first for Codex, then native MCP or API, with browser
+  control allowed only as a recorded capability-specific fallback.
+- Technical media delivery and creative acceptance are now separate mandatory
+  gates; codec/keyframe success cannot justify a creative completion claim.
+
 ## 1.6.4 - 2026-07-27
 
 ### Added

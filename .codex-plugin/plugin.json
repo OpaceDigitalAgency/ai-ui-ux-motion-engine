@@ -1,7 +1,7 @@
 {
   "name": "ai-ui-ux-motion-engine",
-  "version": "1.6.4",
-  "description": "Accuracy-first cinematic website skill with timeboxed product-film production, reusable scroll media and fail-closed validation.",
+  "version": "1.7.0",
+  "description": "Cinematic website skill with enforced flagship intent, CLI-first media production, creative acceptance and fail-closed scroll validation.",
   "author": {
     "name": "David Bryan / Opace",
     "url": "https://opace.agency/services/web-design/"
@@ -34,8 +34,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "AI UI/UX Motion Engine",
-    "shortDescription": "Build accurate cinematic sites without wasted work.",
-    "longDescription": "Chooses the fastest route that preserves accuracy, proves one private signature sequence, reuses one master film across page chapters, parallelises safe independent work and fails closed on unreliable scroll media.",
+    "shortDescription": "Build substantial cinematic journeys without camera-only shortcuts.",
+    "longDescription": "Locks the requested flagship intent, rejects camera-only downgrades and unsupported source geometry, prefers programmatic media-provider access, proves creative acceptance separately from technical delivery and fails closed on unreliable scroll media.",
     "developerName": "David Bryan / Opace",
     "websiteURL": "https://opace.agency/services/web-design/",
     "category": "Developer Tools",
@@ -44,7 +44,7 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Create an accuracy-first, timeboxed cinematic scroll reveal.",
+      "Create a full flagship cinematic journey with enforced progression and payoff.",
       "Extract a design system from these references without cloning.",
       "Audit this interface for visual, motion and UX quality."
     ],

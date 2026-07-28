@@ -29,7 +29,13 @@ jobs:
             skills/ai-ui-ux-motion-engine/assets/cinematic-brief.example.json \
             --mode flagship > /tmp/cinematic-prompt.txt
           grep -q "IDENTITY LOCK" /tmp/cinematic-prompt.txt
+          grep -q "INTENT CONTRACT" /tmp/cinematic-prompt.txt
           grep -q "SHOT 4" /tmp/cinematic-prompt.txt
+          node skills/ai-ui-ux-motion-engine/scripts/test-cinematic-regressions.mjs
+          node skills/ai-ui-ux-motion-engine/scripts/validate-creative-acceptance.mjs \
+            skills/ai-ui-ux-motion-engine/assets/creative-acceptance.example.json \
+            --stage integration
+          node --check skills/ai-ui-ux-motion-engine/scripts/higgsfield-preflight.mjs
       - name: Validate cinematic media preparation script
         run: |
           bash -n skills/ai-ui-ux-motion-engine/scripts/prepare-scroll-media.sh

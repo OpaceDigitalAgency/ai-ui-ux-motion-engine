@@ -1,8 +1,6 @@
-> **Opace open-source portfolio:** [Browse featured Opace Agent Skills, WordPress plugins, web platforms and interactive projects](https://github.com/OpaceDigitalAgency/OpaceDigitalAgency)
-
 # AI UI/UX Motion Engine: Website Design Skill for Codex, Claude Code, Cursor, Copilot, Antigravity and Gemini
 
-**Latest release: [v1.6.4](https://github.com/OpaceDigitalAgency/ai-ui-ux-motion-engine/releases/tag/v1.6.4)**
+**Latest source version: v1.7.0**
 
 **AI UI/UX Motion Engine** is an open Agent Skill and plugin from
 [Opace Digital Agency](https://opace.agency/services/web-design/) for AI
@@ -56,7 +54,16 @@ one private signature sequence; rejects hallucinated geometry; then prepares
 the approved media for smooth scroll delivery. Users do not need to know the
 tool name or ask for “wow”.
 
-Version 1.6.4 fails closed on scroll delivery: it proves every shipping video
+Version 1.7.0 locks the requested cinematic intent before generation. A
+full-screen homepage, signature, intricate, burst or exploded-view journey
+cannot silently become a five-second supporting rotation, zoom or dolly. The
+semantic validator requires an authored beginning, progression, meaningful
+state change and payoff; proves source coverage for unseen geometry; and keeps
+creative acceptance separate from technical delivery. It prefers Higgsfield
+CLI for Codex, then native MCP or API, with browser control only as a recorded
+fallback.
+
+The existing scroll gate proves every shipping video
 frame is independently seekable, rejects P/B-frame derivatives, verifies
 silence and fast-start, requires a poster generated from and visually matched
 to the exact first decoded frame, serializes seeks, keeps the last decoded
@@ -368,7 +375,7 @@ animation, an existing framework library, GSAP for coordinated timelines,
 video/canvas for photographic sequences, or WebGL only when depth materially
 improves the story.
 
-For an authored product-camera journey, the skill now runs a mandatory
+For an authored product-camera journey, the skill runs a mandatory
 cinematic intake before page implementation. It routes to generated
 image-to-video, prompt-to-video, controlled 3D/CAD, compositing or footage
 according to the required truth level. Real-time WebGL remains the route for
@@ -437,7 +444,7 @@ API access.
 ├── skills/ai-ui-ux-motion-engine/
 │   ├── SKILL.md                       # canonical Agent Skill
 │   ├── agents/openai.yaml             # Codex interface metadata
-│   ├── assets/                         # cinematic brief and scroll controller
+│   ├── assets/                         # intent brief, regression fixtures and scroll controller
 │   ├── references/                    # workflow and implementation guides
 │   └── scripts/                       # prompts, media, safety and validators
 ├── GITHUB-PUBLISHING.md               # repo description, topics and release SEO

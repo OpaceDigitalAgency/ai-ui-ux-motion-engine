@@ -1,0 +1,119 @@
+{
+  "project": "Regression: camera-only homepage downgrade",
+  "truthMode": "evidence-accurate",
+  "intent": {
+    "requestSummary": "Create a full-screen beautiful scroll video with a meaningful intricate journey and burst-style impact",
+    "impact": "flagship",
+    "fullScreen": true,
+    "scrollControlled": true,
+    "signatureMoment": "the real product progresses through a detailed commissioning journey",
+    "progression": [
+      "specified",
+      "tested",
+      "documented",
+      "handed over"
+    ],
+    "payoff": "the fully commissioned product is handed over",
+    "requiredEffects": [
+      "burst"
+    ],
+    "prohibitedSubstitutes": [
+      "camera-only",
+      "css-like-parallax",
+      "generic-orbit",
+      "rotation-only",
+      "zoom-only"
+    ],
+    "requiresMeaningfulStateChange": true,
+    "requiresUnseenGeometry": true,
+    "requiresExactMechanics": false
+  },
+  "workflow": {
+    "profile": "lean-scalable",
+    "accuracyPriority": "accuracy-first",
+    "targetMinutes": 30,
+    "escalationMinutes": 60,
+    "parallelism": "off",
+    "frameInspection": "automated-overview-dense-on-risk"
+  },
+  "experience": {
+    "placement": "homepage lower-page full-screen commissioning chapter",
+    "tier": "supporting",
+    "scrollControlled": true,
+    "durationSeconds": 5,
+    "aspectRatio": "16:9",
+    "resolution": "4K",
+    "frameRate": 24
+  },
+  "production": {
+    "technique": "multi-shot-generation"
+  },
+  "sourceCoverage": {
+    "authorityType": "single-view",
+    "supportsUnseenGeometry": false,
+    "supportsExactMechanics": false,
+    "limitations": [
+      "only one straight-on rear photograph exists"
+    ]
+  },
+  "provider": {
+    "name": "Higgsfield",
+    "requiredCapability": "single-reference image-to-video",
+    "connected": true,
+    "termsApproved": true,
+    "accessMethod": "browser",
+    "programmaticPreflightComplete": false,
+    "browserFallbackReason": "",
+    "creditsApproved": 150,
+    "attemptLimit": 1
+  },
+  "identity": {
+    "authorityReference": "server-rear.png",
+    "description": "one exact real rack server rear view",
+    "immutableDetails": [
+      "chassis",
+      "ports",
+      "cables"
+    ],
+    "exactCounts": [
+      {
+        "name": "power modules",
+        "count": 4
+      }
+    ]
+  },
+  "references": [
+    {
+      "file": "server-rear.png",
+      "purpose": "single rear identity authority"
+    }
+  ],
+  "look": {
+    "background": "black",
+    "lighting": "retain source",
+    "camera": "slow lateral dolly"
+  },
+  "shots": [
+    {
+      "name": "inspection",
+      "purpose": "authority",
+      "subjectChange": "none",
+      "startSeconds": 0,
+      "endSeconds": 5,
+      "reference": "server-rear.png",
+      "action": "hold the product completely still",
+      "camera": "slow lateral dolly to the right",
+      "endState": "the same static rear view"
+    }
+  ],
+  "forbidden": [
+    "morphing",
+    "moving components",
+    "invented geometry"
+  ],
+  "delivery": {
+    "silent": true,
+    "scrollMaster": "all-intra-video",
+    "fallback": "exact first-frame poster"
+  }
+}
