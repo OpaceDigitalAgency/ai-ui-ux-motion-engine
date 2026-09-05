@@ -4,6 +4,10 @@ Use this gate before page implementation whenever the requested impact depends
 on photographic camera movement, product transformation, burst/exploded motion
 or scroll-controlled film.
 
+First develop the story with [creative-briefing.md](creative-briefing.md).
+The questions below are production dependencies, not a first-response questionnaire
+for a vague idea. Reuse the agreed brief and ask only unresolved relevant questions.
+
 ## Ask only what is missing
 
 1. **Target:** Which page areas need a flagship sequence, a supporting shot or
@@ -39,7 +43,7 @@ Continue independently when these answers already exist. Existing user
 authority remains valid within its scope; do not repeat approval questions.
 Local animation, 3D or compositing does not require an external provider.
 
-Keep the request to five decisions: accuracy target, source readiness,
+After creative agreement, group production gaps into five decisions: accuracy target, source readiness,
 provider/spend authority, desired placements and delivery/time budget. Do not
 ask the user to choose implementation mechanics.
 
@@ -145,7 +149,7 @@ CAD/compositing/real footage. Never prompt harder indefinitely.
 
 ## Proof-before-page rule
 
-The first deliverable is:
+After creative agreement, the first production deliverable is:
 
 1. the validated cinematic brief with the user's intent, timed viewer takeaways,
    progression, payoff, source coverage and prohibited substitutes recorded;

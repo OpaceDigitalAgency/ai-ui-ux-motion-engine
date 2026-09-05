@@ -1,4 +1,46 @@
-# Motion Engine 1.8.0 — local implementation and installation
+# Motion Engine 1.8.1 — guided creative briefing
+
+## Latest update: 5 September 2026
+
+User acceptance target: a short idea should develop through conversation into
+an agreed, scenario-specific brief, with the depth of the webpage/SEO example
+but without copying its subject, style, tools or duration into other projects.
+
+Bounded change: creative discovery and agreement before production. Canonical
+checkout and branch remain those below; clean start at `6d5778b`, fetched
+`origin/main` has no new commits (0 behind, 1 ahead). No additional checkout.
+Existing 1.8.0 changes are a dependency and remain intact.
+
+Implemented and installed 1.8.1 using supported `codex plugin add`; CLI lists
+1.8.1 enabled. New entrypoint:
+`/Users/davidbryan/.codex/plugins/cache/personal/ai-ui-ux-motion-engine/1.8.1/skills/ai-ui-ux-motion-engine/SKILL.md`.
+
+The skill now explores purpose and visual transformation with one or two focused
+questions, offers labelled interpretations, refines a visible brief and records
+agreement to a revision before production. Existing agreed briefs and explicit
+delegation avoid repetitive interviewing. Meaning, sequence, interaction, site
+fit, constraints and observable success all belong in the brief. Agreement and
+spend authority remain separate. No tool firewall or artistic guarantee added.
+
+Independent read-only conversation tests covered webpage/SEO, shop-to-ecommerce,
+a calm museum without references, an existing agreed brief and creative delegation.
+They exposed older first-response and deliverable wording that was corrected,
+plus clarified SEO scope, delegation and natural conversational updates.
+These are simulated conversation tests, not evidence of a real user's agreement.
+
+Validation: Skill Creator and package checks pass; cinematic regressions pass;
+production contract suite 37/37; motion-safety audit clean. Full delivery baseline
+passes (12/12 independent I-frames, silent fast-start H.264, matching poster;
+wrong poster rejected). All 16 portable installers include the new reference.
+Temporary baseline evidence: `/tmp/motion-briefing-check.40E7w5`.
+No website modifications, generated media or credit spending. Public release/tag
+and merge remain outside scope; feature-branch checkpoint is separate.
+
+Next acceptance test: start a new task selecting the installed 1.8.1 skill with
+only a short idea. Expect useful questions and an evolving brief before production.
+The current task's older 1.7.0 attachment is not the updated entrypoint.
+
+## Historical 1.8.0 implementation record
 
 5 September 2026. Canonical source: `/Users/davidbryan/plugins/ai-ui-ux-motion-engine`.
 Branch: `codex/motion-evidence-gates-2026-09-05`, based on fetched `origin/main`

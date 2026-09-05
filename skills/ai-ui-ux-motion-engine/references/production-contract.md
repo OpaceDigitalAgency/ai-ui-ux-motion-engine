@@ -8,11 +8,13 @@ not visually inspect scenes, authenticate user approval, or block other tools.
 
 ## First response and reference analysis
 
-Report loaded workflow version/path, the intended audience takeaway, what moves,
-how input controls it, the likely route and the next visible proof. Use existing
-context and authority. Ask only for missing information that materially changes
-the outcome. Do not ask the owner to choose an implementation they hired you to
-determine, promise perfection, or start with a long intake form.
+Report loaded workflow version/path. If the idea is undeveloped, use
+[creative-briefing.md](creative-briefing.md) first: propose interpretations and
+develop the audience takeaway, movement and interaction with the user. Do not
+invent these or select a route to satisfy a first-response checklist. Once the
+brief is agreed or remaining choices explicitly delegated, report the selected
+route and next visible proof. Reuse existing context and authority; do not ask
+the owner to choose implementation mechanics or repeat an adequate agreed brief.
 
 Inspect the relevant moving sections of a video, the prompt shown on screen,
 description links and transcript where available. Record time ranges and what

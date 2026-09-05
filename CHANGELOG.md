@@ -2,6 +2,17 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 1.8.1 - 2026-09-05
+
+- Develop new ideas through focused creative conversation before production
+  intake: concrete interpretations, evolving briefs and scenario-specific meaning.
+- Distinguish confirmed requirements, proposed choices and unresolved decisions;
+  record agreement to a brief revision separately from spend authority.
+- Preserve supplied briefs and explicit creative delegation. Reopen affected
+  decisions when the story changes without repeating unchanged questions.
+- Add conversational guidance across commercial transformations and quiet
+  editorial work; keep technical validators separate from genuine user agreement.
+
 ## 1.8.0 - 2026-09-05
 
 - Separate local authoring from provider execution and impact tier. Inspect

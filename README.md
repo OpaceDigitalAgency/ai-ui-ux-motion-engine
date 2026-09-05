@@ -1,6 +1,6 @@
 # AI UI/UX Motion Engine: Website Design Skill for Codex, Claude Code, Cursor, Copilot, Antigravity and Gemini
 
-**Latest source version: v1.8.0**
+**Latest source version: v1.8.1**
 
 **AI UI/UX Motion Engine** is an open Agent Skill and plugin from
 [Opace Digital Agency](https://opace.agency/services/web-design/) for AI
@@ -54,7 +54,14 @@ one private signature sequence; rejects hallucinated geometry; then prepares
 the approved media for smooth scroll delivery. Users do not need to know the
 tool name or ask for “wow”.
 
-Version 1.8.0 locks the requested cinematic intent before generation. A
+Version 1.8.1 adds a guided creative briefing conversation before production.
+Start with a short idea: the skill offers concrete interpretations, asks focused
+questions and develops a visible brief with you. It separates your requirements
+from proposed choices and open decisions, records agreement to the brief, then
+derives the production plan. Existing adequate briefs and explicit creative
+delegation are respected without repeating the interview.
+
+The cinematic contract locks the requested intent before generation. A
 full-screen homepage, signature, intricate, burst or exploded-view journey
 cannot silently become a five-second supporting rotation, zoom or dolly. The
 planning validator requires an authored beginning, progression, meaningful
@@ -99,10 +106,10 @@ reduced-motion users were considered.
 
 AI UI/UX Motion Engine replaces one-shot prompting with a production workflow:
 
-1. detect whether the reference depends on cinematic source motion;
-2. confirm accuracy, sources, provider capability and spend before coding;
-3. prove one private signature sequence when cinematic media is required;
-4. establish the wider brief, source of truth and test baseline;
+1. develop an agreed creative brief from the idea, context and focused conversation;
+2. establish the source of truth, baseline and whether cinematic source motion is needed;
+3. confirm accuracy, sources, provider capability and spend before production;
+4. prove one private signature sequence when cinematic media is required;
 5. extract layout, design-system and motion principles from evidence;
 6. commit to one concrete visual direction;
 7. implement approved media and macro design before micro-polish;

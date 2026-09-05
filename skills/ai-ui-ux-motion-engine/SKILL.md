@@ -5,7 +5,7 @@ description: Design, redesign, build, audit and validate distinctive production 
 
 # AI UI/UX Motion Engine
 
-Workflow version: **1.8.0**. At the first use in a fresh task, report this
+Workflow version: **1.8.1**. At the first use in a fresh task, report this
 version and the loaded path. Read the new task's references and site context;
 do not rely on prior chats or copy their subject, provider, price or acceptance.
 
@@ -40,6 +40,20 @@ branding, copy, code or protected assets.
 - A skill is guidance plus executable checks, not a guarantee of perfect output
   or a host-enforced tool firewall. Never fill passing booleans from intentions,
   equate a structural pass with visual quality, or promise an exact first render.
+
+## Develop the brief with the user
+
+For a new creative requirement, read [creative-briefing.md](references/creative-briefing.md)
+before route selection or production. A short idea is an invitation to develop
+the brief together, not permission to invent the user's purpose and call it agreed.
+Use existing answers, suggest concrete interpretations, ask the next one or two
+high-value questions, and revise a visible plain-language brief as ideas arrive.
+Separate user requirements, creative proposals and unresolved decisions. The first
+deliverable is an agreed, scenario-specific brief with meaning, visual progression,
+interaction, constraints and observable success criteria. Record agreement to the
+specific revision before production; existing explicit agreement counts. Brief
+agreement is separate from spend authority. A small, fully specified fix or audit
+does not need a discovery interview. Never turn briefing into a generic questionnaire.
 
 ## Mandatory cinematic-intent gate
 
@@ -166,15 +180,17 @@ external-provider preflight. Read
 [tool-connections.md](references/tool-connections.md) completely before
 provider work.
 
-Keep the first response concise: confirm the accuracy target, source readiness,
-provider/spend authority, desired placements and delivery/time budget. Do not
-ask the user to choose implementation details the skill can determine.
+For an undeveloped idea, start with the creative briefing conversation above.
+Once the direction is understood, resolve missing production dependencies from
+cinematic intake. Do not lead with models, source formats or credit caps while
+the intended story remains unknown, or ask the user to choose implementation
+details the skill can determine.
 
 “First time” means selecting the correct professional route and bounded proof
 immediately. It cannot guarantee that a stochastic provider’s first render
 will pass.
 
-When required information is missing, make the first response short:
+When the creative brief is agreed but a production dependency is missing:
 
 > I will prove the requested changing scene privately using the route supported
 > by these references and accuracy needs. The remaining dependency is [specific
@@ -207,7 +223,7 @@ Read [media-pipeline.md](references/media-pipeline.md).
 
 ### 3. Lock one direction
 
-Write seven implementable lines covering goal/audience, tone, composition,
+Translate the agreed creative brief into seven implementable lines covering goal/audience, tone, composition,
 typography, colour/media, motion/reduced-motion and one signature
 differentiator. Do not proceed on “clean and modern” alone.
 
@@ -293,6 +309,8 @@ Run the project’s full regression baseline before handoff. Read
 
 ## Resource routing
 
+- [creative-briefing.md](references/creative-briefing.md): conversational discovery,
+  evolving plain-language brief and agreement before production for any new idea.
 - [production-contract.md](references/production-contract.md): fresh-task
   contract, evidence schema, route/model selection and pre-spend validation.
 - [cinematic-intake.md](references/cinematic-intake.md): mandatory questions,

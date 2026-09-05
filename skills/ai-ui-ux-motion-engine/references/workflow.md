@@ -4,6 +4,10 @@
 
 ### A. Intake and baseline
 
+For a new creative idea, first use `creative-briefing.md` to develop an agreed
+plain-language brief with the user. The implementation contract below is derived
+from that agreement; it is not a substitute for discovering meaning and experience.
+
 Produce a short implementation contract:
 
 - bounded target;
