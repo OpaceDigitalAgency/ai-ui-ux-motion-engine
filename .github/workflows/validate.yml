@@ -32,9 +32,13 @@ jobs:
           grep -q "INTENT CONTRACT" /tmp/cinematic-prompt.txt
           grep -q "SHOT 4" /tmp/cinematic-prompt.txt
           node skills/ai-ui-ux-motion-engine/scripts/test-cinematic-regressions.mjs
-          node skills/ai-ui-ux-motion-engine/scripts/validate-creative-acceptance.mjs \
+          node skills/ai-ui-ux-motion-engine/scripts/test-production-contract.mjs
+          if node skills/ai-ui-ux-motion-engine/scripts/validate-creative-acceptance.mjs \
             skills/ai-ui-ux-motion-engine/assets/creative-acceptance.example.json \
-            --stage integration
+            --stage integration; then
+            echo "Unreviewed template unexpectedly passed integration" >&2
+            exit 1
+          fi
           node --check skills/ai-ui-ux-motion-engine/scripts/higgsfield-preflight.mjs
       - name: Validate cinematic media preparation script
         run: |

@@ -40,7 +40,8 @@ Do not ask a video model to reconcile contradictory stills.
 
 ## Generate in bounded tiers
 
-- Flagship: one authored 10–15 second journey using a capable controlled model.
+- Flagship: one authored journey within the agreed duration, using suitable
+  generated media or local 3D/compositing; impact does not mandate a provider.
 - Supporting: one 3–5 second action from one or two references.
 - Code-native: no generated film when CSS/SVG/canvas explains the relationship.
 

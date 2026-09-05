@@ -53,6 +53,9 @@ const required = [
   join(skillRoot, "scripts/validate-creative-acceptance.mjs"),
   join(skillRoot, "scripts/higgsfield-preflight.mjs"),
   join(skillRoot, "scripts/test-cinematic-regressions.mjs"),
+  join(skillRoot, "scripts/test-production-contract.mjs"),
+  join(skillRoot, "scripts/production-contract.mjs"),
+  join(skillRoot, "references/production-contract.md"),
   join(skillRoot, "scripts/render-cinematic-prompt.mjs"),
   join(skillRoot, "scripts/prepare-scroll-media.sh"),
   join(skillRoot, "scripts/validate-scroll-media.mjs"),
@@ -92,7 +95,7 @@ for (const match of skill.matchAll(/\]\((references\/[^)]+)\)/g)) {
 const plugin = JSON.parse(await readFile(join(pluginRoot, ".codex-plugin/plugin.json"), "utf8"));
 if (plugin.name !== "ai-ui-ux-motion-engine") failures.push("Plugin name does not match skill.");
 if (!/^\d+\.\d+\.\d+(?:[-+].+)?$/.test(plugin.version ?? "")) failures.push("Plugin version is not semver.");
-if (plugin.version.split("+")[0] !== "1.7.0") failures.push("Plugin base version is not 1.7.0.");
+if (plugin.version.split("+")[0] !== "1.8.0") failures.push("Plugin base version is not 1.8.0.");
 if (plugin.homepage !== "https://opace.agency/services/web-design/") {
   failures.push("Codex plugin homepage does not point to Opace web design.");
 }
@@ -159,7 +162,7 @@ const generatedScrubber = await readFile(
 );
 for (const phrase of [
   "Golden path",
-  "One-anchor burst preset",
+  "One-anchor burst option",
   "Provider preflight",
   "Attempt discipline",
   "ordinary long-GOP",

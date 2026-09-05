@@ -37,7 +37,6 @@ for (const code of [
   "FLAGSHIP_INTENT_CANNOT_BE_DOWNGRADED",
   "FULLSCREEN_SCROLL_REQUIRES_FLAGSHIP",
   "UNSEEN_GEOMETRY_SOURCE_GAP",
-  "PROGRAMMATIC_PREFLIGHT_REQUIRED",
   "REQUESTED_BURST_OR_TRANSFORMATION_IS_MISSING",
 ]) {
   if (!failed.stderr.includes(code)) {
@@ -68,11 +67,11 @@ const creativeReviewResult = run(creativeValidator, [
   "--stage",
   "integration",
 ]);
-if (creativeReviewResult.status !== 0) {
-  console.error(creativeReviewResult.stderr || creativeReviewResult.stdout);
+if (creativeReviewResult.status === 0) {
+  console.error("An unreviewed template unexpectedly passed integration.");
   process.exit(1);
 }
 
 console.log(
-  "Cinematic regression tests passed: valid flagship accepted; camera-only downgrade, missing source coverage and non-programmatic preflight rejected; creative integration gate accepted only with owner approval.",
+  "Cinematic regression tests passed: planning example accepted; camera-only downgrade and missing source coverage rejected; unreviewed template cannot pass integration.",
 );

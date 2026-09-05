@@ -2,6 +2,23 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 1.8.0 - 2026-09-05
+
+- Separate local authoring from provider execution and impact tier. Inspect
+  reference interactions/workflow before selecting tools; no universal video,
+  3D, hard-cut, shot-count or 10–15 second prescription.
+- Add scenario-specific viewer takeaway, requirement-to-chapter mapping and
+  named independent motion; distinguish actual layers/geometry from flat input.
+- Add planning and generation stages. The latter checks source/evidence hashes,
+  reviewed preview, current capability/quote records, exact submission payload,
+  cumulative spend and attempt limits. Draft rendering validates the plan.
+- Make continuous motion explicit and preserve requested duration ranges.
+- Bind creative review and owner approval to exact brief/asset/evidence hashes;
+  require in-between inspection, purpose, host fit and per-requirement evidence.
+- Replace pre-approved templates with unreviewed examples that fail integration.
+- Add isolated positive/negative regression cases and a fresh-context behavioural
+  evaluation. These checks do not promise perfect output or gate unrelated tools.
+
 ## 1.7.0 - 2026-07-28
 
 ### Added

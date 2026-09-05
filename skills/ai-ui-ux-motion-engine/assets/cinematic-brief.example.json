@@ -1,9 +1,12 @@
 {
-  "project": "Private product-film proof",
+  "project": "Planning example only: replace with the actual task and evidence",
   "truthMode": "identity-locked",
   "intent": {
     "requestSummary": "Create a full-screen scroll-controlled homepage flagship with an intricate product journey rather than a simple camera move",
     "impact": "flagship",
+    "audienceTakeaway": "Understand how the modules work together inside one serviceable product",
+    "requiresIndependentMotion": true,
+    "durationRange": { "min": 8, "max": 12, "reason": "Example brief duration; replace with the current request" },
     "fullScreen": true,
     "scrollControlled": true,
     "signatureMoment": "the product opens and its eight rigid modules separate into a readable engineered arrangement",
@@ -48,10 +51,14 @@
     "frameRate": 24
   },
   "production": {
-    "technique": "multi-shot-generation"
+    "technique": "multi-shot-generation",
+    "execution": "provider",
+    "feasibility": { "status": "experiment", "rationale": "A planning example with no actual sources or verified provider", "unresolved": ["source continuity and actual model controls require inspection"] }
   },
+  "editing": { "mode": "continuous" },
   "sourceCoverage": {
     "authorityType": "multi-view",
+    "representation": "flattened",
     "supportsUnseenGeometry": true,
     "supportsExactMechanics": false,
     "limitations": [
@@ -61,11 +68,11 @@
   "provider": {
     "name": "approved image-to-video provider",
     "requiredCapability": "multi-reference multi-shot video",
-    "connected": true,
-    "termsApproved": true,
+    "connected": false,
+    "termsApproved": false,
     "accessMethod": "cli",
-    "programmaticPreflightComplete": true,
-    "creditsApproved": 90,
+    "programmaticPreflightComplete": false,
+    "creditsApproved": 0,
     "attemptLimit": 1
   },
   "identity": {
@@ -106,6 +113,8 @@
   "shots": [
     {
       "name": "authority",
+      "communicates": "Establish the complete product before showing how it works",
+      "componentActions": [],
       "purpose": "authority",
       "subjectChange": "none",
       "startSeconds": 0,
@@ -117,6 +126,8 @@
     },
     {
       "name": "access",
+      "communicates": "The enclosure opens to expose accessible components",
+      "componentActions": [{ "id": "panel", "action": "Separate the panel on its hinge/axis while the chassis stays still" }],
       "purpose": "transformation",
       "subjectChange": "physical",
       "startSeconds": 2.5,
@@ -128,6 +139,8 @@
     },
     {
       "name": "assembly",
+      "communicates": "Separate functional modules show how the system fits together",
+      "componentActions": [{ "id": "modules", "action": "Stagger the eight module trajectories through depth with stable identities" }, { "id": "panel", "action": "Keep the panel separated while modules move; return after they seat" }],
       "purpose": "inspection",
       "subjectChange": "physical",
       "startSeconds": 5,
@@ -139,6 +152,8 @@
     },
     {
       "name": "resolve",
+      "communicates": "The integrated system becomes ready for use",
+      "componentActions": [{ "id": "indicators", "action": "Activate existing lights after assembly completes" }],
       "purpose": "payoff",
       "subjectChange": "visualized-system",
       "startSeconds": 9,
@@ -149,6 +164,14 @@
       "endState": "opening exterior identity with a half-second still hold"
     }
   ],
+  "planning": {
+    "referenceReview": { "kind": "written", "source": "Example scenario in this template", "status": "partial", "workflowEvidence": "unknown" },
+    "requirements": [
+      { "id": "system", "requirement": "Show how parts form a serviceable system", "shotNames": ["authority", "access", "assembly", "resolve"], "acceptance": "Inspect each named moving group between poses; the arrangement and return explain its relationship to the system" }
+    ],
+    "selection": { "reason": "Generated film is a candidate for a fictional identity with tolerable inference; current capabilities unverified", "alternatives": [{ "name": "procedural-3d", "reason": "Prefer when exact parts or free viewpoints require deterministic control" }] },
+    "evidence": []
+  },
   "forbidden": [
     "morphing",
     "duplicated or missing parts",

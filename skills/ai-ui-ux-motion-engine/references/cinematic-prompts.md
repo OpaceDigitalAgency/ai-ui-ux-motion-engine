@@ -1,115 +1,126 @@
 # Cinematic prompt contracts
 
-Generate prompts from a validated cinematic brief with:
+Generate a draft prompt from a brief that passes the plan gate:
 
 ```bash
 node scripts/render-cinematic-prompt.mjs <brief.json> --mode flagship
 ```
 
-Use `--mode single` for one supporting action and `--mode illustrative` for a
-creative transformation. Provider upload tokens may replace reference names
-after the files are attached.
+Use `--mode single` for a supporting action and `--mode illustrative` for a
+creative transformation. A rendered draft is not permission to generate. Follow
+[production-contract.md](production-contract.md) for the separate exact-payload
+gate, source mapping, live settings and existing spend authority. Preserve the
+rendered structure when adapting it to the provider's current schema; record
+the exact submitted prompt and all input roles. No validator or prompt can
+guarantee the resulting motion.
 
 ## Prompt-writing rules
 
-- Give one reference the role of identity authority.
-- State immutable geometry and exact counts positively before exclusions.
-- Use one physically legible action per supporting clip.
-- For a flagship film, use explicit shot boundaries, durations and hard cuts.
-- Specify permitted camera movement separately from object movement.
-- End every mechanical shot with a short still hold for QC and scroll cues.
-- Keep generated audio off and put readable text in the DOM.
-- Do not assume a longer negative prompt can repair inconsistent references.
+- Give the subject one identity authority, or a documented authoritative source
+  set when a single frame cannot establish it.
+- State immutable identity, geometry and relevant counts before exclusions.
+- Derive timed actions from the scenario's visitor takeaway. Each action must
+  expose a relationship, decision, feature or result that matters to the brief.
+- Separate object/component movement from camera movement. Where requested,
+  name independent groups, overlapping movement, rotations, depth and parallax.
+- Use `editing.mode: continuous` for a continuous scroll journey by default.
+  Timed phases are parts of one shot, not requests for cuts or held stills.
+  Use `editing.mode: cuts` only when distinct shots are explicitly intended.
+- Use the requested duration. Add holds only where the composition needs one;
+  do not impose a still checkpoint after every action.
+- Use audio, text and exclusions appropriate to the brief. Silent is the default
+  for scroll media; keep required readable text and actions in the DOM or exact
+  compositing layers when generated typography cannot meet the truth target.
+- Avoid blanket exclusions that forbid requested rotation, zoom or subject
+  matter. Longer negative prompts do not repair incompatible sources.
 
-## Exact single-action contract
+## Continuous flagship contract
 
 ```text
-Create a silent premium product-engineering shot of the exact subject in
-[IDENTITY REFERENCE].
+Create one [DURATION] continuous cinematic sequence of [SUBJECT] for [PLACEMENT].
+The viewer should understand [SCENARIO-SPECIFIC TAKEAWAY].
 
-IDENTITY LOCK
-Preserve [IMMUTABLE DETAILS AND COUNTS]. Rigid objects remain rigid and retain
-their size, shape, order and spacing.
+IDENTITY AND SOURCE ROLES
+[AUTHORITY] establishes [IDENTITY DETAILS]. [OTHER REFERENCES] constrain
+[NAMED DETAILS/STATES]. Preserve [IMMUTABLES]. A reference image is not a
+guaranteed timed keyframe; follow the supported input roles below.
 
-ACTION
-Perform only [ONE ACTION] along [PERMITTED PHYSICAL AXIS]. Begin at [START
-STATE], finish at [END STATE], then hold completely still for [HOLD].
+PROGRESSION — ONE UNBROKEN SHOT
+[TIME WINDOW 1]: [START STATE]. [NAMED GROUP ACTIONS], while [OVERLAPPING ACTION].
+The visible relationship reveals [MEANING]. Camera: [PATH AND FRAMING].
+[TIME WINDOW 2]: Continue from the same state. [NEXT GROUP ACTIONS AND RELATIONSHIP].
+The viewer now sees [MEANING]. Camera: [CONTINUING PATH AND FRAMING].
+[FURTHER WINDOWS AS THE ACTUAL PLAN REQUIRES]
+[FINAL WINDOW]: Resolve into [PAYOFF/FINAL STATE], making [TAKEAWAY] clear.
 
-CAMERA AND LIGHT
-Use only [ONE CAMERA MOVE] with [LENS/FRAMING]. Preserve [LIGHT/BACKGROUND].
-
-REJECTED CHANGES
-No morphing, rotation unless explicitly requested, duplication, disappearing
-parts, clipping, altered geometry, invented text, logos, labels, people,
-hands, tools, particles, smoke, holograms, camera shake or generated audio.
+MOTION AND CONTINUITY
+[GROUPS] remain recognisable during their individual [PATHS/ROTATIONS].
+[DEPTH AND OVERLAPPING TIMING]. Preserve [COUNTS/GEOMETRY WHERE REQUIRED].
+Maintain [LIGHT/BACKGROUND/COLOUR]. No cuts, dissolves or transitions between
+held still-image compositions. [PROJECT-SPECIFIC EXCLUSIONS].
 
 DELIVERY
-[DURATION], [ASPECT], [RESOLUTION], clean first and final frames.
+[ASPECT], [RESOLUTION], [SUPPORTED FRAME RATE], [AUDIO SETTING], clean start/end.
 ```
 
-## Exact multi-shot flagship contract
+This contract describes the expected output. A generator may not obey exact
+timings or preserve every component. Inspect the proof against the plan before
+accepting it. For exact movement or labels, choose a route with the required
+control rather than claiming the prompt has enforced it.
+
+## Authored-cut flagship contract
+
+Use only when the approved direction calls for cuts. Keep identity and lighting
+constraints from the continuous contract, replace the progression with named
+shots, and specify each cut explicitly:
 
 ```text
-Create one silent [DURATION] premium product film with [SHOT COUNT] distinct
-hard-cut shots. Every reference depicts the same product. [IDENTITY REFERENCE]
-is the authority for identity; other references constrain only their named
-shots.
-
-SUBJECT AND CONTINUITY LOCK
-Preserve [IMMUTABLE DETAILS]. Exactly [COUNTS] remain present in the same order
-and spacing. Rigid parts never bend, stretch, merge, duplicate, disappear,
-change design or trade places. Mechanical motion occurs only on the stated
-physical axes.
-
-SETTING AND LIGHT
-[BACKGROUND, MATERIAL, KEY LIGHT, RIM LIGHT, COLOUR GRADE]. Keep these
-continuous across every shot.
-
-SHOT 1 — [NAME] — [START-END]
-[REFERENCE]. [START STATE]. [ONE ACTION]. [CAMERA]. [END STATE AND STILL HOLD].
-
-[REPEAT ONE BLOCK PER SHOT]
-
-EDITING
-Use only the stated hard cuts. No morphs, dissolves, orbit, turntable, digital
-zoom, handheld shake, jitter, texture crawl, flicker or motion smear.
-
-EXCLUSIONS
-[PROJECT-SPECIFIC EXCLUSIONS]. No added or missing parts, invented seams,
-labels, logos, watermarks, people, hands, tools, loose cables, sparks, smoke,
-particles, holograms or generated audio.
-
-DELIVERY
-[ASPECT], [RESOLUTION], [FRAME RATE], silent, stable first frame and final
-[HOLD] still hold.
+Create one [DURATION] film with [SHOT COUNT] authored shots.
+SHOT [N] — [START-END]: [SOURCE ROLE], [STATE/ACTION], [CAMERA], [VIEWER TAKEAWAY].
+CUT [N TO N+1]: [EXACT EDITING INTENT].
+Preserve [CONTINUITY RULES]. End with [PAYOFF].
 ```
 
-## Illustrative burst/exploded-view contract
+Do not force a three-clip orbit/explosion/macro construction onto a continuous
+reference. Separate renders can be appropriate when their join is deliberately
+designed and verified; their availability alone does not justify the edit.
+
+## Supporting single-action contract
 
 ```text
-Create a silent cinematic exploded-view sequence using [REFERENCE] as the
-identity anchor. The complete subject separates into [NAMED GROUPS] along
-clean radial or linear paths, pauses in a readable layered arrangement, then
-returns exactly to the opening silhouette. Keep every group recognisable and
-preserve the total part count. Use [CAMERA MOVE], [LIGHT] and [BACKGROUND].
-No liquid morphing, random fragments, duplicate parts, text, logos, people,
-camera shake or generated audio. End on a clean still frame.
+Create a [DURATION] shot of [SUBJECT/AUTHORITY]. Preserve [IMMUTABLES].
+Begin at [START STATE], perform [ONE ACTION] using [PERMITTED AXES/PATH],
+and finish at [END STATE]. This reveals [VIEWER TAKEAWAY].
+Camera: [ONE CAMERA INSTRUCTION]. Light/background: [SETTING].
+[OPTIONAL HOLD ONLY WHEN REQUIRED]. [PROJECT-SPECIFIC EXCLUSIONS].
+Deliver [ASPECT], [RESOLUTION], [AUDIO SETTING].
 ```
 
-This route permits stylised mechanics. Do not use it to imply an exact real
-product assembly unless every visible state is independently verified.
+## Illustrative burst/exploded-view adaptation
 
-For a reference-style scroll sequence, use the same approved anchor separately
-for an orbit/dolly prompt, the burst/exploded prompt and a macro/detail prompt.
-Do not ask one generation to perform all three. Reverse the accepted separation
-clip for reassembly only after checking every reversed frame.
+Use the continuous contract with the named groups, separation paths, rotations,
+changing depths and desired reassembly. Specify whether parts keep a fixed
+identity or may transform creatively. A pause or return to the opening
+silhouette is optional, determined by the reference and story. Stylised
+mechanics must not be presented as evidence of real product construction.
+
+For reverse scroll, sample the same accepted timeline backwards. Reverse a
+separation clip into a new reassembly film only after checking that reversed
+motion remains credible, especially irreversible actions and changing text.
 
 ## Prompt failure diagnosis
 
-- Identity drift: improve or reduce references; do not add adjectives.
-- Incorrect count: make the count visible in both start/end references and
-  simplify occlusion.
-- Mechanical morphing: split the action into a separate short clip or use CAD.
-- Missing shot: reduce shot count or accept and disclose the omission; never
-  claim it appeared.
-- Boring result: improve shot design, framing and payoff—not CSS decoration.
+- Identity drift: resolve conflicting source roles or coverage; more adjectives
+  do not establish identity.
+- Incorrect count or geometry: improve visible evidence and simplify occlusion;
+  use a more controlled route if exactness is essential.
+- Mechanical morphing: diagnose the unsupported intermediate state before
+  deciding between source changes, a bounded retry or a different technique.
+- Missing phase: compare actual time windows with the plan. Do not declare a
+  required action optional after seeing the result.
+- Three-image interpolation: examine sustained independent motion, depth and
+  continuity across the whole proof. Re-encoding more frames does not fix it.
+- Decorative spectacle: revise the visual causal story and payoff. Labels and
+  surrounding UI cannot supply a relationship absent from the film.
+- Weak impact: compare the observed reference and output at matched moments;
+  change a specific source, movement, composition or capability before retrying.

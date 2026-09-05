@@ -5,6 +5,10 @@ description: Design, redesign, build, audit and validate distinctive production 
 
 # AI UI/UX Motion Engine
 
+Workflow version: **1.8.0**. At the first use in a fresh task, report this
+version and the loaded path. Read the new task's references and site context;
+do not rely on prior chats or copy their subject, provider, price or acceptance.
+
 Create a project-specific experience from evidence. Treat references as
 structural, visual and interaction inputs, never as permission to clone
 branding, copy, code or protected assets.
@@ -30,6 +34,12 @@ branding, copy, code or protected assets.
 - Never downgrade a requested full-screen, homepage or signature cinematic
   journey to a supporting shot. A camera rotation, dolly, zoom, parallax or
   static-image reveal is not a flagship.
+- Separate impact from implementation: a procedural 3D scene can be a flagship.
+  No video provider is required for local authoring. Choose tools after inspecting
+  the reference and defining the subject, motion and accuracy requirements.
+- A skill is guidance plus executable checks, not a guarantee of perfect output
+  or a host-enforced tool firewall. Never fill passing booleans from intentions,
+  equate a structural pass with visual quality, or promise an exact first render.
 
 ## Mandatory cinematic-intent gate
 
@@ -48,6 +58,9 @@ Before editing the page:
 1. Copy the user's requested outcome into `intent.requestSummary`; record the
    signature moment, progression, payoff, required effects and unacceptable
    substitutes. Do not rewrite the request around the easiest available asset.
+   Record what the viewer must understand or feel (`intent.audienceTakeaway`).
+   For a business/process story, connect movement to decisions or relationships;
+   decorative labels and a finished object alone do not establish the message.
 2. Classify truth mode:
    - `illustrative`: invented details are acceptable;
    - `identity-locked`: the same fictional or concept product must stay stable;
@@ -59,6 +72,13 @@ Before editing the page:
    If the reference is a video, inspect keyframes plus any available transcript,
    prompt pack and description links; do not reconstruct its workflow from a
    summary or isolated screenshot.
+   Distinguish camera movement, object movement and the interaction that controls
+   each. A draggable 3D scene, slider and scroll-scrubbed film are different.
+   Record observed implementation versus unknowns. If access is incomplete,
+   continue useful preparation but do not claim reference parity or spend on
+   an assumed workflow.
+   If a web fetch fails, try an available authorised browser or supplied recording
+   before asking the user to resend an accessible reference.
 4. State the dependency plainly. Photographic camera movement or physical
    transformation requires suitable source media plus an image/video
    generation, 3D or compositing route. CSS cannot invent unseen product views.
@@ -68,7 +88,15 @@ Before editing the page:
 6. Create a cinematic brief from
    `assets/cinematic-brief.example.json`, validate it with
    `scripts/validate-cinematic-brief.mjs`, and obtain spend/terms authority
-   before generation. Do not upload or spend after a failed validation.
+   before generation. Do not upload after a failed source/plan check or spend
+   after a failed generation check. Authorised uploads may supply the media IDs
+   needed for the final quote; uploads themselves do not authorise generation.
+   Read [production-contract.md](references/production-contract.md) fully.
+   Map each requirement to timed chapters and observable checks, name independent
+   component actions when required, and record the actual source representation.
+   Review the cheapest useful visual checkpoint for unresolved direction: existing
+   approved references, styleframes or an animatic. Do not demand all three or
+   request approval again when the user's existing authority covers the action.
 7. Produce one isolated private proof of the signature moment before redesigning
    the page or generating the full library.
 8. Reject drift with automated technical checks and an overview contact sheet.
@@ -90,14 +118,25 @@ burst, exploded or authored scroll journey as `flagship` unless the user
 explicitly requests a smaller supporting shot. Before any paid generation run:
 
 ```bash
-node scripts/validate-cinematic-brief.mjs cinematic-brief.json --check-files
+node scripts/validate-cinematic-brief.mjs cinematic-brief.json --stage plan --check-files
 node scripts/render-cinematic-prompt.mjs cinematic-brief.json --mode flagship
+node scripts/validate-cinematic-brief.mjs cinematic-brief.json --stage generate --check-files
 ```
 
 The validator must reject a tier downgrade, a camera-only story, a missing
 beginning/progression/payoff, insufficient source coverage, a missing requested
 transformation and an unverified provider route. Do not bypass it by writing a
 manual prompt.
+
+The renderer emits a draft and invokes the planning validator itself. The
+generation stage binds current capability/quote evidence, reviewed previews,
+authority, source hashes and the exact payload; changing them requires recheck.
+Submit only that payload, adapting documented provider field names without
+changing its contents. Never patch/copy a validator to turn a failure into a pass.
+Use `editing.mode=continuous` for continuous scroll journeys; use cuts only when
+the reference or agreed direction requires them. Honour the recorded duration
+range rather than forcing 10–15 seconds. Neither gate independently understands
+visual evidence or intercepts a direct MCP call; the agent must honour it.
 
 After generation, record visual evidence and run:
 
@@ -111,7 +150,8 @@ check as evidence that the creative brief passed.
 
 ### Programmatic provider rule
 
-Use structured provider access before browser control. For Higgsfield in Codex:
+Preserve the user's explicit tool/provider choices. Otherwise use structured
+provider access before browser control. For Higgsfield in Codex:
 
 1. prefer the authenticated Higgsfield CLI;
 2. use Higgsfield MCP in clients that expose the connector natively;
@@ -119,8 +159,10 @@ Use structured provider access before browser control. For Higgsfield in Codex:
 4. use browser control only for a required control unavailable through all
    programmatic routes, and record that exact limitation in the brief.
 
-Run `scripts/higgsfield-preflight.mjs` before Higgsfield generation. It checks
-the CLI account connection without spending credits. Read
+Run `scripts/higgsfield-preflight.mjs` for the CLI route; a connected native MCP
+route uses its own read-only account/capability/quote tools. Do not install or
+authenticate a second route merely to satisfy this script. Local authoring skips
+external-provider preflight. Read
 [tool-connections.md](references/tool-connections.md) completely before
 provider work.
 
@@ -134,11 +176,9 @@ will pass.
 
 When required information is missing, make the first response short:
 
-> This experience depends on cinematic source motion, not ordinary CSS. I can
-> produce it with an approved media provider and suitable references, but I
-> first need the required accuracy, key scenes/placements, source assets,
-> provider access and credit cap. I will prove one private signature sequence
-> before changing the page and will not substitute basic photo reveals.
+> I will prove the requested changing scene privately using the route supported
+> by these references and accuracy needs. The remaining dependency is [specific
+> missing input]. I can continue [independent preparation] while it is resolved.
 
 Read [cinematic-intake.md](references/cinematic-intake.md),
 [generated-product-scrubber.md](references/generated-product-scrubber.md) and
@@ -183,8 +223,12 @@ Choose the lightest mechanism that preserves the intended experience:
 - all-intra video or canvas frames for exact scroll scrubbing;
 - WebGL/3D for freely manipulable viewpoints or reliable exact mechanics.
 
-For cinematic product motion, the media is the experience. Prove it first; do
-not expect CSS transforms to create the missing film.
+For cinematic product motion, the changing scene is the experience. Prove it
+first with generated media, authored layers, procedural 3D or footage as selected.
+Three flattened frames may guide generated motion; they do not prove independent
+control, continuity or exact text. Conversely, they are not evidence that AI
+video cannot work. Declare unresolved feasibility and a bounded experiment, or
+prepare controllable geometry/layers where precision requires them.
 
 Use the lean scalable default:
 
@@ -197,8 +241,9 @@ Target 15–30 minutes for a private proof when sources/provider are ready,
 30–60 minutes for an approved flagship plus scroll delivery, and 5–10 minutes
 for a derivative or supporting integration. Allow 75–120 minutes only for new
 or inconsistent source packs, evidence-critical mechanics, CAD or compositing.
-These are targets, not guarantees. If a timebox is exceeded, report the
-evidence and obtain approval before continuing.
+These are targets, not guarantees. If a timebox is exceeded, report the evidence
+and next step. Seek new authority only for a material scope/spend change or an
+explicitly agreed hard limit; continue work already authorised.
 
 ### 5. Implement in bounded passes
 
@@ -226,7 +271,8 @@ generation, approvals or dependent steps. Rejoin before decisions.
 After each component, test pointer, keyboard, touch, reduced motion, target
 viewports, console/runtime behaviour and focused checks. For cinematic media,
 also verify identity/count/geometry, first/end states, forward/backward scrub,
-crop and fallback. Then run:
+crop and fallback. Run the safety/package checks, and run media validation only
+for a selected video delivery route (not an authored 3D/DOM scene):
 
 ```bash
 node scripts/audit-motion-safety.mjs <project-directory>
@@ -247,6 +293,8 @@ Run the project’s full regression baseline before handoff. Read
 
 ## Resource routing
 
+- [production-contract.md](references/production-contract.md): fresh-task
+  contract, evidence schema, route/model selection and pre-spend validation.
 - [cinematic-intake.md](references/cinematic-intake.md): mandatory questions,
   pushback, tiers, spend and stop rules.
 - [cinematic-prompts.md](references/cinematic-prompts.md): exact reusable

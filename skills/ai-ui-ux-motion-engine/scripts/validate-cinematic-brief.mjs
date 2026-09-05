@@ -1,14 +1,18 @@
 #!/usr/bin/env node
 import { access, readFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
+import { validateProductionContract } from "./production-contract.mjs";
 
 const args = process.argv.slice(2);
+const stageIndex = args.indexOf("--stage");
+const stage = stageIndex === -1 ? "plan" : args[stageIndex + 1];
+if (stageIndex !== -1) args.splice(stageIndex, 2);
 const checkFilesIndex = args.indexOf("--check-files");
 const checkFiles = checkFilesIndex !== -1;
 if (checkFiles) args.splice(checkFilesIndex, 1);
 
-if (args.length !== 1 || args[0] === "--help") {
-  console.log("Usage: validate-cinematic-brief.mjs <brief.json> [--check-files]");
+if (args.length !== 1 || args[0] === "--help" || !["plan", "generate"].includes(stage)) {
+  console.log("Usage: validate-cinematic-brief.mjs <brief.json> [--check-files] [--stage plan|generate]");
   process.exit(args[0] === "--help" ? 0 : 2);
 }
 
@@ -32,6 +36,9 @@ const productionTechniques = new Set([
   "compositing",
   "real-footage",
   "code-native",
+  "image-to-video",
+  "procedural-3d",
+  "hybrid",
 ]);
 const providerAccessMethods = new Set(["cli", "mcp", "api", "browser", "none"]);
 const transformationEffects = new Set([
@@ -220,7 +227,7 @@ if (!referenceFiles.has(brief.identity?.authorityReference)) {
   );
 }
 
-if (brief.experience?.tier !== "code-native") {
+if (brief.production?.execution === "provider" && stage === "generate") {
   requireValue(brief.provider?.name, "provider.name");
   requireValue(brief.provider?.requiredCapability, "provider.requiredCapability");
   if (brief.provider?.connected !== true) {
@@ -232,6 +239,7 @@ if (brief.experience?.tier !== "code-native") {
   if (!(brief.provider?.creditsApproved >= 0)) {
     fail("CREDIT_AUTHORITY_MISSING", "provider.creditsApproved must be zero or more.");
   }
+  if (brief.provider?.accessMethod === "none") fail("PROVIDER_ROUTE_NONE", "Provider generation cannot use accessMethod=none.");
   if (![1, 2].includes(brief.provider?.attemptLimit)) {
     fail("INVALID_ATTEMPT_LIMIT", "provider.attemptLimit must be 1 or 2.");
   }
@@ -276,6 +284,7 @@ for (const [index, shot] of (brief.shots ?? []).entries()) {
   if (!(shot.startSeconds >= 0) || !(shot.endSeconds > shot.startSeconds)) {
     fail("INVALID_SHOT_TIMING", `${prefix} has invalid timing.`);
   }
+  if (index === 0 && shot.startSeconds !== 0) fail("SHOT_TIMELINE_GAP", "The first chapter must begin at zero.");
   if (index > 0 && Math.abs(shot.startSeconds - previousEnd) > 0.01) {
     fail("SHOT_TIMELINE_GAP", `${prefix} does not start where the previous shot ends.`);
   }
@@ -290,10 +299,11 @@ if (
 }
 
 if (brief.experience?.tier === "flagship") {
-  if (!(brief.experience.durationSeconds >= 10 && brief.experience.durationSeconds <= 15)) {
+  const range = brief.intent?.durationRange;
+  if (!range || !Number.isFinite(range.min) || !Number.isFinite(range.max) || range.min <= 0 || range.max < range.min || !String(range.reason ?? "").trim() || brief.experience.durationSeconds < range.min || brief.experience.durationSeconds > range.max) {
     fail(
       "FLAGSHIP_DURATION_OUT_OF_RANGE",
-      "A flagship film must be 10–15 seconds unless the user explicitly requests a different tier.",
+      "Record a positive intent.durationRange {min,max,reason} and keep the timeline within it. Duration does not determine tier.",
     );
   }
   if ((brief.shots?.length ?? 0) < 3) {
@@ -387,6 +397,10 @@ if (checkFiles) {
   }
 }
 
+if (brief.experience?.tier === "flagship" || stage === "generate") {
+  failures.push(...await validateProductionContract(brief, { base: dirname(briefPath), stage, checkFiles }));
+}
+
 if (failures.length) {
   console.error(`Cinematic brief validation failed (${failures.length}):`);
   failures.forEach((failure) => console.error(`- ${failure}`));
@@ -394,5 +408,5 @@ if (failures.length) {
 }
 
 console.log(
-  `Cinematic brief passed: ${brief.experience.tier}, ${brief.truthMode}, ${brief.shots.length} shots, ${brief.provider?.accessMethod ?? "n/a"} provider route, ${brief.provider?.attemptLimit ?? 0} attempt(s).`,
+  `Cinematic ${stage} checks passed: ${brief.experience.tier}, ${brief.truthMode}, ${brief.shots.length} chapters. ${stage === "plan" ? "Planning only; not permission to spend or proof of visual quality." : "Evidence and payload checked; no generation submitted. Visual claims still require inspection."}`,
 );

@@ -4,23 +4,32 @@ Use this route when the experience depends on an authored photographic camera
 path, product reveal, assembly/disassembly, burst/exploded view, macro inspection
 or object state controlled by scrolling.
 
-The deliverable is a pre-rendered film or frame sequence plus semantic DOM
-content. It is not real-time 3D.
+The deliverable on this route is a pre-rendered film or frame sequence plus
+semantic DOM content. The film may come from generation, footage, 3D or
+compositing. Choose real-time 3D separately when interaction needs it; do not
+force that architecture merely because many components should move.
 
 ## Golden path
 
 1. Run the cinematic-intent gate before editing the page.
 2. Classify truth mode and production tier.
-3. Verify provider capability, access, terms, cost and attempt authority.
+3. Select a route against accuracy and source coverage. Honour user-selected
+   tools. Verify provider capability, access, terms, cost and attempt authority
+   only when external generation is selected.
 4. Record the user's requested signature moment, progression, payoff, required
    effects and prohibited substitutes; create and validate the cinematic brief.
-5. Prepare one identity authority and only the shot-specific references needed.
-6. Render the prompt from the brief; do not improvise a different production
-   method.
-7. Generate one private proof through CLI, MCP or API where available; use
-   browser control only as a recorded capability-specific fallback.
-8. Inspect the overview contact sheet and sample risky transitions densely only
-   where identity or mechanical drift could occur.
+5. Prepare the identity authority and sources needed for the actual sequence.
+   Resolve uncertain direction with the cheapest useful preview; an animatic is
+   useful for uncertain choreography but is not mandatory before every proof.
+6. For generation, render a draft prompt from the plan-validated brief, then
+   validate the exact provider payload under the generation gate in
+   [production-contract.md](production-contract.md). A draft prompt cannot
+   authorise spend. Local rendering follows its recorded production plan.
+7. Produce one private proof using the selected route. For generation, use CLI,
+   MCP or API where available; browser control is a recorded capability fallback.
+8. Watch the complete proof and compare it with the inspected reference and
+   timed takeaways. Inspect the overview contact sheet and sample risky
+   transitions densely where identity or mechanical drift could occur.
 9. Convert accepted media to an all-intra scrub master and frame sequence.
 10. Generate the poster from the exact shipping master and validate both
     together with `validate-scroll-media.mjs`.
@@ -56,13 +65,17 @@ delivered product.
 
 ### Flagship film
 
-- 10–15 seconds is normally sufficient.
-- Use an authored progression: authority, access/change, inspection and payoff.
-- Choose a model that supports the required multi-reference and multi-shot
-  controls.
-- One paid attempt by default; one additional attempt only with explicit
-  approval.
-- A missing shot is a disclosed exception, not a silent success.
+- Use the requested duration and a scenario-specific beginning, progression
+  and payoff; there is no fixed shot count or 10–15 second minimum.
+- A continuous scroll reference defaults to one continuous shot. Plan timed
+  actions and overlapping component movement without inserting automatic cuts
+  or holds. Use authored cuts only when they serve the intended experience.
+- Choose controls required by the plan, not a model name or assumed need for
+  multiple references/shots. Record feasibility and unresolved risks.
+- Stay within existing spend and attempt authority. Obtain only missing
+  authority; a new approval is not required for each action within the cap.
+- A missing required action fails its acceptance criterion. Any proposed change
+  to the requirement must be explicit.
 - A rotation, dolly, zoom, parallax or static product with moving camera is
   supporting footage, never a substitute for a requested flagship.
 
@@ -80,17 +93,16 @@ delivered product.
 Use CSS, SVG, canvas or an existing motion library when the effect explains
 data, airflow, state or typography and does not need photographic state change.
 
-## One-anchor burst preset
+## One-anchor burst option
 
 For a fictional product, abstract material or illustrative reference-style
 experience:
 
 1. approve one strong anchor image;
-2. reuse that same anchor for each independent clip;
-3. generate three simple movements rather than one overloaded film—typically a
-   controlled orbit/dolly, one exploded or burst action, and one macro/detail
-   move;
-4. keep each clip to one action and one camera instruction;
+2. record the parts and intermediate states that the anchor does not establish;
+3. select one continuous sequence or intentionally edited segments according
+   to the reference and story, never a compulsory three-clip recipe;
+4. specify named component groups, overlapping action and the camera path;
 5. reverse an accepted separation clip for reassembly when that reads cleanly;
 6. extract a consistent numbered frame sequence from every accepted segment;
 7. preload the opening frames and map the sequence to a pinned canvas;
@@ -128,27 +140,34 @@ an obsolete model name merely because it worked previously.
 More references do not automatically create more control. Inconsistent
 references create averaged or invented geometry.
 
+Flattened start/end frames can support intricate generated motion, but do not
+prove controllable layers or valid intermediate states. Explain how the chosen
+route will address those gaps. Use isolated layers or 3D when their control is
+needed for the stated accuracy; treat generated inference as an explicit risk,
+not automatically as either sufficient or disallowed.
+
 ## Brief and prompt
 
 Copy `assets/cinematic-brief.example.json`, replace the example values, then run:
 
 ```bash
-node scripts/validate-cinematic-brief.mjs cinematic-brief.json --check-files
+node scripts/validate-cinematic-brief.mjs cinematic-brief.json --check-files --stage plan
 node scripts/render-cinematic-prompt.mjs cinematic-brief.json --mode flagship \
   > cinematic-prompt.txt
 ```
 
 Use `--mode single` for a supporting shot and `--mode illustrative` for a burst
 or fictional transformation. Read [cinematic-prompts.md](cinematic-prompts.md)
-before changing the rendered structure.
+before changing the rendered structure. The generation-stage payload check is
+separate; follow [production-contract.md](production-contract.md).
 
 ## Prompt discipline
 
 - State identity and positive immutable constraints first.
 - State exactly one action per supporting clip.
-- Use timed shot blocks and hard cuts for a multi-shot film.
+- Use timed phases for a continuous shot; named cuts only for an authored edit.
 - Separate object motion from camera motion.
-- Require a clean still hold at useful cue points.
+- Require readable cue states; add a still hold only when the motion plan needs it.
 - Keep readable text and labels outside generated pixels.
 - Reject a generic orbit when the brief requires a product story.
 - Do not add endless exclusions after bad output; diagnose references, action
@@ -160,13 +179,15 @@ For each attempt:
 
 1. save provider ID, model/settings, prompt and cost;
 2. download the raw result;
-3. produce a 30-frame overview sheet;
+3. produce an overview sheet and inspect the complete moving result;
 4. sample difficult mechanical moments densely;
-5. decide pass, supporting-only, disclosed exception or reject;
+5. compare the timed actions, independent movement and viewer takeaway with the
+   brief; decide pass or reject against its actual required criteria;
 6. do not integrate rejected media.
 
-After the approved cap, change one material condition—references, model,
-complexity or technique. Do not keep rewriting synonyms.
+After the approved cap, report the failure and propose one material change:
+references, model, complexity or technique. Do not spend beyond the cap or
+silently reduce the requested scope. Do not keep rewriting synonyms.
 
 ## Scrub delivery
 
@@ -289,6 +310,8 @@ frame changes crop, scale, position, filter or mask from the poster.
 Require:
 
 - the requested beginning, progression and payoff;
+- scenario-specific meaning visible in the actions and final relationship;
+- independent overlapping component motion when the reference requires it;
 - continuous identity and required counts/geometry;
 - clean cue frames and truthful disclosed exceptions;
 - smooth forward/backward progress;

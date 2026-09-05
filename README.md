@@ -1,6 +1,6 @@
 # AI UI/UX Motion Engine: Website Design Skill for Codex, Claude Code, Cursor, Copilot, Antigravity and Gemini
 
-**Latest source version: v1.7.0**
+**Latest source version: v1.8.0**
 
 **AI UI/UX Motion Engine** is an open Agent Skill and plugin from
 [Opace Digital Agency](https://opace.agency/services/web-design/) for AI
@@ -54,14 +54,22 @@ one private signature sequence; rejects hallucinated geometry; then prepares
 the approved media for smooth scroll delivery. Users do not need to know the
 tool name or ask for “wow”.
 
-Version 1.7.0 locks the requested cinematic intent before generation. A
+Version 1.8.0 locks the requested cinematic intent before generation. A
 full-screen homepage, signature, intricate, burst or exploded-view journey
 cannot silently become a five-second supporting rotation, zoom or dolly. The
-semantic validator requires an authored beginning, progression, meaningful
-state change and payoff; proves source coverage for unseen geometry; and keeps
-creative acceptance separate from technical delivery. It prefers Higgsfield
-CLI for Codex, then native MCP or API, with browser control only as a recorded
-fallback.
+planning validator requires an authored beginning, progression, meaningful
+state change and payoff. It maps requirements to chapters and distinguishes
+observed reference workflows from inference. Local procedural 3D can be a
+flagship without a provider; generated video remains an option when suited to
+the subject. Continuous shots and user-defined durations are supported.
+
+Before paid generation, a separate gate checks exact source/payload hashes,
+current model and quote evidence, reviewed previews, authority and cumulative
+attempt/credit caps. Creative acceptance records the viewer takeaway,
+in-between motion, host fit and each requirement; owner approval is bound to
+the exact brief and asset. These checks enforce record consistency when run.
+They cannot judge artistic excellence, guarantee a perfect render, or intercept
+arbitrary tool calls. The agent remains responsible for honest visual review.
 
 The existing scroll gate proves every shipping video
 frame is independently seekable, rejects P/B-frame derivatives, verifies

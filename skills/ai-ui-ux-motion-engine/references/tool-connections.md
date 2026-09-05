@@ -1,7 +1,9 @@
 # External tools and cinematic-provider preflight
 
 Provider interfaces, models, pricing and authentication change. Verify current
-capabilities and displayed cost before configuration or spend.
+capabilities and displayed cost before configuration or spend. Honour the
+user's provider allocation, including different tools for stills and video.
+Do not replace their chosen provider silently or claim a universally best model.
 
 ## Cinematic provider requirement
 
@@ -17,18 +19,43 @@ angles, assembly/disassembly or a physical burst:
 
 ## Provider preflight
 
-Complete before upload:
+Use this only for an external provider route. Local 3D, animation, compositing
+or processing needs its relevant dependency checks, not a fictional provider
+connection or price quote. A generated film may be an appropriate route for
+intricate motion; controlled rendering is appropriate when exact motion or
+geometry needs that control.
+
+Before upload, validate the source/plan and confirm the connection, upload
+authority, applicable terms and model input roles. Authorised uploads can then
+supply media IDs for the exact quote. Before generation complete this checklist:
 
 1. provider is connected and authenticated;
 2. upload controls work in the available tool/browser;
 3. user owns or may upload the references;
 4. any provider terms requiring acceptance are shown to the user;
-5. selected model supports the required references, duration, ratio,
-   resolution, shot control and silent output;
+5. selected model supports the actual reference roles, duration, ratio,
+   resolution, editing mode and audio setting required by this plan;
 6. displayed cost and attempt cap are recorded and approved;
 7. prompt entry and reference ordering can be verified;
 8. raw output can be downloaded;
-9. no generation begins while any item above is unknown.
+9. the exact prompt, ordered input roles and settings match the validated plan
+   and the generation payload gate in
+   [production-contract.md](production-contract.md);
+10. no generation begins with a material prerequisite unknown.
+
+Record a compact capability and cost comparison among the available options
+that could meet the brief. Compare supported start/end conditioning, additional
+references versus timed keyframes, duration, resolution, continuous motion,
+identity constraints and exact live quote. Record why the selected route is
+suited to this proof and what remains unverified. An expensive/new model is not
+evidence of greater fidelity; a cheaper model is not evidence of adequate control.
+Research once for the run and refresh when settings, route or prices change.
+
+Use the existing authorisation for uploads, terms, credits and attempts within
+its recorded scope. Do not ask the same permission again or require a separate
+owner-approved animatic in every workflow. A quote, validation pass or connected
+account is not itself spend authority. Submission remains an explicit action
+under that authority; validation scripts must not submit automatically.
 
 Use this mandatory route order:
 
@@ -44,8 +71,10 @@ Do not spend credits merely to test browser automation.
 
 ## Higgsfield
 
-Higgsfield currently documents both CLI and MCP access. For Codex, prefer the
-CLI. Install and authenticate it using the current official instructions:
+Verify Higgsfield's current official CLI/MCP instructions before installation
+or authentication. When the documented Codex route is the CLI, prefer it; when
+the user expressly chooses an available MCP route, honour that choice. The
+following are examples to verify against the current official instructions:
 
 ```text
 npm i -g @higgsfield/cli
@@ -63,7 +92,7 @@ download, use `--allow-npx`. The script runs the official CLI account-status
 command, records the access route and available credits, and does not submit a
 generation.
 
-For clients with native MCP support, the provider has documented:
+The documented MCP endpoint to verify for clients with native MCP support is:
 
 ```text
 https://mcp.higgsfield.ai/mcp
@@ -74,15 +103,18 @@ Authentication is provider-hosted; do not commit credentials or preflight
 reports containing account identifiers. Treat individual model names and
 command schemas as current capabilities rather than permanent requirements.
 
-Use a multi-reference/multi-shot capable model for a flagship when the brief
-requires it. Use a simpler image-to-video model only for one bounded action.
-Unlimited or low-cost access does not make a model appropriate for exact
-mechanical continuity.
+Use multi-reference or multi-shot capabilities only when required by the actual
+plan. A single-reference job can be a credible bounded proof for an illustrative
+continuous sequence if its inference and continuity risks are recorded. It must
+not be presented as guaranteeing exact independent component control. If exact
+real views or mechanics are required but unsupported, report the source/route
+gap before spending.
 
-Never use a single-reference image-to-video job for a requested multi-chapter
-flagship merely because it is cheaper or immediately available. If the
-required real views, CAD or verified keyframes are missing, stop before spend
-and report the source gap.
+Check account-specific included or unlimited options and the route to which
+they apply. Browser, API, CLI and MCP allowances may differ. Do not infer that
+an unlimited web allowance covers automation or that disabling audio reduces
+the quote. Use the supported route within the provider's current terms; report
+the relevant limitation without automating around it.
 
 ## Local processing
 
