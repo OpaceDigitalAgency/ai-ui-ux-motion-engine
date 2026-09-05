@@ -5,7 +5,7 @@ description: Design, redesign, build, audit and validate distinctive production 
 
 # AI UI/UX Motion Engine
 
-Workflow version: **1.8.1**. At the first use in a fresh task, report this
+Workflow version: **1.8.2**. At the first use in a fresh task, report this
 version and the loaded path. Read the new task's references and site context;
 do not rely on prior chats or copy their subject, provider, price or acceptance.
 
@@ -54,6 +54,16 @@ interaction, constraints and observable success criteria. Record agreement to th
 specific revision before production; existing explicit agreement counts. Brief
 agreement is separate from spend authority. A small, fully specified fix or audit
 does not need a discovery interview. Never turn briefing into a generic questionnaire.
+
+Project notes are not automatically creative agreement. Before reusing an inherited
+direction, distinguish user instructions and traceable user approval from agent
+recommendations, rejected attempts and superseded plans. A handover saying "proceed
+with DOM" or "no-credit route" does not itself prove the user chose that route.
+If agreement is unproven, present the recovered direction as a proposal and resolve
+the meaningful creative gaps with the user. Answering placement does not approve
+the story, visual ambition or technique. After asking a required creative question,
+wait for the user's answer; more repository reading cannot answer it on their behalf.
+Free/local/private implementation is still production and does not bypass this gate.
 
 ## Mandatory cinematic-intent gate
 

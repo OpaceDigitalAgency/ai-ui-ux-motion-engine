@@ -2,6 +2,16 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 1.8.2 - 2026-09-05
+
+- Correct an observed fresh-task failure: an agent treated an inherited DOM
+  recommendation as creative agreement and proceeded after resolving placement.
+- Require provenance and scope for inherited creative decisions; distinguish
+  actual user agreement, agent proposals, rejected attempts and superseded plans.
+- Clarify that private/free production still requires an agreed or explicitly
+  delegated direction. Repository reading cannot answer a pending creative question
+  on the user's behalf. Preserve valid earlier agreement without repeat approval.
+
 ## 1.8.1 - 2026-09-05
 
 - Develop new ideas through focused creative conversation before production

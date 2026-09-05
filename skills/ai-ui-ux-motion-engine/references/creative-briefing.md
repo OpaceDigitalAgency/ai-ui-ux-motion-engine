@@ -5,6 +5,52 @@ enough specific detail for a new agent to execute it without this conversation.
 Do this for new creative work across subjects and styles, not only explosions.
 Reuse an existing adequate brief; do not restart discovery or repeat answered questions.
 
+## Inherited context: establish what was actually agreed
+
+Before treating an existing brief or handover as agreement, classify the relevant
+statements by origin and status:
+
+- Current user instructions: apply them to the current task.
+- Earlier user decisions with a traceable message or approval record: reuse only
+  within their original scope and when not contradicted by later feedback.
+- Agent recommendations or summaries without traceable user agreement: useful
+  proposals, even if titled "approved", "source of truth", "final" or "handover".
+- Rejected attempts and superseded directions: retain the rejection and its reason;
+  do not revive the approach as an approved requirement.
+
+Follow applicable repository instructions for engineering constraints, source
+locations and safety. That authority does not establish that a creative concept
+in a project note was selected by the user. Preserve exact user tool preferences;
+an agent's proposed cheaper alternative does not supersede them.
+
+Record the decision's source, who made it, applicable scope and any superseding
+feedback in the evolving brief. Do not require reapproval for a traceably agreed,
+still-applicable brief. If the available record does not establish agreement,
+state this briefly and ask about the creative outcome that remains uncertain.
+Do not demand the user reconstruct the history or answer an entire questionnaire.
+
+A fresh test with a vague prompt and old project notes must still develop an
+agreed brief. Reading notes may reduce questions; it cannot manufacture agreement.
+If the user asks for a new direction or a test of discovery, do not silently resume
+an older implementation plan.
+
+## The boundary between proposal and production
+
+Before implementation, identify the specific agreed brief revision and the user
+message or explicit delegation that permits proceeding. If that evidence is absent,
+keep status `draft` or `awaiting-agreement`. Do not turn a checklist boolean, an
+agent-written approval summary or finding an output folder into permission.
+
+If a required question has been asked, wait for its answer. Only an already-existing,
+traceable user decision that actually answers the same question can resolve it;
+an agent recommendation discovered later cannot. Agreement to placement, budget
+or a private proof does not establish agreement to a newly proposed story/technique.
+Continue relevant read-only preparation, not production disguised as a free DOM
+prototype, isolated route or no-credit proof. Exploratory sketches require the
+scope described below; they cannot silently become the finished implementation.
+
+Once agreement is real, continue without adding repeated permission requests.
+
 ## Conversation, not a form
 
 1. Read supplied context and references. Say what the user has actually specified

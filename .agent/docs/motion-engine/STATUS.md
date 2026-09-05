@@ -1,4 +1,42 @@
-# Motion Engine 1.8.1 — guided creative briefing
+# Motion Engine 1.8.2 — inherited agreement correction
+
+## Latest correction: 5 September 2026
+
+The user's actual fresh-task screenshot disproved 1.8.1's briefing behaviour in
+a repository with inherited notes. The agent loaded 1.8.1, proposed Precision
+Assembly/DOM, asked only placement, then treated a handover as answering that
+question and proceeded without agreeing the creative story. This was a workflow
+failure, not simply the old 1.7.0 skill link. Earlier simulated tests did not
+cover inherited agent recommendations and were insufficient.
+
+Bounded 1.8.2 correction: distinguish user agreement from agent-written proposals,
+rejected attempts and superseded directions. Private/free/local work cannot bypass
+brief agreement. Preserve valid prior agreement and explicit creative delegation.
+No changes to another task, website files, provider accounts or generated media.
+
+Canonical branch began clean at `3042070`; fetched default branch had no new
+commits (0 behind, 2 ahead). Version 1.8.2 installed/enabled by supported plugin
+CLI; source and installed skill directories match byte for byte. Installed entry:
+`/Users/davidbryan/.codex/plugins/cache/personal/ai-ui-ux-motion-engine/1.8.2/skills/ai-ui-ux-motion-engine/SKILL.md`.
+
+Two independent read-only agents tested inherited notes, placement-only consent,
+misleading approval headings, valid approval, explicit delegation and superseding
+user feedback. Outcomes and reproducible cases are in
+`BRIEFING-REGRESSION-2026-09-05.md`. All six cases behaved as intended in simulation.
+No claim that these tests enforce tool calls or guarantee future agent compliance.
+
+Verification: package/Skill Creator validation, cinematic regression suite,
+37/37 production contract tests, motion-safety audit and diff checks passed.
+Full installer/media baseline passed: 16 installers; 12/12 independent I-frames,
+silent fast-start H.264, poster SSIM 0.995941; wrong poster rejected.
+Temporary media evidence: `/tmp/motion-182-check.DN1yaC`.
+
+Next step for the failed task: explicitly reload the installed 1.8.2 entrypoint
+and resume at creative briefing, preserving its existing work as unapproved.
+An installation does not rewrite the instructions already loaded in that task.
+Feature-branch checkpoint only; no default-branch merge or release tag.
+
+## Historical 1.8.1 record
 
 ## Latest update: 5 September 2026
 
