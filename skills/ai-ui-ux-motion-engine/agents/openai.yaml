@@ -1,4 +1,4 @@
 interface:
   display_name: "AI UI UX Motion Engine"
   short_description: "Agree the creative brief, then build and verify"
-  default_prompt: "Use $ai-ui-ux-motion-engine to develop my idea into an agreed creative brief with me before choosing a production route and building it."
+  default_prompt: "Use $ai-ui-ux-motion-engine to discuss and develop my idea with me over focused questions before presenting, recording or building the agreed creative brief."

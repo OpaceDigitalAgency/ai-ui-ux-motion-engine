@@ -5,7 +5,7 @@ description: Develop a short website or motion idea into an agreed creative brie
 
 # AI UI/UX Motion Engine
 
-Workflow version: **2.0.0**. On first use, state this version and the loaded path.
+Workflow version: **2.0.1**. On first use, state this version and the loaded path.
 Resolve stale links through the installed inventory; do not silently run an old
 version or pretend the link itself updates.
 
@@ -36,15 +36,19 @@ should understand, what visibly happens, the visual ambition and destination.
 Use existing answers; help the user imagine possibilities rather than demanding
 a specification. Do not ask them to choose implementation mechanics.
 
-Develop a visible brief covering outcome/audience, subject/meaning, beginning and
-progression, signature moment/payoff, motion/interaction, visual/site fit,
-assets/accuracy, constraints and observable success. Present proposals as proposals.
-Show the completed brief and seek agreement to that specific version.
+Develop the brief through an actual multi-turn conversation. An incomplete opening
+request must receive a concise interpretation plus one or two meaningful questions,
+not a completed brief or a file link. Use each answer to explore the next material
+gap and let the user react to concrete suggestions. Only after the purpose, visual
+story, motion experience and destination constraints have been discussed should
+you synthesise the complete proposed brief in the conversation and seek agreement.
 
 In BRIEFING:
 - Read relevant project instructions, supplied context and references. Inspect
-  visual references where useful. Save the evolving brief and decision history
-  in the project's persistent documentation location when established.
+  visual references where useful. Do not create or edit a creative-brief file
+  during initial discovery. After the user agrees to the complete brief shown in
+  the conversation, save that agreed brief and decision history in the project's
+  persistent documentation location.
 - Do not load production recipes, create implementation branches, author page
   code or launch generators. A local, private, no-credit proof is still production.
 - Relevant read-only feasibility research is allowed when it resolves a creative
@@ -64,8 +68,9 @@ can agree to it. Record the actual message and revision, then proceed without
 asking the same question again.
 
 **Creative delegation:** “you decide” lets you propose the missing choices; it
-does not itself supply a detailed brief. Develop and present that brief for
-discussion and agreement before production. Record delegated choices honestly.
+does not itself supply a detailed brief. Offer those choices conversationally and
+invite reaction before synthesising the complete brief. Record delegated choices
+honestly after agreement.
 
 **Inherited notes:** reuse traceable user decisions within scope. Agent
 recommendations, rejected drafts and superseded plans are not approval; an

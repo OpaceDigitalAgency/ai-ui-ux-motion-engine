@@ -2,6 +2,17 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 2.0.1 - 2026-09-05
+
+- Require a genuine multi-turn discovery conversation for every incomplete new
+  creative brief, using small groups of concrete suggestions and focused questions.
+- Prohibit creating or linking a complete brief file during initial discovery.
+  Present the synthesised brief in the conversation after material decisions have
+  been discussed; persist it only after user agreement.
+- Treat “you decide” as permission to propose choices for discussion, not permission
+  to replace the discussion with an entire self-authored specification.
+- Add package checks for conversation-first and post-agreement recording rules.
+
 ## 2.0.0 - 2026-09-05
 
 - Replace the production-heavy entrypoint with BRIEFING, PRODUCTION and DIRECT

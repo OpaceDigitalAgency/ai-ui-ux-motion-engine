@@ -1,6 +1,6 @@
 # AI UI/UX Motion Engine: Website Design Skill for Codex, Claude Code, Cursor, Copilot, Antigravity and Gemini
 
-**Latest source version: v2.0.0**
+**Latest source version: v2.0.1**
 
 **AI UI/UX Motion Engine** is an open Agent Skill and plugin from
 [Opace Digital Agency](https://opace.agency/services/web-design/) for AI
@@ -54,7 +54,13 @@ one private signature sequence; rejects hallucinated geometry; then prepares
 the approved media for smooth scroll delivery. Users do not need to know the
 tool name or ask for “wow”.
 
-Version 2.0.0 separates BRIEFING from PRODUCTION instead of loading both sets of
+Version 2.0.1 requires an actual multi-turn creative conversation. An incomplete
+request receives ideas and focused questions; the skill does not immediately write
+a full brief for approval. It presents the complete brief in the conversation after
+the material decisions have been discussed, then saves the persistent document only
+after agreement.
+
+Version 2.0.0 separated BRIEFING from PRODUCTION instead of loading both sets of
 instructions at once. New ideas begin with a guided creative conversation.
 Start with a short idea: the skill offers concrete interpretations, asks focused
 questions and develops a visible brief with you. It separates your requirements

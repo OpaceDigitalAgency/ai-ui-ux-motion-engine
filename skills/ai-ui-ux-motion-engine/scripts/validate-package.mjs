@@ -73,6 +73,22 @@ if (!/^---\nname: ai-ui-ux-motion-engine\ndescription: .+\n---/s.test(skill)) {
 }
 
 const production = await readFile(join(skillRoot, "references/production.md"), "utf8");
+const creativeBriefing = await readFile(join(skillRoot, "references/creative-briefing.md"), "utf8");
+for (const phrase of [
+  "actual multi-turn conversation",
+  "not a completed brief or a file link",
+  "Do not create or edit a creative-brief file",
+]) {
+  if (!skill.includes(phrase)) failures.push(`SKILL.md is missing conversation-first guardrail: ${phrase}`);
+}
+for (const phrase of [
+  "Required conversational sequence",
+  "Do not create, edit or link to `CREATIVE-BRIEF.md` at this stage",
+  "Do not make the user open a file to",
+  "Record the outcome after agreement",
+]) {
+  if (!creativeBriefing.includes(phrase)) failures.push(`Creative briefing is missing conversational guardrail: ${phrase}`);
+}
 for (const phrase of [
   "Mandatory cinematic-intent gate",
   "The user does not need to use a trigger word",
@@ -98,7 +114,7 @@ for (const match of skill.matchAll(/\]\((references\/[^)]+)\)/g)) {
 const plugin = JSON.parse(await readFile(join(pluginRoot, ".codex-plugin/plugin.json"), "utf8"));
 if (plugin.name !== "ai-ui-ux-motion-engine") failures.push("Plugin name does not match skill.");
 if (!/^\d+\.\d+\.\d+(?:[-+].+)?$/.test(plugin.version ?? "")) failures.push("Plugin version is not semver.");
-if (plugin.version.split("+")[0] !== "2.0.0") failures.push("Plugin base version is not 2.0.0.");
+if (plugin.version.split("+")[0] !== "2.0.1") failures.push("Plugin base version is not 2.0.1.");
 if (plugin.homepage !== "https://opace.agency/services/web-design/") {
   failures.push("Codex plugin homepage does not point to Opace web design.");
 }

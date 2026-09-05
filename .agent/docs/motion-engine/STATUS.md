@@ -1,4 +1,37 @@
-# Motion Engine 2.0.0 — briefing-first restructure
+# Motion Engine 2.0.1 — conversational discovery before documentation
+
+## Current correction: 5 September 2026
+
+The user's live 2.0.0 test stopped production but still compressed discovery into
+one agent-authored 72-line Markdown brief after the opening prompt. This met the
+technical stop gate while missing the intended collaborative briefing experience.
+
+Version 2.0.1 requires three stages for every incomplete creative request:
+explore with a concise interpretation and one or two questions; develop the idea
+through substantive replies; then present the complete proposed brief in the
+conversation for correction and agreement. It prohibits creating, editing or
+linking a creative-brief file during initial discovery. The persistent document
+is written after agreement and records the outcome rather than replacing dialogue.
+"You decide" permits proposals, not a one-shot specification or production bypass.
+
+Package validation now checks these conversational invariants as well as the
+preserved production safeguards. This is instruction/package evidence; it cannot
+prove how every future model will behave. The next meaningful acceptance evidence
+must come from a fresh live invocation of 2.0.1 across several conversational turns.
+
+Installed and enabled version: 2.0.1, verified through the supported plugin CLI,
+byte comparison of source versus installed skills, and validation of the installed
+package. Entry:
+`/Users/davidbryan/.codex/plugins/cache/personal/ai-ui-ux-motion-engine/2.0.1/skills/ai-ui-ux-motion-engine/SKILL.md`.
+
+Source validation passed Skill Creator quick validation, package validation,
+cinematic regressions, all 37 production-contract checks, motion-safety checks
+and all 16 clean installer-target comparisons.
+
+No Opace website files, provider accounts or media were changed. No credits spent.
+Public release/default-branch merge remains separate.
+
+## Historical 2.0.0 record — superseded
 
 ## Current status: 5 September 2026
 

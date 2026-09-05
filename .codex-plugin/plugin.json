@@ -1,6 +1,6 @@
 {
   "name": "ai-ui-ux-motion-engine",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Develop an agreed creative brief through conversation, then build cinematic websites with suitable tools and separate creative and technical verification.",
   "author": {
     "name": "David Bryan / Opace",
@@ -35,7 +35,7 @@
   "interface": {
     "displayName": "AI UI/UX Motion Engine",
     "shortDescription": "Develop the brief together, then build and verify the experience.",
-    "longDescription": "Starts new creative ideas with focused conversation and an agreed brief. Production guidance loads after agreement, retaining reference-led route selection, source fidelity, provider spending controls, creative acceptance and scroll validation.",
+    "longDescription": "Develops incomplete creative ideas through an actual multi-turn conversation. The agreed brief is recorded only after discussion; production then retains reference-led route selection, source fidelity, provider spending controls, creative acceptance and scroll validation.",
     "developerName": "David Bryan / Opace",
     "websiteURL": "https://opace.agency/services/web-design/",
     "category": "Developer Tools",

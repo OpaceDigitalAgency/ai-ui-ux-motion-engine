@@ -1,10 +1,56 @@
-# BRIEFING: develop the idea together
+# BRIEFING: develop the idea through conversation
 
-The deliverable is a substantial, human-readable creative brief that the user
-recognises as their intention and another designer could understand without the
-chat. Start from what is known, contribute ideas, and develop the remaining
-decisions through conversation. A vague request begins briefing, even when it
-uses words such as “create”, “build” or “start fresh”.
+The outcome is a substantial creative brief that the user recognises as their
+intention and another designer could understand without the chat. Reach it through
+a genuine back-and-forth. A vague request begins discovery even when it uses words
+such as “create”, “build” or “start fresh”. Do not jump from that request to a
+complete brief and ask the user to approve the agent's assumptions wholesale.
+
+## Required conversational sequence
+
+### 1. Explore
+
+For an incomplete opening request, reply in the conversation with:
+
+- a short interpretation or one or two contrasting possibilities;
+- why those possibilities might serve the intended outcome; and
+- one or two focused questions that would materially change the experience.
+
+Do not create, edit or link to `CREATIVE-BRIEF.md` at this stage. Do not announce
+that the brief is drafted, locked or ready for approval. The user should be reacting
+to understandable ideas, not reviewing a specification they did not help shape.
+
+### 2. Develop
+
+Use each substantive answer to refine the idea and discuss the next important gap.
+Keep the exchange natural: briefly reflect what changed, offer the next concrete
+creative suggestion, then ask at most one or two related questions. Do not repeat
+answered questions or dump a checklist.
+
+Before synthesis, the conversation must establish enough detail to picture:
+
+- who the experience is for and what it should communicate or make them feel;
+- what visibly happens, including the opening, transformation and payoff;
+- the intended motion character and how the visitor encounters or controls it;
+- where it belongs and how it relates to the site's identity and purpose; and
+- the most important constraints, references, dislikes or failure conditions.
+
+The user need not invent every detail. Propose strong options and recommendations,
+but discuss them rather than silently treating them as confirmed. If an answer
+opens a material new choice, continue the conversation instead of rushing to a brief.
+
+### 3. Synthesis and agreement
+
+Once the material creative decisions have been discussed, present the complete
+proposed brief in the conversation. Make confirmed requirements, your proposals
+and any remaining open decisions clear. Ask whether that specific brief captures
+the user's intention and invite corrections. Do not make the user open a file to
+understand or approve it.
+
+If the user corrects it, revise the affected parts in the conversation and seek
+agreement again. If they agree, record the agreed brief and the actual agreement
+message in the persistent project document, then return to PRODUCTION. The file
+preserves the result of the conversation; it never substitutes for the conversation.
 
 ## Make each reply useful
 
@@ -28,9 +74,9 @@ specific interpretation, such as intricate component movement or a stronger
 change of scale; it does not automatically mean particles or faster animation.
 Do not force a technique, duration, brand or reference when none was supplied.
 
-Carry answers forward. After meaningful feedback, say what changed and show the
-developing brief, including what remains unresolved. As it becomes coherent,
-present the whole proposed experience rather than another fragment of intake.
+Carry answers forward. After meaningful feedback, say what changed and what remains
+unresolved in natural prose. Do not repeatedly reproduce a formal developing brief.
+When it becomes coherent, use the synthesis step above.
 
 ## Give the brief enough substance to judge
 
@@ -73,15 +119,14 @@ Agreement to placement or one detail does not resolve the rest of the story.
 Interpret short replies in context:
 
 - Vague request → “ignore the old work, start fresh; what version are you?” →
-  version answer → “go on then”: continue **briefing**. No concrete brief was
-  presented. Respond with
-  a useful interpretation and the next focused question; do not start building.
+  version answer → “go on then”: continue **briefing**. No creative discussion has
+  occurred. Respond with a useful interpretation and the next focused question;
+  do not write a complete brief or start building.
 - Complete proposed brief → “go on then”: this can agree to that brief. Record
   the exchange and proceed without demanding a special approval phrase.
-- “You decide everything”: propose the missing creative choices and present a
-  detailed brief, labelling those choices as yours. This is still an incomplete
-  input brief; discuss the proposed experience and obtain agreement before building.
-  Make that discussion easy by providing a concrete recommendation, not a blank form.
+- “You decide everything”: propose the missing choices in small, meaningful groups
+  and discuss them with the user. Do not respond with an entire self-authored brief.
+  Once the user has reacted and the experience is coherent, synthesise it for agreement.
 - A supplied adequate, agreed brief: reuse it. Ask only about material gaps or
   contradictions, and retain the decisions that remain applicable.
 
@@ -104,15 +149,14 @@ and develop the unresolved creative outcome. Do not ask the user to reconstruct
 the history. Where agreement is traceable and still applicable, use it without
 asking again.
 
-## Keep one evolving record
+## Record the outcome after agreement
 
-Save `CREATIVE-BRIEF.md` in the project's persistent documentation location
-(default `.agent/docs/<project>/`). Include the current brief, a simple revision
-and status (`draft`, `awaiting-agreement` or `agreed`), open decisions and concise
-feedback history. Record the actual agreement message and the revision it covers.
-Record delegated choices separately; they are not approval of an unseen brief.
-Never invent an approval quote. If no destination
-project is known, develop the brief in the conversation until one is established.
+After agreement, save `CREATIVE-BRIEF.md` in the project's persistent documentation
+location (default `.agent/docs/<project>/`). Include the agreed brief, its revision,
+any remaining production decisions and concise feedback history. Record the actual
+agreement message and revision. Record delegated choices separately; they are not
+approval of an unseen brief. Never invent an approval quote. If no destination
+project is known, keep the agreed brief in the conversation until one is established.
 
 Meaningful changes reopen only the affected decisions. Preserve earlier feedback
 and the unchanged requirements. Once the detailed brief and agreement are recorded,
