@@ -1,153 +1,120 @@
-# Develop an agreed creative brief
+# BRIEFING: develop the idea together
 
-Success at this stage is a brief the user recognises as their intention, with
-enough specific detail for a new agent to execute it without this conversation.
-Do this for new creative work across subjects and styles, not only explosions.
-Reuse an existing adequate brief; do not restart discovery or repeat answered questions.
+The deliverable is a substantial, human-readable creative brief that the user
+recognises as their intention and another designer could understand without the
+chat. Start from what is known, contribute ideas, and develop the remaining
+decisions through conversation. A vague request begins briefing, even when it
+uses words such as “create”, “build” or “start fresh”.
 
-## Inherited context: establish what was actually agreed
+## Make each reply useful
 
-Before treating an existing brief or handover as agreement, classify the relevant
-statements by origin and status:
+Read the supplied context and references, then explain your interpretation of
+the idea. Offer a concrete proposal and why it serves the intended audience;
+ask one or two questions whose answers would most change the experience.
+Do not send only questions or a generic intake form. Give the user something
+specific to react to, without pretending your proposal is their decision.
 
-- Current user instructions: apply them to the current task.
-- Earlier user decisions with a traceable message or approval record: reuse only
-  within their original scope and when not contradicted by later feedback.
-- Agent recommendations or summaries without traceable user agreement: useful
-  proposals, even if titled "approved", "source of truth", "final" or "handover".
-- Rejected attempts and superseded directions: retain the rejection and its reason;
-  do not revive the approach as an approved requirement.
+When purpose is unclear, explore what the audience should understand, feel or
+do. For a transformation, establish what changes into what and what that change
+means. Suggest recognisable relationships and a meaningful payoff instead of
+asking the user to invent a storyboard. If they do not know, recommend a
+direction and explain its value.
 
-Follow applicable repository instructions for engineering constraints, source
-locations and safety. That authority does not establish that a creative concept
-in a project note was selected by the user. Preserve exact user tool preferences;
-an agent's proposed cheaper alternative does not supersede them.
+Discover motion ambition, references and site context as they become relevant.
+Describe what viewers would see: independent parts separating, surfaces folding,
+a viewpoint moving through a scene, or a quiet editorial reveal. Distinguish
+the subject's movement from the viewer's control. “More impressive” needs a
+specific interpretation, such as intricate component movement or a stronger
+change of scale; it does not automatically mean particles or faster animation.
+Do not force a technique, duration, brand or reference when none was supplied.
 
-Record the decision's source, who made it, applicable scope and any superseding
-feedback in the evolving brief. Do not require reapproval for a traceably agreed,
-still-applicable brief. If the available record does not establish agreement,
-state this briefly and ask about the creative outcome that remains uncertain.
-Do not demand the user reconstruct the history or answer an entire questionnaire.
+Carry answers forward. After meaningful feedback, say what changed and show the
+developing brief, including what remains unresolved. As it becomes coherent,
+present the whole proposed experience rather than another fragment of intake.
 
-A fresh test with a vague prompt and old project notes must still develop an
-agreed brief. Reading notes may reduce questions; it cannot manufacture agreement.
-If the user asks for a new direction or a test of discovery, do not silently resume
-an older implementation plan.
+## Give the brief enough substance to judge
 
-## The boundary between proposal and production
+Use readable prose and useful bullets, scaled to the work. For a substantial
+experience, the reader should be able to picture the opening, progression,
+signature moment and ending, and understand why each belongs there. Explain:
 
-Before implementation, identify the specific agreed brief revision and the user
-message or explicit delegation that permits proceeding. If that evidence is absent,
-keep status `draft` or `awaiting-agreement`. Do not turn a checklist boolean, an
-agent-written approval summary or finding an output folder into permission.
+- Who it serves, the message or feeling, and the intended next action.
+- The subject, what its elements represent, and what transforms into what.
+- The meaningful sequence and payoff, including motion character and how the
+  visitor controls or encounters it.
+- The visual direction and fit with the destination site; what each reference
+  contributes and which features to avoid.
+- Relevant constraints, supplied assets, factual versus illustrative content,
+  devices and a usable experience when motion is reduced.
+- Observable success and failure: what would make this effective, and what
+  could look attractive while missing the point. Preserve stated dislikes.
 
-If a required question has been asked, wait for its answer. Only an already-existing,
-traceable user decision that actually answers the same question can resolve it;
-an agent recommendation discovered later cannot. Agreement to placement, budget
-or a private proof does not establish agreement to a newly proposed story/technique.
-Continue relevant read-only preparation, not production disguised as a free DOM
-prototype, isolated route or no-credit proof. Exploratory sketches require the
-scope described below; they cannot silently become the finished implementation.
+These are prompts for judgement, not a compulsory questionnaire. Resolve gaps
+that materially affect the idea; do not interrogate the user about every item.
+Keep **confirmed requirements**, **proposed choices** and **open decisions**
+distinguishable. The final proposal can be detailed without falsely labelling
+agent-selected details as confirmed.
 
-Once agreement is real, continue without adding repeated permission requests.
+For example, a shop becoming an ecommerce page could map shelves into product
+grids and the till into checkout, ending with the same shop accessible from
+anywhere. Establish whether expanded reach is the point and whether the change
+should feel like elegant folding or energetic collapse. A calm museum homepage
+might instead centre on an exhibition reveal or collection browsing. Neither
+scenario needs a predetermined eight-second sequence or a sales story.
 
-## Conversation, not a form
+## Understand what the user is agreeing to
 
-1. Read supplied context and references. Say what the user has actually specified
-   and identify the uncertainty that would most change the concept. Do not infer
-   audience, brand, duration, interaction or meaning from a previous client.
-2. Offer one concrete interpretation, or two materially different directions
-   when the idea is ambiguous. Label them as proposals. Describe what viewers
-   would see and understand, rather than asking them to invent a storyboard.
-3. Ask one or two focused questions at a time. Begin with purpose and the visual
-   transformation when those are unknown; discover destination, motion character,
-   references and constraints as they become relevant. Let users respond naturally,
-   reject options, combine them or say they do not know. Offer a recommendation
-   with its rationale instead of asking for technical knowledge.
-4. With each meaningful answer, update the interpretation and visible brief.
-   Explain what changed; carry confirmed decisions forward. If the user says
-   "more impressive", translate that into concrete choices such as more independent
-   component activity, closer inspection or stronger scale changes. Do not silently
-   equate impressive with extra particles, faster motion or a particular tool.
-5. Once coherent, present the complete brief in readable prose with useful bullets.
-   Ask whether this specific revision captures the intended outcome and what needs
-   changing. Do not treat silence, elapsed time, a response to one question, or the
-   original vague request as agreement to an invented complete story. Continue
-   useful read-only preparation while awaiting required answers.
+Present the concrete brief and ask whether that specific direction captures
+their intention, for example: “Does this sequence and payoff capture what you
+want, or should the emphasis change?” Wait for the answer. A required creative
+answer cannot come from further repository reading, silence or elapsed time.
+Agreement to placement or one detail does not resolve the rest of the story.
 
-The user may explicitly delegate remaining creative choices or ask to skip the
-interview. Honour that: label the choices as agent-selected, record that delegation,
-and proceed within its scope rather than repeatedly requesting confirmation.
-Do not describe delegated suggestions as preferences the user personally supplied.
+Interpret short replies in context:
 
-## What the resulting brief must communicate
+- Vague request → “ignore the old work, start fresh; what version are you?” →
+  version answer → “go on then”: continue **briefing**. No concrete brief was
+  presented. Respond with
+  a useful interpretation and the next focused question; do not start building.
+- Complete proposed brief → “go on then”: this can agree to that brief. Record
+  the exchange and proceed without demanding a special approval phrase.
+- “You decide everything”: propose the missing creative choices and present a
+  detailed brief, labelling those choices as yours. This is still an incomplete
+  input brief; discuss the proposed experience and obtain agreement before building.
+  Make that discussion easy by providing a concrete recommendation, not a blank form.
+- A supplied adequate, agreed brief: reuse it. Ask only about material gaps or
+  contradictions, and retain the decisions that remain applicable.
 
-Scale the detail to the task. For a substantial cinematic experience, cover:
+“Start fresh” resets the creative direction; it does not itself delegate every
+choice. A version or status question is a detour, not agreement. Resume the
+unfinished conversation afterwards. A private or free build is still production;
+it cannot substitute for the missing conversation.
 
-- **Outcome and audience:** who it is for, what they should understand or feel,
-  why it matters and any intended next action.
-- **Subject and meaning:** what is shown, what the elements represent and how
-  their relationships communicate the message. Flag metaphor versus factual claims.
-- **Visual sequence:** recognisable beginning, meaningful progression, signature
-  moment and payoff; specific transformations and component relationships.
-- **Motion and interaction:** object movement versus camera movement, continuity,
-  pace and depth; scroll, reverse scroll, autoplay, drag or other intended control.
-  Duration is a proposal unless supplied; scroll exposure also depends on the visitor.
-- **Visual direction and placement:** destination, existing design language,
-  tone, composition, references and what to borrow or avoid from each.
-- **Assets and accuracy:** supplied material, what may be invented, identity/text
-  requirements and missing evidence. Never demand references when the user has none.
-- **Practical constraints:** devices, accessibility, performance, deliverables,
-  explicit tool preferences, budget and release boundary. Resolve only relevant gaps.
-- **Failure and acceptance:** observable differences between a successful result
-  and an attractive but irrelevant substitute. Include stated dislikes and past failures.
+## Reuse history without inventing consent
 
-Maintain three explicit categories: **confirmed requirements**, **proposed creative
-choices**, and **open decisions**. Do not bury an open story decision inside a polished
-brief and mark it approved. Non-blocking technical details can remain for production
-planning; material uncertainty about meaning or experience must be resolved or delegated.
-Keep these distinctions in the brief; short conversational updates may use natural
-prose rather than repeating three headings after every answer.
+Current user instructions and traceable earlier user decisions establish the
+direction. Agent-written notes are context and proposals, even if headed
+“approved”, “final” or “source of truth”. Engineering instructions can govern
+the project without proving that the user selected a creative concept.
+Retain rejected attempts and their reasons; later feedback supersedes the
+affected earlier decisions. Do not revive an old plan after a fresh-start request.
 
-## Scenario-neutral examples
+Where agreement is missing, briefly identify the inherited idea as a proposal
+and develop the unresolved creative outcome. Do not ask the user to reconstruct
+the history. Where agreement is traceable and still applicable, use it without
+asking again.
 
-These demonstrate the conversation, not default scripts or predetermined briefs:
+## Keep one evolving record
 
-- "An exploding webpage and SEO": ask what the explosion should reveal about
-  the business. Offer a process story connecting search intent, structure, content
-  and conversion, versus an inspection of technical foundations. Neither is agreed
-  merely because it is plausible. Do not assume Opace or reuse its colours.
-  If "and SEO" could also request actual optimisation work, resolve that scope
-  ambiguity rather than silently treating the entire request as a visual metaphor.
-- "A shop implodes into an ecommerce page": clarify whether the point is continuity
-  between physical and online shopping, expanded reach or operational transformation.
-  Propose recognisable mappings such as shelves to product grids and till to checkout;
-  establish whether "implodes" means elegant folding or energetic collapse.
-- "A calm museum homepage": explore the institution's audience and intended feeling;
-  propose an exhibition-led reveal or an editorial browsing experience. Do not force
-  an explosion, a sales conversion story, an eight-second film or a media provider.
+Save `CREATIVE-BRIEF.md` in the project's persistent documentation location
+(default `.agent/docs/<project>/`). Include the current brief, a simple revision
+and status (`draft`, `awaiting-agreement` or `agreed`), open decisions and concise
+feedback history. Record the actual agreement message and the revision it covers.
+Record delegated choices separately; they are not approval of an unseen brief.
+Never invent an approval quote. If no destination
+project is known, develop the brief in the conversation until one is established.
 
-## Agreement and handoff
-
-Save one evolving `CREATIVE-BRIEF.md` in the project's persistent documentation
-location (default `.agent/docs/<project>/`). Record revision, status
-`draft | awaiting-agreement | agreed`, current brief, open decisions and concise
-feedback history. For agreement, record the actual user message and the revision
-it covers, or their explicit delegation. Never manufacture an approval quote.
-If no project is selected yet, show the brief in the conversation and establish
-the destination before saving; do not create an arbitrary repository.
-
-Meaningful changes to the story or intended experience reopen only the affected
-decisions. Do not erase earlier feedback or repeatedly reapprove unchanged details.
-Read-only research and authorised low-cost exploratory sketches can inform briefing;
-they remain proposals. Do not start the production asset or page implementation
-until the brief is agreed or the user explicitly delegates proceeding.
-
-After agreement, derive the technical cinematic brief, prompts, tool/model/settings
-selection and acceptance checks from it. If feasibility changes the promised story,
-bring the trade-off back to the user rather than silently rewriting it. Brief
-agreement does not authorise unapproved expenditure, uploads or publication.
-Existing production and creative validators remain required where applicable;
-their JSON passes cannot prove that a conversation reached genuine agreement.
-Delegation of creative choices permits developing the proof within that scope;
-it does not waive the separate exact-proof owner approval required for integration.
+Meaningful changes reopen only the affected decisions. Preserve earlier feedback
+and the unchanged requirements. Once the detailed brief and agreement are recorded,
+return to the entrypoint's PRODUCTION mode. If later feasibility changes the
+intended experience, bring that specific trade-off back into the conversation.

@@ -43,7 +43,8 @@ Do not combine every observed effect. Choose the smallest coherent set.
 
 ### C. Direction lock
 
-Write the seven-line direction required by `SKILL.md`. Check that:
+Write the seven-line production direction described in `production.md`, derived
+from the agreed brief. Check that:
 
 - typography choices have a role;
 - palette choices establish hierarchy;

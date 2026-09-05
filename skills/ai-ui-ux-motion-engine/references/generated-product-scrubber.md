@@ -1,5 +1,8 @@
 # Cinematic generated-product scrubber
 
+Production-only reference: the entrypoint must first establish a detailed brief
+and applicable agreement. This workflow cannot resolve an unagreed story by itself.
+
 Use this route when the experience depends on an authored photographic camera
 path, product reveal, assembly/disassembly, burst/exploded view, macro inspection
 or object state controlled by scrolling.

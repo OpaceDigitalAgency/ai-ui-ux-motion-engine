@@ -3,6 +3,9 @@
 The user does not need to know the production tool or say “wow”. The skill must
 infer cinematic intent from the desired experience or reference.
 
+For new ideas, begin by developing the brief together. Production instructions
+in these templates apply after a detailed brief and agreement.
+
 ## Cinematic product experience
 
 ```text
@@ -15,7 +18,7 @@ Accuracy required:
 Source images/CAD/clips:
 Target devices:
 
-Before changing the page, tell me whether cinematic media generation, 3D or
+First develop and agree the creative brief with me. Then tell me whether cinematic media generation, 3D or
 compositing is required. Confirm provider access and cost, prepare one private
 signature proof, reject identity or geometry drift, and get approval before
 generating the remaining library or integrating it.

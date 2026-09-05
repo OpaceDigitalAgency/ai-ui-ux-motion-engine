@@ -2,6 +2,18 @@
 
 All notable changes to AI UI/UX Motion Engine are documented here.
 
+## 2.0.0 - 2026-09-05
+
+- Replace the production-heavy entrypoint with BRIEFING, PRODUCTION and DIRECT
+  TASK modes. Production recipes load after a detailed brief and agreement.
+- Preserve cinematic/provider/source/spend/creative/scroll checks in production.md,
+  including existing scripts, templates and reference resources.
+- Interpret short replies against the actual preceding conversation: "go on then"
+  after a version answer continues briefing; after a concrete brief it may agree.
+- Align launch prompts, plugin metadata and usage guidance with briefing first.
+- Use isolated editable projects for multi-turn behavioural tests and compare file
+  actions before/after agreement, alongside existing technical regressions.
+
 ## 1.8.2 - 2026-09-05
 
 - Correct an observed fresh-task failure: an agent treated an inherited DOM

@@ -1,6 +1,6 @@
 # AI UI/UX Motion Engine: Website Design Skill for Codex, Claude Code, Cursor, Copilot, Antigravity and Gemini
 
-**Latest source version: v1.8.2**
+**Latest source version: v2.0.0**
 
 **AI UI/UX Motion Engine** is an open Agent Skill and plugin from
 [Opace Digital Agency](https://opace.agency/services/web-design/) for AI
@@ -54,12 +54,14 @@ one private signature sequence; rejects hallucinated geometry; then prepares
 the approved media for smooth scroll delivery. Users do not need to know the
 tool name or ask for “wow”.
 
-Version 1.8.2 develops a guided creative briefing conversation before production.
+Version 2.0.0 separates BRIEFING from PRODUCTION instead of loading both sets of
+instructions at once. New ideas begin with a guided creative conversation.
 Start with a short idea: the skill offers concrete interpretations, asks focused
 questions and develops a visible brief with you. It separates your requirements
 from proposed choices and open decisions, records agreement to the brief, then
-derives the production plan. Existing adequate briefs and explicit creative
-delegation are respected without repeating the interview.
+derives the production plan. Existing detailed briefs are reused without repeating
+answered questions. Any new creative input short of a detailed brief leads to
+discussion, including a request to let the agent choose the creative details.
 
 Inherited agent recommendations are proposals until supported by applicable user
 agreement. Rejected or superseded plans cannot silently become the new direction.
@@ -332,8 +334,9 @@ baseline before reporting completion.
 ```text
 Use $ai-ui-ux-motion-engine to create an impressive cinematic,
 scroll-controlled product story from these references. Infer the required
-media route, confirm accuracy, provider access and credits before coding, and
-prove one private signature sequence before changing the page. Do not
+story with me and agree its brief first. Then choose the media route, confirm
+accuracy, provider access and credits, and prove one private signature sequence
+before changing the page. Do not
 substitute photo fades, CSS zooms or generic background video.
 ```
 
@@ -342,7 +345,8 @@ substitute photo fades, CSS zooms or generic background video.
 ```text
 Use $ai-ui-ux-motion-engine to create a watch-style product experience from
 approved reference images and prompts, without requiring CAD or a GLB model.
-Classify it as illustrative, identity-locked or evidence-accurate; confirm the
+Develop and agree the intended experience with me first. Then classify it as
+illustrative, identity-locked or evidence-accurate; confirm the
 provider and attempt budget; validate a cinematic brief; and prove one private
 film before integration. Reject geometry/count drift and prepare accepted media
 as an all-intra video plus exact frame sequence with static fallbacks.
@@ -586,13 +590,13 @@ identity, copy, source code or distinctive assets.
 It designs and implements web-based motion using CSS, Motion/Framer Motion,
 GSAP, ScrollTrigger, video, canvas, Three.js and WebGL when appropriate. It can
 also coordinate an authorised external image/video-generation workflow. For a
-cinematic reveal, it first confirms provider access, truth mode, references,
-cost and proof acceptance rather than attempting basic photo animation.
+cinematic reveal, it first develops an agreed creative brief. Production then
+checks provider access, truth mode, references, cost and proof acceptance.
 
 ### Will it automatically install GSAP, Three.js or an MCP server?
 
-No. It first reads the existing project and selects the smallest architecture
-that satisfies the requirement. New dependencies, external services and paid
+No. After the creative brief is agreed, it reads the existing project and selects
+the smallest architecture that satisfies the experience. New dependencies, external services and paid
 credits require justification and user authority.
 
 ### Does the skill guarantee accessibility, performance or SEO?

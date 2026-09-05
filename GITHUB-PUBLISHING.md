@@ -53,9 +53,9 @@ curated vocabulary in useful prose, examples and headings.
 
 ## Release metadata
 
-- Tag for a separately authorised public release: `v1.8.2`
+- Tag for a separately authorised public release: `v2.0.0`
 - Release title:
-  `AI UI/UX Motion Engine v1.8.2 — distinguish user agreement from inherited proposals`
+  `AI UI/UX Motion Engine v2.0.0 — briefing first, production after agreement`
 - Attach the versioned ZIP generated from the committed tree.
 - Summarise the supported agents, installer targets and validation evidence.
 
@@ -79,7 +79,7 @@ private project information.
 2. Set the description and all 20 topics.
 3. Keep the root `README.md`, `LICENSE`, `SECURITY.md` and
    `CONTRIBUTING.md`.
-4. After release authority, create the `v1.8.2` release and attach the matching ZIP.
+4. After release authority, create the `v2.0.0` release and attach the matching ZIP.
 5. Keep the contextual Opace web-design link in the README and repository
    website field.
 6. Submit or share useful examples rather than manufacturing keyword-heavy

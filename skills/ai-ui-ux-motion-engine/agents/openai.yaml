@@ -1,4 +1,4 @@
 interface:
   display_name: "AI UI UX Motion Engine"
-  short_description: "Build substantial cinematic journeys without shortcuts"
-  default_prompt: "Use $ai-ui-ux-motion-engine to lock the requested flagship intent, reject camera-only substitutes, prefer programmatic media generation, and require separate creative and technical acceptance."
+  short_description: "Agree the creative brief, then build and verify"
+  default_prompt: "Use $ai-ui-ux-motion-engine to develop my idea into an agreed creative brief with me before choosing a production route and building it."

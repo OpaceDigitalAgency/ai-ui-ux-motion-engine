@@ -12,7 +12,7 @@ Report loaded workflow version/path. If the idea is undeveloped, use
 [creative-briefing.md](creative-briefing.md) first: propose interpretations and
 develop the audience takeaway, movement and interaction with the user. Do not
 invent these or select a route to satisfy a first-response checklist. Once the
-brief is agreed or remaining choices explicitly delegated, report the selected
+brief is detailed and agreed, report the selected
 route and next visible proof. Reuse existing context and authority; do not ask
 the owner to choose implementation mechanics or repeat an adequate agreed brief.
 

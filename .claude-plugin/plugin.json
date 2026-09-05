@@ -1,8 +1,8 @@
 {
   "name": "ai-ui-ux-motion-engine",
   "displayName": "AI UI/UX Motion Engine",
-  "version": "1.8.2",
-  "description": "Cinematic website skill with enforced flagship intent, programmatic media production, creative acceptance and fail-closed scroll validation.",
+  "version": "2.0.0",
+  "description": "Develop an agreed creative brief through conversation, then build cinematic websites with suitable tools and separate creative and technical verification.",
   "author": {
     "name": "David Bryan / Opace",
     "url": "https://opace.agency/services/web-design/"

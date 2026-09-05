@@ -44,6 +44,7 @@ const required = [
   join(skillRoot, "references/generated-product-scrubber.md"),
   join(skillRoot, "references/cinematic-intake.md"),
   join(skillRoot, "references/creative-briefing.md"),
+  join(skillRoot, "references/production.md"),
   join(skillRoot, "references/cinematic-prompts.md"),
   join(skillRoot, "references/cinematic-case-study.md"),
   join(skillRoot, "references/tool-connections.md"),
@@ -71,6 +72,7 @@ if (!/^---\nname: ai-ui-ux-motion-engine\ndescription: .+\n---/s.test(skill)) {
   failures.push("SKILL.md frontmatter is missing or invalid.");
 }
 
+const production = await readFile(join(skillRoot, "references/production.md"), "utf8");
 for (const phrase of [
   "Mandatory cinematic-intent gate",
   "The user does not need to use a trigger word",
@@ -85,7 +87,7 @@ for (const phrase of [
   "inspect every frame only",
   "default to parallel execution",
 ]) {
-  if (!skill.includes(phrase)) failures.push(`SKILL.md is missing cinematic guardrail: ${phrase}`);
+  if (!production.includes(phrase)) failures.push(`Production reference is missing cinematic guardrail: ${phrase}`);
 }
 
 for (const match of skill.matchAll(/\]\((references\/[^)]+)\)/g)) {
@@ -96,7 +98,7 @@ for (const match of skill.matchAll(/\]\((references\/[^)]+)\)/g)) {
 const plugin = JSON.parse(await readFile(join(pluginRoot, ".codex-plugin/plugin.json"), "utf8"));
 if (plugin.name !== "ai-ui-ux-motion-engine") failures.push("Plugin name does not match skill.");
 if (!/^\d+\.\d+\.\d+(?:[-+].+)?$/.test(plugin.version ?? "")) failures.push("Plugin version is not semver.");
-if (plugin.version.split("+")[0] !== "1.8.2") failures.push("Plugin base version is not 1.8.2.");
+if (plugin.version.split("+")[0] !== "2.0.0") failures.push("Plugin base version is not 2.0.0.");
 if (plugin.homepage !== "https://opace.agency/services/web-design/") {
   failures.push("Codex plugin homepage does not point to Opace web design.");
 }
@@ -371,6 +373,10 @@ async function validateLocalMarkdownLinks(path) {
 
 await validateLocalMarkdownLinks(join(pluginRoot, "README.md"));
 await validateLocalMarkdownLinks(join(pluginRoot, "GITHUB-PUBLISHING.md"));
+await validateLocalMarkdownLinks(join(skillRoot, "SKILL.md"));
+for (const file of await readdir(join(skillRoot, "references"))) {
+  if (file.endsWith(".md")) await validateLocalMarkdownLinks(join(skillRoot, "references", file));
+}
 for (const file of await readdir(join(pluginRoot, "platforms"))) {
   if (file.endsWith(".md")) {
     await validateLocalMarkdownLinks(join(pluginRoot, "platforms", file));

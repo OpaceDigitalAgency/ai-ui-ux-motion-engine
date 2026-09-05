@@ -1,4 +1,56 @@
-# Motion Engine 1.8.2 — inherited agreement correction
+# Motion Engine 2.0.0 — briefing-first restructure
+
+## Current status: 5 September 2026
+
+The actual 1.8.2 test also failed: "start fresh", a version answer, then "go on
+then" led straight to a self-locked code-only brief and implementation. Historical
+passing simulations below did not predict that behaviour and are not acceptance.
+
+The current update replaces the large production-heavy entrypoint with a short
+mode router. New creative requests enter BRIEFING; production recipes are loaded
+only after a detailed brief and agreement. User clarification during this work:
+anything less than a detailed brief must lead to discussion, irrespective of
+input form. Creative delegation alone now proposes choices for discussion; it
+does not bypass the brief. DIRECT TASK is only for bounded audits/fixes/edits,
+not a loophole for a new website or cinematic concept.
+
+Preserved all existing production references, templates, validators and controller.
+Moved the former production workflow into references/production.md. Updated
+discovery/launch prompts, plugin manifests, README examples and package/link checks.
+Independent preservation review found two issues, both corrected before install.
+
+Installed/enabled version: 2.0.0, verified through supported plugin CLI and byte
+comparison of source versus installed skills. Entry:
+`/Users/davidbryan/.codex/plugins/cache/personal/ai-ui-ux-motion-engine/2.0.0/skills/ai-ui-ux-motion-engine/SKILL.md`.
+
+Action-based tests used fresh-context agents with editable isolated projects.
+Webpage request -> start fresh/version -> "go on then" -> integrated design/SEO
+feedback: agent developed/revised an awaiting-agreement brief and made no page
+changes. Bookshop request -> clarification -> complete brief -> explicit agreement:
+agent held before agreement, then validated the production plan and created
+proof.html afterwards. Proof SHA-256:
+`3a4c4676b387648af2b632d75922c093b3bcac2f7e6c297cac3dc2a1e5a3538b`.
+The test deliberately stopped after the first implementation mutation; that proof
+is not visually verified or claimed complete. Detailed reproducible cases and
+preserved briefs: `V2-REFACTOR-AND-BEHAVIOURAL-TESTS.md`, `evidence/2.0.0/`.
+
+Third action-based test: a vague museum request with "you choose the creative
+details" yielded a proposed detailed brief and an agreement question, with source
+unchanged. This tests the user's clarification that delegation alone cannot
+replace a detailed brief and discussion.
+
+Regression baseline passes: Skill Creator/package/all-reference links, cinematic
+tests, 37 production contracts, motion safety, module syntax, 16 installers and
+positive/negative media validation. No Higgsfield/image generation or real website
+changes. No runtime guarantee: these instructions cannot intercept arbitrary tools.
+No public tag/default-branch merge; feature-branch checkpoint only.
+
+Next user acceptance: select the skill afresh and verify it reports 2.0.0, then
+provide an idea. Its first meaningful deliverable must be a discussion and a
+brief you can recognise and agree, not page code. Existing loaded task instructions
+are not rewritten by installing an update.
+
+## Historical 1.8.2 record — superseded
 
 ## Latest correction: 5 September 2026
 

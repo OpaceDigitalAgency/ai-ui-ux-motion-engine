@@ -1,7 +1,7 @@
 {
   "name": "ai-ui-ux-motion-engine",
-  "version": "1.8.2",
-  "description": "Reference-led cinematic websites with scenario-specific tool selection, evidence-bound generation gates and separate creative acceptance.",
+  "version": "2.0.0",
+  "description": "Develop an agreed creative brief through conversation, then build cinematic websites with suitable tools and separate creative and technical verification.",
   "author": {
     "name": "David Bryan / Opace",
     "url": "https://opace.agency/services/web-design/"
@@ -34,8 +34,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "AI UI/UX Motion Engine",
-    "shortDescription": "Build substantial cinematic journeys without camera-only shortcuts.",
-    "longDescription": "Locks the requested flagship intent, rejects camera-only downgrades and unsupported source geometry, prefers programmatic media-provider access, proves creative acceptance separately from technical delivery and fails closed on unreliable scroll media.",
+    "shortDescription": "Develop the brief together, then build and verify the experience.",
+    "longDescription": "Starts new creative ideas with focused conversation and an agreed brief. Production guidance loads after agreement, retaining reference-led route selection, source fidelity, provider spending controls, creative acceptance and scroll validation.",
     "developerName": "David Bryan / Opace",
     "websiteURL": "https://opace.agency/services/web-design/",
     "category": "Developer Tools",
@@ -44,7 +44,7 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Create a full flagship cinematic journey with enforced progression and payoff.",
+      "Help me develop this website or motion idea into an agreed brief before building it.",
       "Extract a design system from these references without cloning.",
       "Audit this interface for visual, motion and UX quality."
     ],
